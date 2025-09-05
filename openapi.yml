@@ -13,7 +13,7 @@ servers:
 - url: https://test.stytch.com
   description: Test server
 security:
-- bearerAuth: []
+- basicAuth: []
 paths:
   /v1/connected_apps/clients/{client_id}:
     get:
@@ -381,7 +381,9 @@ paths:
         in: query
         required: false
         schema:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
       responses:
         '200':
           description: Successful response
@@ -1137,7 +1139,7 @@ paths:
         in: query
         required: false
         schema:
-          type: string
+          type: boolean
       responses:
         '200':
           description: Successful response
@@ -1176,7 +1178,7 @@ paths:
         in: query
         required: false
         schema:
-          type: string
+          type: boolean
       responses:
         '200':
           description: Successful response
@@ -1445,7 +1447,7 @@ paths:
         in: query
         required: false
         schema:
-          type: string
+          type: boolean
       responses:
         '200':
           description: Successful response
@@ -1487,7 +1489,7 @@ paths:
         in: query
         required: false
         schema:
-          type: string
+          type: boolean
       responses:
         '200':
           description: Successful response
@@ -1559,7 +1561,7 @@ paths:
         in: query
         required: false
         schema:
-          type: string
+          type: boolean
       responses:
         '200':
           description: Successful response
@@ -1598,7 +1600,7 @@ paths:
         in: query
         required: false
         schema:
-          type: string
+          type: boolean
       responses:
         '200':
           description: Successful response
@@ -6765,10 +6767,9 @@ paths:
           description: Internal server error
 components:
   securitySchemes:
-    bearerAuth:
+    basicAuth:
       type: http
-      scheme: bearer
-      bearerFormat: JWT
+      scheme: basic
   schemas:
     api_attribute_v1_Attributes:
       type: object
@@ -6789,7 +6790,7 @@ components:
         status:
           type: string
         full_access_allowed:
-          type: string
+          type: boolean
         client_type:
           type: string
         redirect_urls:
@@ -6797,7 +6798,8 @@ components:
           items:
             type: string
         access_token_expiry_minutes:
-          type: string
+          type: integer
+          format: int32
         access_token_template_content:
           type: string
         post_logout_redirect_urls:
@@ -6805,7 +6807,7 @@ components:
           items:
             type: string
         bypass_consent_for_offline_access:
-          type: string
+          type: boolean
         client_secret_last_four:
           type: string
         next_client_secret_last_four:
@@ -6856,7 +6858,7 @@ components:
         status:
           type: string
         full_access_allowed:
-          type: string
+          type: boolean
         client_type:
           type: string
         redirect_urls:
@@ -6864,7 +6866,8 @@ components:
           items:
             type: string
         access_token_expiry_minutes:
-          type: string
+          type: integer
+          format: int32
         access_token_template_content:
           type: string
         post_logout_redirect_urls:
@@ -6872,7 +6875,7 @@ components:
           items:
             type: string
         bypass_consent_for_offline_access:
-          type: string
+          type: boolean
         client_secret_last_four:
           type: string
         next_client_secret_last_four:
@@ -6909,7 +6912,7 @@ components:
         client_secret_last_four:
           type: string
         full_access_allowed:
-          type: string
+          type: boolean
         client_type:
           type: string
         redirect_urls:
@@ -6919,7 +6922,8 @@ components:
         next_client_secret:
           type: string
         access_token_expiry_minutes:
-          type: string
+          type: integer
+          format: int32
         access_token_template_content:
           type: string
         post_logout_redirect_urls:
@@ -6927,7 +6931,7 @@ components:
           items:
             type: string
         bypass_consent_for_offline_access:
-          type: string
+          type: boolean
         next_client_secret_last_four:
           type: string
         access_token_custom_audience:
@@ -6952,7 +6956,8 @@ components:
       type: object
       properties:
         total:
-          type: string
+          type: integer
+          format: int32
         next_cursor:
           type: string
       required:
@@ -6971,9 +6976,10 @@ components:
           items:
             type: string
         full_access_allowed:
-          type: string
+          type: boolean
         access_token_expiry_minutes:
-          type: string
+          type: integer
+          format: int32
         access_token_custom_audience:
           type: string
         access_token_template_content:
@@ -6985,7 +6991,7 @@ components:
         logo_url:
           type: string
         bypass_consent_for_offline_access:
-          type: string
+          type: boolean
       description: Request type
       required:
       - client_type
@@ -6997,7 +7003,8 @@ components:
         connected_app:
           $ref: '#/components/schemas/api_connectedapps_v1_ConnectedAppWithClientSecret'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -7019,7 +7026,8 @@ components:
         client_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -7041,7 +7049,8 @@ components:
         connected_app:
           $ref: '#/components/schemas/api_connectedapps_v1_ConnectedApp'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -7053,7 +7062,9 @@ components:
         cursor:
           type: string
         limit:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
       description: Request type
     api_connectedapps_v1_SearchResponse:
       type: object
@@ -7067,7 +7078,8 @@ components:
         results_metadata:
           $ref: '#/components/schemas/api_connectedapps_v1_ResultsMetadata'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -7088,9 +7100,10 @@ components:
           items:
             type: string
         full_access_allowed:
-          type: string
+          type: boolean
         access_token_expiry_minutes:
-          type: string
+          type: integer
+          format: int32
         access_token_custom_audience:
           type: string
         access_token_template_content:
@@ -7102,7 +7115,7 @@ components:
         logo_url:
           type: string
         bypass_consent_for_offline_access:
-          type: string
+          type: boolean
       description: Request type
       required:
       - client_id
@@ -7114,7 +7127,8 @@ components:
         connected_app:
           $ref: '#/components/schemas/api_connectedapps_v1_ConnectedApp'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -7143,7 +7157,8 @@ components:
         connected_app:
           $ref: '#/components/schemas/api_connectedapps_v1_ConnectedApp'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -7165,7 +7180,8 @@ components:
         connected_app:
           $ref: '#/components/schemas/api_connectedapps_v1_ConnectedApp'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -7187,7 +7203,8 @@ components:
         connected_app:
           $ref: '#/components/schemas/api_connectedapps_v1_ConnectedAppWithNextClientSecret'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -7211,7 +7228,7 @@ components:
         type:
           type: string
         primary:
-          type: string
+          type: boolean
       required:
       - formatted
       - street_address
@@ -7229,7 +7246,7 @@ components:
         type:
           type: string
         primary:
-          type: string
+          type: boolean
       required:
       - value
       - type
@@ -7263,7 +7280,7 @@ components:
         type:
           type: string
         primary:
-          type: string
+          type: boolean
       required:
       - value
       - type
@@ -7286,7 +7303,7 @@ components:
         type:
           type: string
         primary:
-          type: string
+          type: boolean
       required:
       - value
       - type
@@ -7334,7 +7351,7 @@ components:
         type:
           type: string
         primary:
-          type: string
+          type: boolean
       required:
       - value
       - type
@@ -7347,7 +7364,7 @@ components:
         type:
           type: string
         primary:
-          type: string
+          type: boolean
       required:
       - value
       - type
@@ -7360,7 +7377,7 @@ components:
         type:
           type: string
         primary:
-          type: string
+          type: boolean
       required:
       - value
       - type
@@ -7375,7 +7392,7 @@ components:
         external_id:
           type: string
         active:
-          type: string
+          type: boolean
         groups:
           type: array
           items:
@@ -7597,7 +7614,7 @@ components:
         type:
           type: string
         primary:
-          type: string
+          type: boolean
       required:
       - value
       - type
@@ -7620,7 +7637,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnectionWithToken'
       description: Response type
@@ -7646,7 +7664,8 @@ components:
         connection_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -7662,7 +7681,9 @@ components:
         cursor:
           type: string
         limit:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
       description: Request type
       required:
       - organization_id
@@ -7675,7 +7696,8 @@ components:
           items:
             $ref: '#/components/schemas/api_b2b_scim_v1_SCIMGroup'
         status_code:
-          type: string
+          type: integer
+          format: int32
         next_cursor:
           type: string
       description: Response type
@@ -7696,7 +7718,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnection'
       description: Response type
@@ -7720,7 +7743,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnection'
       description: Response type
@@ -7744,7 +7768,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnection'
       description: Response type
@@ -7768,7 +7793,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnectionWithNextToken'
       description: Response type
@@ -7800,7 +7826,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnection'
       description: Response type
@@ -7897,7 +7924,8 @@ components:
         access_token:
           type: string
         access_token_expires_in:
-          type: string
+          type: integer
+          format: int32
         scopes:
           type: array
           items:
@@ -7928,7 +7956,7 @@ components:
           items:
             $ref: '#/components/schemas/api_organization_v1_SSORegistration'
         is_breakglass:
-          type: string
+          type: boolean
         member_password_id:
           type: string
         oauth_registrations:
@@ -7936,11 +7964,11 @@ components:
           items:
             $ref: '#/components/schemas/api_organization_v1_OAuthRegistration'
         email_address_verified:
-          type: string
+          type: boolean
         mfa_phone_number_verified:
-          type: string
+          type: boolean
         is_admin:
-          type: string
+          type: boolean
         totp_registration_id:
           type: string
         retired_email_addresses:
@@ -7948,9 +7976,9 @@ components:
           items:
             $ref: '#/components/schemas/api_organization_v1_RetiredEmail'
         is_locked:
-          type: string
+          type: boolean
         mfa_enrolled:
-          type: string
+          type: boolean
         mfa_phone_number:
           type: string
         default_mfa_method:
@@ -8064,7 +8092,8 @@ components:
         access_token:
           type: string
         access_token_expires_in:
-          type: string
+          type: integer
+          format: int32
         scopes:
           type: array
           items:
@@ -8216,7 +8245,8 @@ components:
       type: object
       properties:
         total:
-          type: string
+          type: integer
+          format: int32
         next_cursor:
           type: string
       required:
@@ -8316,7 +8346,8 @@ components:
           items:
             $ref: '#/components/schemas/api_organization_v1_OrganizationConnectedApp'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8336,13 +8367,13 @@ components:
         untrusted_metadata:
           type: string
         create_member_as_pending:
-          type: string
+          type: boolean
         is_breakglass:
-          type: string
+          type: boolean
         mfa_phone_number:
           type: string
         mfa_enrolled:
-          type: string
+          type: boolean
         roles:
           type: array
           items:
@@ -8365,7 +8396,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8392,7 +8424,8 @@ components:
         member_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8425,7 +8458,8 @@ components:
           items:
             $ref: '#/components/schemas/api_organization_v1_OrganizationConnectedAppActiveMember'
         status_code:
-          type: string
+          type: integer
+          format: int32
         logo_url:
           type: string
       description: Response type
@@ -8460,7 +8494,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8481,9 +8516,12 @@ components:
         request_id:
           type: string
         member_count:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
         status_code:
-          type: string
+          type: integer
+          format: int32
       required:
       - request_id
       - member_count
@@ -8498,7 +8536,9 @@ components:
         cursor:
           type: string
         limit:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
         query:
           $ref: '#/components/schemas/api_organization_v1_SearchQuery'
       description: Request type
@@ -8520,7 +8560,8 @@ components:
           additionalProperties:
             $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8542,17 +8583,17 @@ components:
         untrusted_metadata:
           type: string
         is_breakglass:
-          type: string
+          type: boolean
         mfa_phone_number:
           type: string
         mfa_enrolled:
-          type: string
+          type: boolean
         roles:
           type: array
           items:
             type: string
         preserve_existing_sessions:
-          type: string
+          type: boolean
         default_mfa_method:
           type: string
         email_address:
@@ -8560,7 +8601,7 @@ components:
         external_id:
           type: string
         unlink_email:
-          type: string
+          type: boolean
       description: Request type
       required:
       - organization_id
@@ -8577,7 +8618,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8620,7 +8662,7 @@ components:
         member_id:
           type: string
         include_deleted:
-          type: string
+          type: boolean
       description: Request type
       required:
       - member_id
@@ -8647,7 +8689,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8678,7 +8721,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8709,7 +8753,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8738,7 +8783,8 @@ components:
           items:
             $ref: '#/components/schemas/api_organization_v1_MemberConnectedApp'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8752,7 +8798,7 @@ components:
         member_id:
           type: string
         include_refresh_token:
-          type: string
+          type: boolean
       description: Request type
       required:
       - organization_id
@@ -8767,7 +8813,8 @@ components:
           items:
             $ref: '#/components/schemas/api_organization_v1_OIDCProviderInfo'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8796,7 +8843,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8836,7 +8884,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8873,7 +8922,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8901,7 +8951,8 @@ components:
           items:
             $ref: '#/components/schemas/api_organization_v1_GithubProviderInfo'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8924,11 +8975,13 @@ components:
           items:
             type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         access_token:
           type: string
         access_token_expires_in:
-          type: string
+          type: integer
+          format: int32
         refresh_token:
           type: string
       description: Response type
@@ -8951,7 +9004,8 @@ components:
           items:
             $ref: '#/components/schemas/api_organization_v1_HubspotProviderInfo'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -8970,7 +9024,8 @@ components:
         access_token:
           type: string
         access_token_expires_in:
-          type: string
+          type: integer
+          format: int32
         id_token:
           type: string
         scopes:
@@ -8978,7 +9033,8 @@ components:
           items:
             type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         refresh_token:
           type: string
       description: Response type
@@ -8999,7 +9055,7 @@ components:
         member_id:
           type: string
         include_refresh_token:
-          type: string
+          type: boolean
       description: Request type
       required:
       - organization_id
@@ -9027,7 +9083,8 @@ components:
           items:
             $ref: '#/components/schemas/api_organization_v1_SlackProviderInfo'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9054,7 +9111,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9067,7 +9125,7 @@ components:
         description:
           type: string
         is_grantable:
-          type: string
+          type: boolean
       required:
       - scope
       - description
@@ -9076,7 +9134,7 @@ components:
       type: object
       properties:
         consent_granted:
-          type: string
+          type: boolean
         scopes:
           type: array
           items:
@@ -9118,7 +9176,8 @@ components:
         redirect_uri:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         authorization_code:
           type: string
       description: Response type
@@ -9169,13 +9228,14 @@ components:
         client:
           $ref: '#/components/schemas/api_connectedapps_v1_ConnectedAppPublic'
         consent_required:
-          type: string
+          type: boolean
         scope_results:
           type: array
           items:
             $ref: '#/components/schemas/api_b2b_idp_v1_ScopeResult'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9207,7 +9267,7 @@ components:
       type: object
       properties:
         is_new:
-          type: string
+          type: boolean
         first_seen_at:
           type: string
         last_seen_at:
@@ -9241,7 +9301,7 @@ components:
         biometric_registration_id:
           type: string
         verified:
-          type: string
+          type: boolean
       required:
       - biometric_registration_id
       - verified
@@ -9255,7 +9315,7 @@ components:
         crypto_wallet_type:
           type: string
         verified:
-          type: string
+          type: boolean
       required:
       - crypto_wallet_id
       - crypto_wallet_address
@@ -9269,7 +9329,7 @@ components:
         email:
           type: string
         verified:
-          type: string
+          type: boolean
       required:
       - email_id
       - email
@@ -9308,7 +9368,7 @@ components:
         password_id:
           type: string
         requires_reset:
-          type: string
+          type: boolean
       required:
       - password_id
       - requires_reset
@@ -9320,7 +9380,7 @@ components:
         phone_number:
           type: string
         verified:
-          type: string
+          type: boolean
       required:
       - phone_id
       - phone_number
@@ -9329,7 +9389,8 @@ components:
       type: object
       properties:
         total:
-          type: string
+          type: integer
+          format: int32
         next_cursor:
           type: string
       required:
@@ -9352,7 +9413,7 @@ components:
         totp_id:
           type: string
         verified:
-          type: string
+          type: boolean
       required:
       - totp_id
       - verified
@@ -9392,7 +9453,7 @@ components:
           items:
             $ref: '#/components/schemas/api_user_v1_BiometricRegistration'
         is_locked:
-          type: string
+          type: boolean
         name:
           $ref: '#/components/schemas/api_user_v1_Name'
         created_at:
@@ -9451,7 +9512,7 @@ components:
         user_agent:
           type: string
         verified:
-          type: string
+          type: boolean
         authenticator_type:
           type: string
         name:
@@ -9481,7 +9542,8 @@ components:
           items:
             $ref: '#/components/schemas/api_user_v1_UserConnectedApp'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9499,7 +9561,7 @@ components:
         phone_number:
           type: string
         create_user_as_pending:
-          type: string
+          type: boolean
         trusted_metadata:
           type: string
         untrusted_metadata:
@@ -9523,7 +9585,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9551,7 +9614,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9576,7 +9640,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9601,7 +9666,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9626,7 +9692,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9651,7 +9718,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9676,7 +9744,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9699,7 +9768,8 @@ components:
         user_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9723,7 +9793,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9748,7 +9819,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9777,7 +9849,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9830,9 +9903,10 @@ components:
           items:
             $ref: '#/components/schemas/api_user_v1_BiometricRegistration'
         is_locked:
-          type: string
+          type: boolean
         status_code:
-          type: string
+          type: integer
+          format: int32
         name:
           $ref: '#/components/schemas/api_user_v1_Name'
         created_at:
@@ -9880,7 +9954,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9891,7 +9966,9 @@ components:
         cursor:
           type: string
         limit:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
         query:
           $ref: '#/components/schemas/api_user_v1_SearchUsersQuery'
       description: Request type
@@ -9907,7 +9984,8 @@ components:
         results_metadata:
           $ref: '#/components/schemas/api_user_v1_ResultsMetadata'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -9954,7 +10032,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -10112,7 +10191,7 @@ components:
       type: object
       properties:
         authorized:
-          type: string
+          type: boolean
         granting_roles:
           type: array
           items:
@@ -10596,7 +10675,8 @@ components:
         token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         session_token:
@@ -10623,7 +10703,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -10642,7 +10723,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -10664,7 +10746,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         verdict:
           $ref: '#/components/schemas/api_session_v1_AuthorizationVerdict'
       description: Response type
@@ -10681,7 +10764,8 @@ components:
         access_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         telemetry_id:
@@ -10703,7 +10787,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -10734,7 +10819,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - keys
@@ -10758,7 +10844,8 @@ components:
           items:
             $ref: '#/components/schemas/api_session_v1_Session'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -10770,7 +10857,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         telemetry_id:
@@ -10792,7 +10880,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -10821,7 +10910,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -10907,7 +10997,7 @@ components:
       type: object
       properties:
         authorized:
-          type: string
+          type: boolean
         granting_roles:
           type: array
           items:
@@ -10971,7 +11061,8 @@ components:
         organization_id:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         session_token:
@@ -11002,7 +11093,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_device:
           $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
@@ -11021,7 +11113,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -11045,7 +11138,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
         verdict:
           $ref: '#/components/schemas/api_multitenant_session_v1_AuthorizationVerdict'
       description: Response type
@@ -11063,7 +11157,8 @@ components:
         access_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         telemetry_id:
@@ -11087,7 +11182,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_session:
           $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
         member_device:
@@ -11111,7 +11207,8 @@ components:
         session_jwt:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         locale:
@@ -11137,11 +11234,12 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         member_authenticated:
-          type: string
+          type: boolean
         intermediate_session_token:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_session:
           $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
         mfa_required:
@@ -11179,7 +11277,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - keys
@@ -11206,7 +11305,8 @@ components:
           items:
             $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -11220,7 +11320,8 @@ components:
         organization_id:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
       description: Request type
@@ -11243,7 +11344,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_session:
           $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
       description: Response type
@@ -11273,7 +11375,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -11317,9 +11420,10 @@ components:
         intermediate_session_token:
           type: string
         member_authenticated:
-          type: string
+          type: boolean
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_session:
           $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
         mfa_required:
@@ -11434,7 +11538,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         policy:
           $ref: '#/components/schemas/api_b2b_rbac_v1_Policy'
       description: Response type
@@ -11468,7 +11573,8 @@ components:
           items:
             type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -11493,7 +11599,8 @@ components:
         session_jwt:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         telemetry_id:
@@ -11519,9 +11626,11 @@ components:
         session_jwt:
           type: string
         recovery_codes_remaining:
-          type: string
+          type: integer
+          format: int32
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_session:
           $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
         member_device:
@@ -11563,7 +11672,8 @@ components:
           items:
             type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -11588,13 +11698,14 @@ components:
         session_jwt:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         set_mfa_enrollment:
           type: string
         set_default_mfa:
-          type: string
+          type: boolean
         telemetry_id:
           type: string
       description: Request type
@@ -11618,7 +11729,8 @@ components:
         session_jwt:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_session:
           $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
         member_device:
@@ -11640,7 +11752,8 @@ components:
         member_id:
           type: string
         expiration_minutes:
-          type: string
+          type: integer
+          format: int32
         intermediate_session_token:
           type: string
         session_token:
@@ -11673,7 +11786,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -11722,7 +11836,8 @@ components:
           items:
             type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -11830,7 +11945,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         policy:
           $ref: '#/components/schemas/api_consumer_rbac_v1_Policy'
       description: Response type
@@ -11874,7 +11990,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -11900,7 +12017,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         siwe_params:
@@ -11944,9 +12062,10 @@ components:
         challenge:
           type: string
         user_created:
-          type: string
+          type: boolean
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -11968,7 +12087,8 @@ components:
           items:
             type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         issued_at:
           type: string
         message_request_id:
@@ -11983,7 +12103,7 @@ components:
       type: object
       properties:
         member_authenticated:
-          type: string
+          type: boolean
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         membership:
@@ -12013,7 +12133,8 @@ components:
         organization_id:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         locale:
@@ -12040,11 +12161,12 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         member_authenticated:
-          type: string
+          type: boolean
         intermediate_session_token:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_session:
           $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
         mfa_required:
@@ -12081,7 +12203,8 @@ components:
         intermediate_session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         organization_name:
@@ -12155,11 +12278,12 @@ components:
         member:
           $ref: '#/components/schemas/api_organization_v1_Member'
         member_authenticated:
-          type: string
+          type: boolean
         intermediate_session_token:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_session:
           $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
         organization:
@@ -12202,7 +12326,8 @@ components:
           items:
             $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
         status_code:
-          type: string
+          type: integer
+          format: int32
         organization_id_hint:
           type: string
       description: Response type
@@ -12295,9 +12420,9 @@ components:
         ip_geolocation:
           $ref: '#/components/schemas/api_fraud_v1_IPGeoProperties'
         is_proxy:
-          type: string
+          type: boolean
         is_vpn:
-          type: string
+          type: boolean
       required:
       - ip_address
       - asn
@@ -12363,7 +12488,7 @@ components:
         detected_device_type:
           type: string
         is_authentic_device:
-          type: string
+          type: boolean
         verdict_reason_overrides:
           type: array
           items:
@@ -12469,7 +12594,8 @@ components:
         expires_at:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         properties:
           $ref: '#/components/schemas/api_fraud_v1_Properties'
       description: Response type
@@ -12486,7 +12612,7 @@ components:
       type: object
       properties:
         overrides_only:
-          type: string
+          type: boolean
       description: Request type
     api_fraud_v1_ListResponse:
       type: object
@@ -12498,7 +12624,8 @@ components:
           items:
             $ref: '#/components/schemas/api_fraud_v1_VerdictReasonAction'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -12522,7 +12649,8 @@ components:
         network_fingerprint:
           type: string
         expires_in_minutes:
-          type: string
+          type: integer
+          format: int32
         description:
           type: string
         cidr_block:
@@ -12542,7 +12670,8 @@ components:
         action:
           $ref: '#/components/schemas/api_fraud_v1_RuleAction'
         status_code:
-          type: string
+          type: integer
+          format: int32
         visitor_id:
           type: string
         browser_id:
@@ -12589,7 +12718,8 @@ components:
         verdict_reason_action:
           $ref: '#/components/schemas/api_fraud_v1_VerdictReasonAction'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -12610,7 +12740,7 @@ components:
         description:
           type: string
         is_grantable:
-          type: string
+          type: boolean
       required:
       - scope
       - description
@@ -12619,7 +12749,7 @@ components:
       type: object
       properties:
         consent_granted:
-          type: string
+          type: boolean
         scopes:
           type: array
           items:
@@ -12659,7 +12789,8 @@ components:
         redirect_uri:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         authorization_code:
           type: string
       description: Response type
@@ -12706,13 +12837,14 @@ components:
         client:
           $ref: '#/components/schemas/api_connectedapps_v1_ConnectedAppPublic'
         consent_required:
-          type: string
+          type: boolean
         scope_results:
           type: array
           items:
             $ref: '#/components/schemas/api_idp_v1_ScopeResult'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -12744,7 +12876,8 @@ components:
         session_jwt:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
       description: Response type
@@ -12861,7 +12994,8 @@ components:
       type: object
       properties:
         total:
-          type: string
+          type: integer
+          format: int32
         next_cursor:
           type: string
       required:
@@ -12899,7 +13033,8 @@ components:
         m2m_client:
           $ref: '#/components/schemas/api_m2m_v1_M2MClientWithClientSecret'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -12921,7 +13056,8 @@ components:
         client_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -12943,7 +13079,8 @@ components:
         m2m_client:
           $ref: '#/components/schemas/api_m2m_v1_M2MClient'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -12955,7 +13092,9 @@ components:
         cursor:
           type: string
         limit:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
         query:
           $ref: '#/components/schemas/api_m2m_v1_M2MSearchQuery'
       description: Request type
@@ -12971,7 +13110,8 @@ components:
         results_metadata:
           $ref: '#/components/schemas/api_m2m_v1_ResultsMetadata'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13006,7 +13146,8 @@ components:
         m2m_client:
           $ref: '#/components/schemas/api_m2m_v1_M2MClient'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13033,7 +13174,8 @@ components:
         m2m_client:
           $ref: '#/components/schemas/api_m2m_v1_M2MClient'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13055,7 +13197,8 @@ components:
         m2m_client:
           $ref: '#/components/schemas/api_m2m_v1_M2MClient'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13077,7 +13220,8 @@ components:
         m2m_client:
           $ref: '#/components/schemas/api_m2m_v1_M2MClientWithNextClientSecret'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13087,9 +13231,9 @@ components:
       type: object
       properties:
         ip_match_required:
-          type: string
+          type: boolean
         user_agent_match_required:
-          type: string
+          type: boolean
       required:
       - ip_match_required
       - user_agent_match_required
@@ -13117,7 +13261,8 @@ components:
           items:
             $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13131,7 +13276,8 @@ components:
         user_id:
           type: string
         expiration_minutes:
-          type: string
+          type: integer
+          format: int32
         attributes:
           $ref: '#/components/schemas/api_attribute_v1_Attributes'
       description: Request type
@@ -13147,7 +13293,8 @@ components:
         token:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13180,7 +13327,9 @@ components:
           items:
             type: string
         invite_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
       description: Request type
       required:
       - organization_id
@@ -13197,7 +13346,8 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13215,9 +13365,11 @@ components:
         signup_magic_link_url:
           type: string
         login_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
         signup_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
         login_template_id:
           type: string
         signup_template_id:
@@ -13225,7 +13377,7 @@ components:
         attributes:
           $ref: '#/components/schemas/api_attribute_v1_Attributes'
         create_user_as_pending:
-          type: string
+          type: boolean
         code_challenge:
           type: string
         locale:
@@ -13243,9 +13395,10 @@ components:
         email_id:
           type: string
         user_created:
-          type: string
+          type: boolean
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13267,7 +13420,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13286,7 +13440,9 @@ components:
         locale:
           $ref: '#/components/schemas/api_magic_v1_SendRequestLocale'
         discovery_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
       description: Request type
       required:
       - email_address
@@ -13296,7 +13452,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13349,9 +13506,13 @@ components:
         locale:
           $ref: '#/components/schemas/api_magic_v1_LoginOrSignupRequestLocale'
         login_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
         signup_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
       description: Request type
       required:
       - organization_id
@@ -13364,13 +13525,14 @@ components:
         member_id:
           type: string
         member_created:
-          type: string
+          type: boolean
         member:
           $ref: '#/components/schemas/api_organization_v1_Member'
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13411,7 +13573,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -13445,7 +13608,8 @@ components:
         full_name:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13493,7 +13657,8 @@ components:
           items:
             $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13511,7 +13676,9 @@ components:
         locale:
           $ref: '#/components/schemas/api_multitenant_otp_v1_SendRequestLocale'
         discovery_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
       description: Request type
       required:
       - email_address
@@ -13521,7 +13688,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13547,9 +13715,13 @@ components:
         locale:
           $ref: '#/components/schemas/api_multitenant_otp_v1_LoginOrSignupRequestLocale'
         login_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
         signup_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
       description: Request type
       required:
       - organization_id
@@ -13562,13 +13734,14 @@ components:
         member_id:
           type: string
         member_created:
-          type: string
+          type: boolean
         member:
           $ref: '#/components/schemas/api_organization_v1_Member'
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13597,13 +13770,17 @@ components:
         salt:
           type: string
         iteration_amount:
-          type: string
+          type: integer
+          format: int32
         memory:
-          type: string
+          type: integer
+          format: int32
         threads:
-          type: string
+          type: integer
+          format: int32
         key_length:
-          type: string
+          type: integer
+          format: int32
       required:
       - salt
       - iteration_amount
@@ -13628,17 +13805,19 @@ components:
       type: object
       properties:
         has_lower_case:
-          type: string
+          type: boolean
         has_upper_case:
-          type: string
+          type: boolean
         has_digit:
-          type: string
+          type: boolean
         has_symbol:
-          type: string
+          type: boolean
         missing_complexity:
-          type: string
+          type: integer
+          format: int32
         missing_characters:
-          type: string
+          type: integer
+          format: int32
       required:
       - has_lower_case
       - has_upper_case
@@ -13662,9 +13841,11 @@ components:
         salt:
           type: string
         iteration_amount:
-          type: string
+          type: integer
+          format: int32
         key_length:
-          type: string
+          type: integer
+          format: int32
         algorithm:
           type: string
       required:
@@ -13688,13 +13869,17 @@ components:
         salt:
           type: string
         n_parameter:
-          type: string
+          type: integer
+          format: int32
         r_parameter:
-          type: string
+          type: integer
+          format: int32
         p_parameter:
-          type: string
+          type: integer
+          format: int32
         key_length:
-          type: string
+          type: integer
+          format: int32
       required:
       - salt
       - n_parameter
@@ -13711,7 +13896,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -13736,7 +13922,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -13757,7 +13944,8 @@ components:
         password:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         trusted_metadata:
@@ -13788,7 +13976,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -13826,13 +14015,13 @@ components:
         untrusted_metadata:
           type: string
         set_email_verified:
-          type: string
+          type: boolean
         name:
           $ref: '#/components/schemas/api_user_v1_Name'
         phone_number:
           type: string
         set_phone_number_verified:
-          type: string
+          type: boolean
         external_id:
           type: string
         roles:
@@ -13854,11 +14043,12 @@ components:
         email_id:
           type: string
         user_created:
-          type: string
+          type: boolean
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -13883,17 +14073,19 @@ components:
         request_id:
           type: string
         valid_password:
-          type: string
+          type: boolean
         score:
-          type: string
+          type: integer
+          format: int32
         breached_password:
-          type: string
+          type: boolean
         strength_policy:
           type: string
         breach_detection_on_create:
-          type: string
+          type: boolean
         status_code:
-          type: string
+          type: integer
+          format: int32
         feedback:
           $ref: '#/components/schemas/api_password_v1_Feedback'
       description: Response type
@@ -13926,7 +14118,8 @@ components:
         session_jwt:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         telemetry_id:
@@ -13948,7 +14141,8 @@ components:
         session_jwt:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -13969,7 +14163,8 @@ components:
         reset_password_redirect_url:
           type: string
         reset_password_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
         code_challenge:
           type: string
         attributes:
@@ -13993,7 +14188,8 @@ components:
         email_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -14011,17 +14207,19 @@ components:
       type: object
       properties:
         has_lower_case:
-          type: string
+          type: boolean
         has_upper_case:
-          type: string
+          type: boolean
         has_digit:
-          type: string
+          type: boolean
         has_symbol:
-          type: string
+          type: boolean
         missing_complexity:
-          type: string
+          type: integer
+          format: int32
         missing_characters:
-          type: string
+          type: integer
+          format: int32
       required:
       - has_lower_case
       - has_upper_case
@@ -14066,7 +14264,8 @@ components:
           items:
             $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -14106,11 +14305,11 @@ components:
           items:
             type: string
         preserve_existing_sessions:
-          type: string
+          type: boolean
         mfa_phone_number:
           type: string
         set_phone_number_verified:
-          type: string
+          type: boolean
         external_id:
           type: string
       description: Request type
@@ -14127,13 +14326,14 @@ components:
         member_id:
           type: string
         member_created:
-          type: string
+          type: boolean
         member:
           $ref: '#/components/schemas/api_organization_v1_Member'
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -14158,17 +14358,19 @@ components:
         request_id:
           type: string
         valid_password:
-          type: string
+          type: boolean
         score:
-          type: string
+          type: integer
+          format: int32
         breached_password:
-          type: string
+          type: boolean
         strength_policy:
           type: string
         breach_detection_on_create:
-          type: string
+          type: boolean
         status_code:
-          type: string
+          type: integer
+          format: int32
         luds_feedback:
           $ref: '#/components/schemas/api_multitenant_password_v1_LudsFeedback'
         zxcvbn_feedback:
@@ -14218,7 +14420,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_id:
           type: string
         member:
@@ -14256,7 +14459,8 @@ components:
           items:
             $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -14276,7 +14480,8 @@ components:
         reset_password_template_id:
           type: string
         reset_password_expiration_minutes:
-          type: string
+          type: integer
+          format: int32
         pkce_code_challenge:
           type: string
         locale:
@@ -14292,7 +14497,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -14353,7 +14559,8 @@ components:
         oauth_attach_token:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -14367,7 +14574,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -14399,11 +14607,12 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         reset_sessions:
-          type: string
+          type: boolean
         oauth_user_registration_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         user_session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -14435,7 +14644,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -14462,9 +14672,10 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         reset_sessions:
-          type: string
+          type: boolean
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -14485,11 +14696,12 @@ components:
         email:
           type: string
         expiration_minutes:
-          type: string
+          type: integer
+          format: int32
         attributes:
           $ref: '#/components/schemas/api_attribute_v1_Attributes'
         create_user_as_pending:
-          type: string
+          type: boolean
         locale:
           $ref: '#/components/schemas/api_otp_v1_LoginOrCreateRequestLocale'
         login_template_id:
@@ -14509,9 +14721,10 @@ components:
         email_id:
           type: string
         user_created:
-          type: string
+          type: boolean
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -14525,7 +14738,8 @@ components:
         email:
           type: string
         expiration_minutes:
-          type: string
+          type: integer
+          format: int32
         attributes:
           $ref: '#/components/schemas/api_attribute_v1_Attributes'
         locale:
@@ -14553,7 +14767,8 @@ components:
         email_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -14580,7 +14795,9 @@ components:
         metric_type:
           $ref: '#/components/schemas/api_project_v1_ProjectMetricMetricType'
         count:
-          type: string
+          type: integer
+          format: int32
+          minimum: 0
       required:
       - metric_type
       - count
@@ -14599,7 +14816,8 @@ components:
           items:
             $ref: '#/components/schemas/api_project_v1_ProjectMetric'
         status_code:
-          type: string
+          type: integer
+          format: int32
       required:
       - request_id
       - project_id
@@ -14770,7 +14988,7 @@ components:
         alternative_acs_url:
           type: string
         idp_initiated_auth_disabled:
-          type: string
+          type: boolean
         attribute_mapping:
           type: string
       required:
@@ -14840,7 +15058,8 @@ components:
         session_jwt:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_custom_claims:
           type: string
         locale:
@@ -14868,15 +15087,16 @@ components:
         session_jwt:
           type: string
         reset_session:
-          type: string
+          type: boolean
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         intermediate_session_token:
           type: string
         member_authenticated:
-          type: string
+          type: boolean
         status_code:
-          type: string
+          type: integer
+          format: int32
         member_session:
           $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
         mfa_required:
@@ -14917,7 +15137,8 @@ components:
         connection_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -14949,7 +15170,8 @@ components:
           items:
             $ref: '#/components/schemas/api_sso_v1_Connection'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -14998,7 +15220,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         connection:
           $ref: '#/components/schemas/api_sso_v1_Connection'
       description: Response type
@@ -15032,7 +15255,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         connection:
           $ref: '#/components/schemas/api_sso_v1_Connection'
       description: Response type
@@ -15097,7 +15321,8 @@ components:
         private_key_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -15125,7 +15350,8 @@ components:
         certificate_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -15151,7 +15377,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         connection:
           $ref: '#/components/schemas/api_sso_v1_SAMLConnection'
       description: Response type
@@ -15164,7 +15391,7 @@ components:
         totp_id:
           type: string
         verified:
-          type: string
+          type: boolean
         recovery_codes:
           type: array
           items:
@@ -15183,7 +15410,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -15210,7 +15438,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -15230,7 +15459,8 @@ components:
         user_id:
           type: string
         expiration_minutes:
-          type: string
+          type: integer
+          format: int32
       description: Request type
       required:
       - user_id
@@ -15254,7 +15484,8 @@ components:
         user_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -15275,7 +15506,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -15302,7 +15534,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -15336,7 +15569,8 @@ components:
           items:
             $ref: '#/components/schemas/api_totp_v1_TOTP'
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -15367,7 +15601,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -15393,7 +15628,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -15415,7 +15651,7 @@ components:
         user_id:
           type: string
         return_passkey_credential_options:
-          type: string
+          type: boolean
       description: Request type
       required:
       - domain
@@ -15429,7 +15665,8 @@ components:
         public_key_credential_request_options:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -15457,7 +15694,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - credentials
@@ -15473,7 +15711,8 @@ components:
         session_token:
           type: string
         session_duration_minutes:
-          type: string
+          type: integer
+          format: int32
         session_jwt:
           type: string
         session_custom_claims:
@@ -15500,7 +15739,8 @@ components:
         user:
           $ref: '#/components/schemas/api_user_v1_User'
         status_code:
-          type: string
+          type: integer
+          format: int32
         session:
           $ref: '#/components/schemas/api_session_v1_Session'
         user_device:
@@ -15526,7 +15766,7 @@ components:
         authenticator_type:
           type: string
         return_passkey_credential_options:
-          type: string
+          type: boolean
         override_id:
           type: string
         override_name:
@@ -15534,7 +15774,7 @@ components:
         override_display_name:
           type: string
         use_base64_url_encoding:
-          type: string
+          type: boolean
       description: Request type
       required:
       - user_id
@@ -15549,7 +15789,8 @@ components:
         public_key_credential_creation_options:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
       description: Response type
       required:
       - request_id
@@ -15573,7 +15814,8 @@ components:
         request_id:
           type: string
         status_code:
-          type: string
+          type: integer
+          format: int32
         webauthn_registration:
           $ref: '#/components/schemas/api_user_v1_WebAuthnRegistration'
       description: Response type
