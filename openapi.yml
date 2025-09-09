@@ -2593,7 +2593,7 @@ paths:
   /v1/b2b/sessions:
     get:
       summary: Get
-      operationId: api_multitenant_session_v1_Get
+      operationId: api_b2b_session_v1_Get
       tags:
       - Session
       description: Retrieves all active Sessions for a Member.
@@ -2614,7 +2614,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_session_v1_GetResponse'
+                $ref: '#/components/schemas/api_b2b_session_v1_GetResponse'
         '400':
           description: Bad request
         '401':
@@ -2624,7 +2624,7 @@ paths:
   /v1/b2b/sessions/authenticate:
     post:
       summary: Authenticate
-      operationId: api_multitenant_session_v1_Authenticate
+      operationId: api_b2b_session_v1_Authenticate
       tags:
       - Session
       description: 'Authenticates a Session and updates its lifetime by the specified
@@ -2663,14 +2663,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_session_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_session_v1_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_session_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_session_v1_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -2680,7 +2680,7 @@ paths:
   /v1/b2b/sessions/revoke:
     post:
       summary: Revoke
-      operationId: api_multitenant_session_v1_Revoke
+      operationId: api_b2b_session_v1_Revoke
       tags:
       - Session
       description: Revoke a Session and immediately invalidate all its tokens. To
@@ -2691,14 +2691,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_session_v1_RevokeRequest'
+              $ref: '#/components/schemas/api_b2b_session_v1_RevokeRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_session_v1_RevokeResponse'
+                $ref: '#/components/schemas/api_b2b_session_v1_RevokeResponse'
         '400':
           description: Bad request
         '401':
@@ -2708,7 +2708,7 @@ paths:
   /v1/b2b/sessions/exchange:
     post:
       summary: Exchange
-      operationId: api_multitenant_session_v1_Exchange
+      operationId: api_b2b_session_v1_Exchange
       tags:
       - Session
       description: 'Use this endpoint to exchange a Member''s existing session for
@@ -2759,14 +2759,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_session_v1_ExchangeRequest'
+              $ref: '#/components/schemas/api_b2b_session_v1_ExchangeRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_session_v1_ExchangeResponse'
+                $ref: '#/components/schemas/api_b2b_session_v1_ExchangeResponse'
         '400':
           description: Bad request
         '401':
@@ -2776,7 +2776,7 @@ paths:
   /v1/b2b/sessions/exchange_access_token:
     post:
       summary: Exchangeaccesstoken
-      operationId: api_multitenant_session_v1_ExchangeAccessToken
+      operationId: api_b2b_session_v1_ExchangeAccessToken
       tags:
       - Session
       description: "Use this endpoint to exchange a Connected Apps Access Token back\
@@ -2795,14 +2795,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_session_v1_ExchangeAccessTokenRequest'
+              $ref: '#/components/schemas/api_b2b_session_v1_ExchangeAccessTokenRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_session_v1_ExchangeAccessTokenResponse'
+                $ref: '#/components/schemas/api_b2b_session_v1_ExchangeAccessTokenResponse'
         '400':
           description: Bad request
         '401':
@@ -2812,7 +2812,7 @@ paths:
   /v1/b2b/sessions/attest:
     post:
       summary: Attest
-      operationId: api_multitenant_session_v1_Attest
+      operationId: api_b2b_session_v1_Attest
       tags:
       - Session
       description: Exchange an auth token issued by a trusted identity provider for
@@ -2825,14 +2825,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_session_v1_AttestRequest'
+              $ref: '#/components/schemas/api_b2b_session_v1_AttestRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_session_v1_AttestResponse'
+                $ref: '#/components/schemas/api_b2b_session_v1_AttestResponse'
         '400':
           description: Bad request
         '401':
@@ -2842,7 +2842,7 @@ paths:
   /v1/b2b/sessions/migrate:
     post:
       summary: Migrate
-      operationId: api_multitenant_session_v1_Migrate
+      operationId: api_b2b_session_v1_Migrate
       tags:
       - Session
       description: 'Migrate a session from an external OIDC compliant endpoint.
@@ -2861,14 +2861,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_session_v1_MigrateRequest'
+              $ref: '#/components/schemas/api_b2b_session_v1_MigrateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_session_v1_MigrateResponse'
+                $ref: '#/components/schemas/api_b2b_session_v1_MigrateResponse'
         '400':
           description: Bad request
         '401':
@@ -2878,7 +2878,7 @@ paths:
   /v1/b2b/sessions/jwks/{project_id}:
     get:
       summary: Getjwks
-      operationId: api_multitenant_session_v1_GetJWKS
+      operationId: api_b2b_session_v1_GetJWKS
       tags:
       - Session
       description: 'Get the JSON Web Key Set (JWKS) for a project.
@@ -2919,7 +2919,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_session_v1_GetJWKSResponse'
+                $ref: '#/components/schemas/api_b2b_session_v1_GetJWKSResponse'
         '400':
           description: Bad request
         '401':
@@ -4439,9 +4439,9 @@ paths:
   /v1/b2b/oauth/authenticate:
     post:
       summary: Authenticate
-      operationId: api_multitenant_oauth_v1_Authenticate
+      operationId: api_b2b_oauth_v1_Authenticate
       tags:
-      - Multitenant Oauth
+      - B2B Oauth
       description: 'Authenticate a Member given a `token`. This endpoint verifies
         that the member completed the OAuth flow by verifying that the token is valid
         and hasn''t expired.  Provide the `session_duration_minutes` parameter to
@@ -4488,14 +4488,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_oauth_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_oauth_v1_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_oauth_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_oauth_v1_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -4505,7 +4505,7 @@ paths:
   /v1/b2b/oauth/discovery/authenticate:
     post:
       summary: Authenticate
-      operationId: api_multitenant_oauth_v1_b2b_oauth_discovery_Authenticate
+      operationId: api_b2b_oauth_v1_b2b_oauth_discovery_Authenticate
       tags:
       - B2B Oauth
       description: 'Authenticates the Discovery OAuth token and exchanges it for an
@@ -4518,14 +4518,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_oauth_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_oauth_v1_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_oauth_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_oauth_v1_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -4535,7 +4535,7 @@ paths:
   /v1/b2b/otps/sms/send:
     post:
       summary: Send
-      operationId: api_multitenant_otp_v1_b2b_otp_sms_Send
+      operationId: api_b2b_otp_v1_b2b_otp_sms_Send
       tags:
       - B2B Otp
       description: "Send a One-Time Passcode (OTP) to a Member's phone number.\n\n\
@@ -4575,14 +4575,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_otp_v1_SendRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_SendRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_otp_v1_SendResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_SendResponse'
         '400':
           description: Bad request
         '401':
@@ -4592,7 +4592,7 @@ paths:
   /v1/b2b/otps/sms/authenticate:
     post:
       summary: Authenticate
-      operationId: api_multitenant_otp_v1_b2b_otp_sms_Authenticate
+      operationId: api_b2b_otp_v1_b2b_otp_sms_Authenticate
       tags:
       - B2B Otp
       description: 'SMS OTPs may not be used as a primary authentication mechanism.
@@ -4644,14 +4644,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_otp_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_otp_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -4661,7 +4661,7 @@ paths:
   /v1/b2b/otps/email/login_or_signup:
     post:
       summary: Loginorsignup
-      operationId: api_multitenant_otp_v1_b2b_otp_email_LoginOrSignup
+      operationId: api_b2b_otp_v1_b2b_otp_email_LoginOrSignup
       tags:
       - B2B Otp
       description: 'Send either a login or signup email OTP to a Member. A new, pending,
@@ -4678,14 +4678,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_otp_v1_LoginOrSignupRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_LoginOrSignupRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_otp_v1_LoginOrSignupResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_LoginOrSignupResponse'
         '400':
           description: Bad request
         '401':
@@ -4695,7 +4695,7 @@ paths:
   /v1/b2b/otps/email/authenticate:
     post:
       summary: Authenticate
-      operationId: api_multitenant_otp_v1_b2b_otp_email_Authenticate
+      operationId: api_b2b_otp_v1_b2b_otp_email_Authenticate
       tags:
       - B2B Otp
       description: "Authenticate a Member with a one-time passcode (OTP). This endpoint\
@@ -4722,14 +4722,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_otp_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_otp_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -4739,7 +4739,7 @@ paths:
   /v1/b2b/otps/email/discovery/send:
     post:
       summary: Send
-      operationId: api_multitenant_otp_v1_b2b_otp_email_discovery_Send
+      operationId: api_b2b_otp_v1_b2b_otp_email_discovery_Send
       tags:
       - Email
       description: 'Send a discovery OTP to an email address. The OTP is valid for
@@ -4751,14 +4751,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_otp_v1_SendRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_SendRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_otp_v1_SendResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_SendResponse'
         '400':
           description: Bad request
         '401':
@@ -4768,7 +4768,7 @@ paths:
   /v1/b2b/otps/email/discovery/authenticate:
     post:
       summary: Authenticate
-      operationId: api_multitenant_otp_v1_b2b_otp_email_discovery_Authenticate
+      operationId: api_b2b_otp_v1_b2b_otp_email_discovery_Authenticate
       tags:
       - Email
       description: Authenticates the OTP and returns an intermediate session token.
@@ -4779,14 +4779,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_otp_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_otp_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -5081,7 +5081,7 @@ paths:
   /v1/b2b/passwords/strength_check:
     post:
       summary: Strengthcheck
-      operationId: api_multitenant_password_v1_StrengthCheck
+      operationId: api_b2b_password_v1_StrengthCheck
       tags:
       - Password
       description: "This API allows you to check whether the user\u2019s provided\
@@ -5109,14 +5109,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_StrengthCheckRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_StrengthCheckRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_StrengthCheckResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_StrengthCheckResponse'
         '400':
           description: Bad request
         '401':
@@ -5126,7 +5126,7 @@ paths:
   /v1/b2b/passwords/migrate:
     post:
       summary: Migrate
-      operationId: api_multitenant_password_v1_Migrate
+      operationId: api_b2b_password_v1_Migrate
       tags:
       - Password
       description: "\n**Warning:** This endpoint marks the Member's email address\
@@ -5145,14 +5145,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_MigrateRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_MigrateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_MigrateResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_MigrateResponse'
         '400':
           description: Bad request
         '401':
@@ -5162,7 +5162,7 @@ paths:
   /v1/b2b/passwords/authenticate:
     post:
       summary: Authenticate
-      operationId: api_multitenant_password_v1_Authenticate
+      operationId: api_b2b_password_v1_Authenticate
       tags:
       - Password
       description: 'Authenticate a member with their email address and password. This
@@ -5198,14 +5198,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -5215,7 +5215,7 @@ paths:
   /v1/b2b/passwords/email/reset/start:
     post:
       summary: Resetstart
-      operationId: api_multitenant_password_v1_b2b_passwords_email_ResetStart
+      operationId: api_b2b_password_v1_b2b_passwords_email_ResetStart
       tags:
       - B2B Passwords
       description: 'Initiates a password reset for the email address provided. This
@@ -5241,14 +5241,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_ResetStartRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_ResetStartRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_ResetStartResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_ResetStartResponse'
         '400':
           description: Bad request
         '401':
@@ -5258,7 +5258,7 @@ paths:
   /v1/b2b/passwords/email/reset:
     post:
       summary: Reset
-      operationId: api_multitenant_password_v1_b2b_passwords_email_Reset
+      operationId: api_b2b_password_v1_b2b_passwords_email_Reset
       tags:
       - B2B Passwords
       description: "Reset the Member's password and authenticate them. This endpoint\
@@ -5281,14 +5281,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -5298,7 +5298,7 @@ paths:
   /v1/b2b/passwords/email/require_reset:
     post:
       summary: Requirereset
-      operationId: api_multitenant_password_v1_b2b_passwords_email_RequireReset
+      operationId: api_b2b_password_v1_b2b_passwords_email_RequireReset
       tags:
       - B2B Passwords
       description: 'Require a password be reset by the associated email address. This
@@ -5312,14 +5312,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_RequireResetRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_RequireResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_RequireResetResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_RequireResetResponse'
         '400':
           description: Bad request
         '401':
@@ -5329,7 +5329,7 @@ paths:
   /v1/b2b/passwords/session/reset:
     post:
       summary: Reset
-      operationId: api_multitenant_password_v1_b2b_passwords_session_Reset
+      operationId: api_b2b_password_v1_b2b_passwords_session_Reset
       tags:
       - B2B Passwords
       description: 'Reset the Member''s password using their existing session. The
@@ -5346,14 +5346,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -5363,7 +5363,7 @@ paths:
   /v1/b2b/passwords/existing_password/reset:
     post:
       summary: Reset
-      operationId: api_multitenant_password_v1_b2b_passwords_existing_password_Reset
+      operationId: api_b2b_password_v1_b2b_passwords_existing_password_Reset
       tags:
       - B2B Passwords
       description: 'Reset the member''s password using their existing password.
@@ -5407,14 +5407,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -5424,7 +5424,7 @@ paths:
   /v1/b2b/passwords/discovery/authenticate:
     post:
       summary: Authenticate
-      operationId: api_multitenant_password_v1_b2b_passwords_discovery_Authenticate
+      operationId: api_b2b_password_v1_b2b_passwords_discovery_Authenticate
       tags:
       - B2B Passwords
       description: 'Authenticate an email/password combination in the discovery flow.
@@ -5448,14 +5448,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -5465,7 +5465,7 @@ paths:
   /v1/b2b/passwords/discovery/email/reset/start:
     post:
       summary: Resetstart
-      operationId: api_multitenant_password_v1_b2b_passwords_discovery_email_ResetStart
+      operationId: api_b2b_password_v1_b2b_passwords_discovery_email_ResetStart
       tags:
       - Discovery
       description: 'Initiates a password reset for the email address provided, when
@@ -5492,14 +5492,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_ResetStartRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_ResetStartRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_ResetStartResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_ResetStartResponse'
         '400':
           description: Bad request
         '401':
@@ -5509,7 +5509,7 @@ paths:
   /v1/b2b/passwords/discovery/email/reset:
     post:
       summary: Reset
-      operationId: api_multitenant_password_v1_b2b_passwords_discovery_email_Reset
+      operationId: api_b2b_password_v1_b2b_passwords_discovery_email_Reset
       tags:
       - Discovery
       description: "Reset the password associated with an email and start an intermediate\
@@ -5526,14 +5526,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_multitenant_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_multitenant_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -9246,7 +9246,7 @@ components:
       - consent_required
       - scope_results
       - status_code
-    api_multitenant_mfa_v1_MemberOptions:
+    api_b2b_mfa_v1_MemberOptions:
       type: object
       properties:
         mfa_phone_number:
@@ -9256,11 +9256,11 @@ components:
       required:
       - mfa_phone_number
       - totp_registration_id
-    api_multitenant_mfa_v1_MfaRequired:
+    api_b2b_mfa_v1_MfaRequired:
       type: object
       properties:
         member_options:
-          $ref: '#/components/schemas/api_multitenant_mfa_v1_MemberOptions'
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MemberOptions'
         secondary_auth_initiated:
           type: string
     api_device_history_v1_DeviceAttributeDetails:
@@ -10980,7 +10980,7 @@ components:
       - email_otp
       - impersonated
       - trusted_auth_token
-    api_multitenant_session_v1_AuthorizationCheck:
+    api_b2b_session_v1_AuthorizationCheck:
       type: object
       properties:
         organization_id:
@@ -10993,7 +10993,7 @@ components:
       - organization_id
       - resource_id
       - action
-    api_multitenant_session_v1_AuthorizationVerdict:
+    api_b2b_session_v1_AuthorizationVerdict:
       type: object
       properties:
         authorized:
@@ -11005,7 +11005,7 @@ components:
       required:
       - authorized
       - granting_roles
-    api_multitenant_session_v1_MemberSession:
+    api_b2b_session_v1_MemberSession:
       type: object
       properties:
         member_session_id:
@@ -11042,7 +11042,7 @@ components:
       - organization_id
       - roles
       - organization_slug
-    api_multitenant_session_v1_PrimaryRequired:
+    api_b2b_session_v1_PrimaryRequired:
       type: object
       properties:
         allowed_auth_methods:
@@ -11051,7 +11051,7 @@ components:
             type: string
       required:
       - allowed_auth_methods
-    api_multitenant_session_v1_AttestRequest:
+    api_b2b_session_v1_AttestRequest:
       type: object
       properties:
         profile_id:
@@ -11075,7 +11075,7 @@ components:
       required:
       - profile_id
       - token
-    api_multitenant_session_v1_AttestResponse:
+    api_b2b_session_v1_AttestResponse:
       type: object
       properties:
         request_id:
@@ -11083,7 +11083,7 @@ components:
         member_id:
           type: string
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         session_token:
           type: string
         session_jwt:
@@ -11107,7 +11107,7 @@ components:
       - member
       - organization
       - status_code
-    api_multitenant_session_v1_AuthenticateRequest:
+    api_b2b_session_v1_AuthenticateRequest:
       type: object
       properties:
         session_token:
@@ -11120,15 +11120,15 @@ components:
         session_custom_claims:
           type: string
         authorization_check:
-          $ref: '#/components/schemas/api_multitenant_session_v1_AuthorizationCheck'
+          $ref: '#/components/schemas/api_b2b_session_v1_AuthorizationCheck'
       description: Request type
-    api_multitenant_session_v1_AuthenticateResponse:
+    api_b2b_session_v1_AuthenticateResponse:
       type: object
       properties:
         request_id:
           type: string
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         session_token:
           type: string
         session_jwt:
@@ -11141,7 +11141,7 @@ components:
           type: integer
           format: int32
         verdict:
-          $ref: '#/components/schemas/api_multitenant_session_v1_AuthorizationVerdict'
+          $ref: '#/components/schemas/api_b2b_session_v1_AuthorizationVerdict'
       description: Response type
       required:
       - request_id
@@ -11151,7 +11151,7 @@ components:
       - member
       - organization
       - status_code
-    api_multitenant_session_v1_ExchangeAccessTokenRequest:
+    api_b2b_session_v1_ExchangeAccessTokenRequest:
       type: object
       properties:
         access_token:
@@ -11166,7 +11166,7 @@ components:
       description: Request type
       required:
       - access_token
-    api_multitenant_session_v1_ExchangeAccessTokenResponse:
+    api_b2b_session_v1_ExchangeAccessTokenResponse:
       type: object
       properties:
         request_id:
@@ -11185,7 +11185,7 @@ components:
           type: integer
           format: int32
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         member_device:
           $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
@@ -11197,7 +11197,7 @@ components:
       - member
       - organization
       - status_code
-    api_multitenant_session_v1_ExchangeRequest:
+    api_b2b_session_v1_ExchangeRequest:
       type: object
       properties:
         organization_id:
@@ -11212,13 +11212,13 @@ components:
         session_custom_claims:
           type: string
         locale:
-          $ref: '#/components/schemas/api_multitenant_session_v1_ExchangeRequestLocale'
+          $ref: '#/components/schemas/api_b2b_session_v1_ExchangeRequestLocale'
         telemetry_id:
           type: string
       description: Request type
       required:
       - organization_id
-    api_multitenant_session_v1_ExchangeResponse:
+    api_b2b_session_v1_ExchangeResponse:
       type: object
       properties:
         request_id:
@@ -11241,11 +11241,11 @@ components:
           type: integer
           format: int32
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         mfa_required:
-          $ref: '#/components/schemas/api_multitenant_mfa_v1_MfaRequired'
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
         primary_required:
-          $ref: '#/components/schemas/api_multitenant_session_v1_PrimaryRequired'
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
         member_device:
           $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
@@ -11259,7 +11259,7 @@ components:
       - member_authenticated
       - intermediate_session_token
       - status_code
-    api_multitenant_session_v1_GetJWKSRequest:
+    api_b2b_session_v1_GetJWKSRequest:
       type: object
       properties:
         project_id:
@@ -11267,7 +11267,7 @@ components:
       description: Request type
       required:
       - project_id
-    api_multitenant_session_v1_GetJWKSResponse:
+    api_b2b_session_v1_GetJWKSResponse:
       type: object
       properties:
         keys:
@@ -11284,7 +11284,7 @@ components:
       - keys
       - request_id
       - status_code
-    api_multitenant_session_v1_GetRequest:
+    api_b2b_session_v1_GetRequest:
       type: object
       properties:
         organization_id:
@@ -11295,7 +11295,7 @@ components:
       required:
       - organization_id
       - member_id
-    api_multitenant_session_v1_GetResponse:
+    api_b2b_session_v1_GetResponse:
       type: object
       properties:
         request_id:
@@ -11303,7 +11303,7 @@ components:
         member_sessions:
           type: array
           items:
-            $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+            $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         status_code:
           type: integer
           format: int32
@@ -11312,7 +11312,7 @@ components:
       - request_id
       - member_sessions
       - status_code
-    api_multitenant_session_v1_MigrateRequest:
+    api_b2b_session_v1_MigrateRequest:
       type: object
       properties:
         session_token:
@@ -11328,7 +11328,7 @@ components:
       required:
       - session_token
       - organization_id
-    api_multitenant_session_v1_MigrateResponse:
+    api_b2b_session_v1_MigrateResponse:
       type: object
       properties:
         request_id:
@@ -11347,7 +11347,7 @@ components:
           type: integer
           format: int32
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
       description: Response type
       required:
       - request_id
@@ -11357,7 +11357,7 @@ components:
       - member
       - organization
       - status_code
-    api_multitenant_session_v1_RevokeRequest:
+    api_b2b_session_v1_RevokeRequest:
       type: object
       properties:
         member_session_id:
@@ -11369,7 +11369,7 @@ components:
         member_id:
           type: string
       description: Request type
-    api_multitenant_session_v1_RevokeResponse:
+    api_b2b_session_v1_RevokeResponse:
       type: object
       properties:
         request_id:
@@ -11381,7 +11381,7 @@ components:
       required:
       - request_id
       - status_code
-    api_multitenant_session_v1_ExchangeRequestLocale:
+    api_b2b_session_v1_ExchangeRequestLocale:
       type: string
       enum:
       - en
@@ -11425,9 +11425,9 @@ components:
           type: integer
           format: int32
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         mfa_required:
-          $ref: '#/components/schemas/api_multitenant_mfa_v1_MfaRequired'
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
       description: Response type
       required:
       - request_id
@@ -11632,7 +11632,7 @@ components:
           type: integer
           format: int32
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         member_device:
           $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
@@ -11732,7 +11732,7 @@ components:
           type: integer
           format: int32
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         member_device:
           $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
@@ -12109,9 +12109,9 @@ components:
         membership:
           $ref: '#/components/schemas/api_discovery_v1_Membership'
         primary_required:
-          $ref: '#/components/schemas/api_multitenant_session_v1_PrimaryRequired'
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
         mfa_required:
-          $ref: '#/components/schemas/api_multitenant_mfa_v1_MfaRequired'
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
       required:
       - member_authenticated
     api_discovery_v1_Membership:
@@ -12168,11 +12168,11 @@ components:
           type: integer
           format: int32
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         mfa_required:
-          $ref: '#/components/schemas/api_multitenant_mfa_v1_MfaRequired'
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
         primary_required:
-          $ref: '#/components/schemas/api_multitenant_session_v1_PrimaryRequired'
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
         member_device:
           $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
@@ -12285,13 +12285,13 @@ components:
           type: integer
           format: int32
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         mfa_required:
-          $ref: '#/components/schemas/api_multitenant_mfa_v1_MfaRequired'
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
         primary_required:
-          $ref: '#/components/schemas/api_multitenant_session_v1_PrimaryRequired'
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
         member_device:
           $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
@@ -13548,7 +13548,7 @@ components:
       - es
       - pt-br
       - fr
-    api_multitenant_oauth_v1_ProviderValues:
+    api_b2b_oauth_v1_ProviderValues:
       type: object
       properties:
         scopes:
@@ -13565,7 +13565,7 @@ components:
           type: string
       required:
       - scopes
-    api_multitenant_oauth_v1_AuthenticateRequest:
+    api_b2b_oauth_v1_AuthenticateRequest:
       type: object
       properties:
         discovery_oauth_token:
@@ -13584,7 +13584,7 @@ components:
       description: Request type
       required:
       - discovery_oauth_token
-    api_multitenant_oauth_v1_AuthenticateResponse:
+    api_b2b_oauth_v1_AuthenticateResponse:
       type: object
       properties:
         request_id:
@@ -13621,7 +13621,7 @@ components:
       - provider_tenant_ids
       - full_name
       - status_code
-    api_multitenant_oauth_v1_AuthenticateRequestLocale:
+    api_b2b_oauth_v1_AuthenticateRequestLocale:
       type: string
       enum:
       - en
@@ -13632,7 +13632,7 @@ components:
       - de-DE
       - zh-Hans
       - ca-ES
-    api_multitenant_otp_v1_AuthenticateRequest:
+    api_b2b_otp_v1_AuthenticateRequest:
       type: object
       properties:
         email_address:
@@ -13643,7 +13643,7 @@ components:
       required:
       - email_address
       - code
-    api_multitenant_otp_v1_AuthenticateResponse:
+    api_b2b_otp_v1_AuthenticateResponse:
       type: object
       properties:
         request_id:
@@ -13666,7 +13666,7 @@ components:
       - email_address
       - discovered_organizations
       - status_code
-    api_multitenant_otp_v1_SendRequest:
+    api_b2b_otp_v1_SendRequest:
       type: object
       properties:
         email_address:
@@ -13674,7 +13674,7 @@ components:
         login_template_id:
           type: string
         locale:
-          $ref: '#/components/schemas/api_multitenant_otp_v1_SendRequestLocale'
+          $ref: '#/components/schemas/api_b2b_otp_v1_SendRequestLocale'
         discovery_expiration_minutes:
           type: integer
           format: int32
@@ -13682,7 +13682,7 @@ components:
       description: Request type
       required:
       - email_address
-    api_multitenant_otp_v1_SendResponse:
+    api_b2b_otp_v1_SendResponse:
       type: object
       properties:
         request_id:
@@ -13694,14 +13694,14 @@ components:
       required:
       - request_id
       - status_code
-    api_multitenant_otp_v1_SendRequestLocale:
+    api_b2b_otp_v1_SendRequestLocale:
       type: string
       enum:
       - en
       - es
       - pt-br
       - fr
-    api_multitenant_otp_v1_LoginOrSignupRequest:
+    api_b2b_otp_v1_LoginOrSignupRequest:
       type: object
       properties:
         organization_id:
@@ -13713,7 +13713,7 @@ components:
         signup_template_id:
           type: string
         locale:
-          $ref: '#/components/schemas/api_multitenant_otp_v1_LoginOrSignupRequestLocale'
+          $ref: '#/components/schemas/api_b2b_otp_v1_LoginOrSignupRequestLocale'
         login_expiration_minutes:
           type: integer
           format: int32
@@ -13726,7 +13726,7 @@ components:
       required:
       - organization_id
       - email_address
-    api_multitenant_otp_v1_LoginOrSignupResponse:
+    api_b2b_otp_v1_LoginOrSignupResponse:
       type: object
       properties:
         request_id:
@@ -13750,14 +13750,14 @@ components:
       - member
       - organization
       - status_code
-    api_multitenant_otp_v1_AuthenticateRequestLocale:
+    api_b2b_otp_v1_AuthenticateRequestLocale:
       type: string
       enum:
       - en
       - es
       - pt-br
       - fr
-    api_multitenant_otp_v1_LoginOrSignupRequestLocale:
+    api_b2b_otp_v1_LoginOrSignupRequestLocale:
       type: string
       enum:
       - en
@@ -14203,7 +14203,7 @@ components:
       - es
       - pt-br
       - fr
-    api_multitenant_password_v1_LudsFeedback:
+    api_b2b_password_v1_LudsFeedback:
       type: object
       properties:
         has_lower_case:
@@ -14227,7 +14227,7 @@ components:
       - has_symbol
       - missing_complexity
       - missing_characters
-    api_multitenant_password_v1_ZxcvbnFeedback:
+    api_b2b_password_v1_ZxcvbnFeedback:
       type: object
       properties:
         warning:
@@ -14239,7 +14239,7 @@ components:
       required:
       - warning
       - suggestions
-    api_multitenant_password_v1_AuthenticateRequest:
+    api_b2b_password_v1_AuthenticateRequest:
       type: object
       properties:
         email_address:
@@ -14250,7 +14250,7 @@ components:
       required:
       - email_address
       - password
-    api_multitenant_password_v1_AuthenticateResponse:
+    api_b2b_password_v1_AuthenticateResponse:
       type: object
       properties:
         request_id:
@@ -14273,7 +14273,7 @@ components:
       - intermediate_session_token
       - discovered_organizations
       - status_code
-    api_multitenant_password_v1_MigrateRequest:
+    api_b2b_password_v1_MigrateRequest:
       type: object
       properties:
         email_address:
@@ -14281,7 +14281,7 @@ components:
         hash:
           type: string
         hash_type:
-          $ref: '#/components/schemas/api_multitenant_password_v1_MigrateRequestHashType'
+          $ref: '#/components/schemas/api_b2b_password_v1_MigrateRequestHashType'
         organization_id:
           type: string
         md_5_config:
@@ -14318,7 +14318,7 @@ components:
       - hash
       - hash_type
       - organization_id
-    api_multitenant_password_v1_MigrateResponse:
+    api_b2b_password_v1_MigrateResponse:
       type: object
       properties:
         request_id:
@@ -14342,7 +14342,7 @@ components:
       - member
       - organization
       - status_code
-    api_multitenant_password_v1_StrengthCheckRequest:
+    api_b2b_password_v1_StrengthCheckRequest:
       type: object
       properties:
         password:
@@ -14352,7 +14352,7 @@ components:
       description: Request type
       required:
       - password
-    api_multitenant_password_v1_StrengthCheckResponse:
+    api_b2b_password_v1_StrengthCheckResponse:
       type: object
       properties:
         request_id:
@@ -14372,9 +14372,9 @@ components:
           type: integer
           format: int32
         luds_feedback:
-          $ref: '#/components/schemas/api_multitenant_password_v1_LudsFeedback'
+          $ref: '#/components/schemas/api_b2b_password_v1_LudsFeedback'
         zxcvbn_feedback:
-          $ref: '#/components/schemas/api_multitenant_password_v1_ZxcvbnFeedback'
+          $ref: '#/components/schemas/api_b2b_password_v1_ZxcvbnFeedback'
       description: Response type
       required:
       - request_id
@@ -14384,14 +14384,14 @@ components:
       - strength_policy
       - breach_detection_on_create
       - status_code
-    api_multitenant_password_v1_AuthenticateRequestLocale:
+    api_b2b_password_v1_AuthenticateRequestLocale:
       type: string
       enum:
       - en
       - es
       - pt-br
       - fr
-    api_multitenant_password_v1_MigrateRequestHashType:
+    api_b2b_password_v1_MigrateRequestHashType:
       type: string
       enum:
       - bcrypt
@@ -14402,7 +14402,7 @@ components:
       - scrypt
       - phpass
       - pbkdf_2
-    api_multitenant_password_v1_RequireResetRequest:
+    api_b2b_password_v1_RequireResetRequest:
       type: object
       properties:
         email_address:
@@ -14414,7 +14414,7 @@ components:
       description: Request type
       required:
       - email_address
-    api_multitenant_password_v1_RequireResetResponse:
+    api_b2b_password_v1_RequireResetResponse:
       type: object
       properties:
         request_id:
@@ -14432,7 +14432,7 @@ components:
       required:
       - request_id
       - status_code
-    api_multitenant_password_v1_ResetRequest:
+    api_b2b_password_v1_ResetRequest:
       type: object
       properties:
         password_reset_token:
@@ -14445,7 +14445,7 @@ components:
       required:
       - password_reset_token
       - password
-    api_multitenant_password_v1_ResetResponse:
+    api_b2b_password_v1_ResetResponse:
       type: object
       properties:
         request_id:
@@ -14468,7 +14468,7 @@ components:
       - email_address
       - discovered_organizations
       - status_code
-    api_multitenant_password_v1_ResetStartRequest:
+    api_b2b_password_v1_ResetStartRequest:
       type: object
       properties:
         email_address:
@@ -14491,7 +14491,7 @@ components:
       description: Request type
       required:
       - email_address
-    api_multitenant_password_v1_ResetStartResponse:
+    api_b2b_password_v1_ResetStartResponse:
       type: object
       properties:
         request_id:
@@ -14503,14 +14503,14 @@ components:
       required:
       - request_id
       - status_code
-    api_multitenant_password_v1_ResetRequestLocale:
+    api_b2b_password_v1_ResetRequestLocale:
       type: string
       enum:
       - en
       - es
       - pt-br
       - fr
-    api_multitenant_password_v1_ResetStartRequestLocale:
+    api_b2b_password_v1_ResetStartRequestLocale:
       type: string
       enum:
       - en
@@ -15098,11 +15098,11 @@ components:
           type: integer
           format: int32
         member_session:
-          $ref: '#/components/schemas/api_multitenant_session_v1_MemberSession'
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
         mfa_required:
-          $ref: '#/components/schemas/api_multitenant_mfa_v1_MfaRequired'
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
         primary_required:
-          $ref: '#/components/schemas/api_multitenant_session_v1_PrimaryRequired'
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
         member_device:
           $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
