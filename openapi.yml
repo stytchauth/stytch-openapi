@@ -5649,6 +5649,52 @@ paths:
                 error_message: Oops, something seems to have gone wrong, please reach
                   out to support@stytch.com to let us know what went wrong.
                 error_url: https://stytch.com/docs/api/errors/500
+  /v1/debug/whoami:
+    get:
+      summary: Whoami
+      operationId: api_debug_v1_Whoami
+      tags:
+      - Debug
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/api_debug_v1_WhoamiResponse'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                status_code: 401
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: unauthorized_credentials
+                error_message: Unauthorized credentials.
+                error_url: https://stytch.com/docs/api/errors/401
+        '429':
+          description: Too Many Requests
+          content:
+            application/json:
+              example:
+                status_code: 429
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: too_many_requests
+                error_message: Too many requests have been made.
+                error_url: https://stytch.com/docs/api/errors/429
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                status_code: 500
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: internal_server_error
+                error_message: Oops, something seems to have gone wrong, please reach
+                  out to support@stytch.com to let us know what went wrong.
+                error_url: https://stytch.com/docs/api/errors/500
   /v1/b2b/discovery/intermediate_sessions/exchange:
     post:
       summary: Exchange
@@ -14233,6 +14279,10 @@ components:
             $ref: '#/components/schemas/api_user_v1_BiometricRegistration'
         is_locked:
           type: boolean
+        roles:
+          type: array
+          items:
+            type: string
         name:
           $ref: '#/components/schemas/api_user_v1_Name'
         created_at:
@@ -14260,6 +14310,7 @@ components:
       - crypto_wallets
       - biometric_registrations
       - is_locked
+      - roles
     api_user_v1_UserConnectedApp:
       type: object
       properties:
@@ -14347,6 +14398,10 @@ components:
           type: string
         external_id:
           type: string
+        roles:
+          type: array
+          items:
+            type: string
       description: Request type
     api_user_v1_CreateResponse:
       type: object
@@ -14683,6 +14738,10 @@ components:
             $ref: '#/components/schemas/api_user_v1_BiometricRegistration'
         is_locked:
           type: boolean
+        roles:
+          type: array
+          items:
+            type: string
         status_code:
           type: integer
           format: int32
@@ -14715,6 +14774,7 @@ components:
       - crypto_wallets
       - biometric_registrations
       - is_locked
+      - roles
       - status_code
     api_user_v1_RevokeRequest:
       type: object
@@ -14786,6 +14846,10 @@ components:
           type: string
         external_id:
           type: string
+        roles:
+          type: array
+          items:
+            type: string
       description: Request type
       required:
       - user_id
@@ -16877,6 +16941,26 @@ components:
       - uri
       - chain_id
       - resources
+      - status_code
+    api_debug_v1_WhoamiRequest:
+      type: object
+      properties: {}
+    api_debug_v1_WhoamiResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        project_id:
+          type: string
+        name:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+      required:
+      - request_id
+      - project_id
+      - name
       - status_code
     api_discovery_v1_DiscoveredOrganization:
       type: object
@@ -19768,6 +19852,8 @@ components:
           type: string
         idp_initiated_auth_disabled:
           type: boolean
+        allow_gateway_callback:
+          type: boolean
         attribute_mapping:
           type: string
       required:
@@ -19789,6 +19875,7 @@ components:
       - nameid_format
       - alternative_acs_url
       - idp_initiated_auth_disabled
+      - allow_gateway_callback
     api_sso_v1_SAMLConnectionImplicitRoleAssignment:
       type: object
       properties:
