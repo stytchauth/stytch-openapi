@@ -2182,16 +2182,22 @@ paths:
         to update to the same email at once)
 
 
-        The member will receive an Email Magic Link that expires in 5 minutes. If
-        they do not verify their new email address in that timeframe, the email
+        The member will receive an Email Magic Link (or Email OTP Code, if `EMAIL_OTP`
+        is specified as the delivery method) that expires in 5 minutes. If they do
+        not verify their new email address in that timeframe, the email
 
         will be freed up for other members to use.
 
 
-        The Magic Link will redirect to your `login_redirect_url` (or the configured
-        default if one isn''t provided), and you should invoke the [Authenticate Magic
-        Link](https://stytch.com/docs/b2b/api/authenticate-magic-link) endpoint as
-        normal to complete the flow.'
+        If using Email Magic Links, the magic link will redirect to your `login_redirect_url`
+        (or the configured default if one isn''t provided), and you should invoke
+        the [Authenticate Magic Link](https://stytch.com/docs/b2b/api/authenticate-magic-link)
+        endpoint as normal to complete the flow.
+
+
+        If using Email OTP Codes, you should invoke the [Authenticate Email OTP Code](https://stytch.com/docs/b2b/api/authenticate-email-otp)
+        endpoint as normal to complete the flow. Make sure to pass the new email address
+        to the endpoint.'
       requestBody:
         required: true
         content:
@@ -13698,6 +13704,8 @@ components:
           $ref: '#/components/schemas/api_organization_v1_StartEmailUpdateRequestLocale'
         login_template_id:
           type: string
+        delivery_method:
+          $ref: '#/components/schemas/api_organization_v1_StartEmailUpdateRequestDeliveryMethod'
       description: Request type
       required:
       - organization_id
@@ -13763,6 +13771,11 @@ components:
       - member
       - organization
       - status_code
+    api_organization_v1_StartEmailUpdateRequestDeliveryMethod:
+      type: string
+      enum:
+      - EMAIL_MAGIC_LINK
+      - EMAIL_OTP
     api_organization_v1_StartEmailUpdateRequestLocale:
       type: string
       enum:
