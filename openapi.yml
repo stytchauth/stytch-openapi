@@ -15381,6 +15381,10 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/api_session_v1_AuthenticationFactor'
+        roles:
+          type: array
+          items:
+            type: string
         started_at:
           type: string
         last_accessed_at:
@@ -15395,6 +15399,7 @@ components:
       - session_id
       - user_id
       - authentication_factors
+      - roles
     api_session_v1_ShopifyOAuthFactor:
       type: object
       properties:
@@ -17092,6 +17097,8 @@ components:
         organization_name:
           type: string
         organization_slug:
+          type: string
+        organization_external_id:
           type: string
         organization_logo_url:
           type: string
