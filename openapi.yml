@@ -521,6 +521,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -582,6 +596,20 @@ paths:
       - name: connection_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -654,6 +682,20 @@ paths:
           type: integer
           format: int32
           minimum: 0
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -716,6 +758,20 @@ paths:
       - name: connection_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -785,6 +841,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -850,6 +920,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -909,6 +993,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -959,6 +1057,20 @@ paths:
       - name: organization_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -1143,6 +1255,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -1200,6 +1326,20 @@ paths:
       - name: organization_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -1376,6 +1516,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -1438,6 +1592,20 @@ paths:
       - name: connected_app_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -1504,6 +1672,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -1565,6 +1747,20 @@ paths:
       - name: member_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -1638,6 +1834,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -1708,6 +1918,20 @@ paths:
       - name: member_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -1783,6 +2007,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -1848,6 +2086,21 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/api_organization_v1_SearchRequest'
+      parameters:
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -1913,6 +2166,20 @@ paths:
       - name: member_password_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -2119,6 +2386,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -2215,6 +2496,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -2284,6 +2579,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -2342,6 +2651,20 @@ paths:
       - name: organization_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -2814,6 +3137,20 @@ paths:
       - name: connected_app_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -4615,6 +4952,21 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/api_b2b_session_v1_RevokeRequest'
+      parameters:
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -7525,6 +7877,21 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/api_magic_v1_InviteRequest'
+      parameters:
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -9118,6 +9485,21 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/api_b2b_password_v1_RequireResetRequest'
+      parameters:
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -10229,6 +10611,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -10291,6 +10687,20 @@ paths:
       - name: connection_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -10421,6 +10831,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -10499,6 +10923,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -10556,6 +10994,20 @@ paths:
       - name: organization_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -10632,6 +11084,20 @@ paths:
       - name: connection_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -10711,6 +11177,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -10785,6 +11265,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -10854,6 +11348,20 @@ paths:
         required: true
         schema:
           type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
       responses:
         '200':
           description: Successful response
@@ -10911,6 +11419,20 @@ paths:
       - name: organization_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
@@ -10975,6 +11497,20 @@ paths:
       - name: connection_id
         in: path
         required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
         schema:
           type: string
       responses:
