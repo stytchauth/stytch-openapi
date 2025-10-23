@@ -34,7 +34,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_connectedapps_v1_GetResponse'
+                $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_GetResponse'
         '400':
           description: Bad request
         '401':
@@ -80,7 +80,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_connectedapps_v1_UpdateRequest'
+              $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_UpdateRequest'
       parameters:
       - name: client_id
         in: path
@@ -93,7 +93,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_connectedapps_v1_UpdateResponse'
+                $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_UpdateResponse'
         '400':
           description: Bad request
         '401':
@@ -138,7 +138,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_connectedapps_v1_DeleteRequest'
+              $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_DeleteRequest'
       parameters:
       - name: client_id
         in: path
@@ -151,7 +151,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_connectedapps_v1_DeleteResponse'
+                $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_DeleteResponse'
         '400':
           description: Bad request
         '401':
@@ -198,14 +198,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_connectedapps_v1_SearchRequest'
+              $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_SearchRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_connectedapps_v1_SearchResponse'
+                $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_SearchResponse'
         '400':
           description: Bad request
         '401':
@@ -259,14 +259,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_connectedapps_v1_CreateRequest'
+              $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_CreateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_connectedapps_v1_CreateResponse'
+                $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_CreateResponse'
         '400':
           description: Bad request
         '401':
@@ -325,7 +325,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_connectedapps_v1_RotateStartRequest'
+              $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_secrets_RotateStartRequest'
       parameters:
       - name: client_id
         in: path
@@ -338,7 +338,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_connectedapps_v1_RotateStartResponse'
+                $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_secrets_RotateStartResponse'
         '400':
           description: Bad request
         '401':
@@ -387,7 +387,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_connectedapps_v1_RotateCancelRequest'
+              $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_secrets_RotateCancelRequest'
       parameters:
       - name: client_id
         in: path
@@ -400,7 +400,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_connectedapps_v1_RotateCancelResponse'
+                $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_secrets_RotateCancelResponse'
         '400':
           description: Bad request
         '401':
@@ -450,7 +450,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_connectedapps_v1_RotateRequest'
+              $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_secrets_RotateRequest'
       parameters:
       - name: client_id
         in: path
@@ -463,7 +463,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_connectedapps_v1_RotateResponse'
+                $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_secrets_RotateResponse'
         '400':
           description: Bad request
         '401':
@@ -509,7 +509,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_scim_v1_UpdateRequest'
+              $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_UpdateRequest'
       parameters:
       - name: organization_id
         in: path
@@ -541,7 +541,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_scim_v1_UpdateResponse'
+                $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_UpdateResponse'
         '400':
           description: Bad request
         '401':
@@ -586,7 +586,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_scim_v1_DeleteRequest'
+              $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_DeleteRequest'
       parameters:
       - name: organization_id
         in: path
@@ -618,7 +618,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_scim_v1_DeleteResponse'
+                $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_DeleteResponse'
         '400':
           description: Bad request
         '401':
@@ -702,7 +702,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_scim_v1_GetGroupsResponse'
+                $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_GetGroupsResponse'
         '400':
           description: Bad request
         '401':
@@ -748,7 +748,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_scim_v1_RotateStartRequest'
+              $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_RotateStartRequest'
       parameters:
       - name: organization_id
         in: path
@@ -780,7 +780,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_scim_v1_RotateStartResponse'
+                $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_RotateStartResponse'
         '400':
           description: Bad request
         '401':
@@ -829,7 +829,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_scim_v1_RotateCompleteRequest'
+              $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_RotateCompleteRequest'
       parameters:
       - name: organization_id
         in: path
@@ -861,7 +861,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_scim_v1_RotateCompleteResponse'
+                $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_RotateCompleteResponse'
         '400':
           description: Bad request
         '401':
@@ -908,7 +908,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_scim_v1_RotateCancelRequest'
+              $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_RotateCancelRequest'
       parameters:
       - name: organization_id
         in: path
@@ -940,7 +940,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_scim_v1_RotateCancelResponse'
+                $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_RotateCancelResponse'
         '400':
           description: Bad request
         '401':
@@ -986,7 +986,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_scim_v1_CreateRequest'
+              $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_CreateRequest'
       parameters:
       - name: organization_id
         in: path
@@ -1013,7 +1013,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_scim_v1_CreateResponse'
+                $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_CreateResponse'
         '400':
           description: Bad request
         '401':
@@ -1079,7 +1079,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_scim_v1_GetResponse'
+                $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_GetResponse'
         '400':
           description: Bad request
         '401':
@@ -1660,7 +1660,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_UpdateRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_UpdateRequest'
       parameters:
       - name: organization_id
         in: path
@@ -1692,7 +1692,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_UpdateResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_UpdateResponse'
         '400':
           description: Bad request
         '401':
@@ -1737,7 +1737,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_DeleteRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteRequest'
       parameters:
       - name: organization_id
         in: path
@@ -1769,7 +1769,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_DeleteResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteResponse'
         '400':
           description: Bad request
         '401':
@@ -1822,7 +1822,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_ReactivateRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_ReactivateRequest'
       parameters:
       - name: organization_id
         in: path
@@ -1854,7 +1854,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_ReactivateResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_ReactivateResponse'
         '400':
           description: Bad request
         '401':
@@ -1908,7 +1908,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_DeleteMFAPhoneNumberRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteMFAPhoneNumberRequest'
       parameters:
       - name: organization_id
         in: path
@@ -1940,7 +1940,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_DeleteMFAPhoneNumberResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteMFAPhoneNumberResponse'
         '400':
           description: Bad request
         '401':
@@ -1995,7 +1995,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_DeleteTOTPRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteTOTPRequest'
       parameters:
       - name: organization_id
         in: path
@@ -2027,7 +2027,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_DeleteTOTPResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteTOTPResponse'
         '400':
           description: Bad request
         '401':
@@ -2085,7 +2085,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_SearchRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_SearchRequest'
       parameters:
       - name: X-Stytch-Member-Session
         in: header
@@ -2107,7 +2107,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_SearchResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_SearchResponse'
         '400':
           description: Bad request
         '401':
@@ -2156,7 +2156,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_DeletePasswordRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_DeletePasswordRequest'
       parameters:
       - name: organization_id
         in: path
@@ -2188,7 +2188,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_DeletePasswordResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_DeletePasswordResponse'
         '400':
           description: Bad request
         '401':
@@ -2250,7 +2250,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_GetResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_GetResponse'
         '400':
           description: Bad request
         '401':
@@ -2316,7 +2316,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_OIDCProvidersResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_OIDCProvidersResponse'
         '400':
           description: Bad request
         '401':
@@ -2374,7 +2374,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_UnlinkRetiredEmailRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_UnlinkRetiredEmailRequest'
       parameters:
       - name: organization_id
         in: path
@@ -2406,7 +2406,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_UnlinkRetiredEmailResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_UnlinkRetiredEmailResponse'
         '400':
           description: Bad request
         '401':
@@ -2484,7 +2484,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_StartEmailUpdateRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_StartEmailUpdateRequest'
       parameters:
       - name: organization_id
         in: path
@@ -2516,7 +2516,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_StartEmailUpdateResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_StartEmailUpdateResponse'
         '400':
           description: Bad request
         '401':
@@ -2599,7 +2599,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_GetConnectedAppsResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_GetConnectedAppsResponse'
         '400':
           description: Bad request
         '401':
@@ -2646,7 +2646,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_CreateRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_CreateRequest'
       parameters:
       - name: organization_id
         in: path
@@ -2673,7 +2673,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_CreateResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_CreateResponse'
         '400':
           description: Bad request
         '401':
@@ -2736,7 +2736,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_GetResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_GetResponse'
         '400':
           description: Bad request
         '401':
@@ -2809,7 +2809,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_GoogleResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_oauth_providers_GoogleResponse'
         '400':
           description: Bad request
         '401':
@@ -2878,7 +2878,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_MicrosoftResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_oauth_providers_MicrosoftResponse'
         '400':
           description: Bad request
         '401':
@@ -2938,7 +2938,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_SlackResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_oauth_providers_SlackResponse'
         '400':
           description: Bad request
         '401':
@@ -3004,7 +3004,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_HubspotResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_oauth_providers_HubspotResponse'
         '400':
           description: Bad request
         '401':
@@ -3070,7 +3070,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_GithubResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_oauth_providers_GithubResponse'
         '400':
           description: Bad request
         '401':
@@ -3122,7 +3122,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_organization_v1_RevokeRequest'
+              $ref: '#/components/schemas/api_organization_v1_organizations_members_connected_apps_RevokeRequest'
       parameters:
       - name: organization_id
         in: path
@@ -3159,7 +3159,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_RevokeResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_connected_apps_RevokeResponse'
         '400':
           description: Bad request
         '401':
@@ -3247,14 +3247,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_idp_v1_AuthorizeStartRequest'
+              $ref: '#/components/schemas/api_b2b_idp_v1_b2b_idp_oauth_AuthorizeStartRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_idp_v1_AuthorizeStartResponse'
+                $ref: '#/components/schemas/api_b2b_idp_v1_b2b_idp_oauth_AuthorizeStartResponse'
         '400':
           description: Bad request
         '401':
@@ -3339,14 +3339,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_idp_v1_AuthorizeRequest'
+              $ref: '#/components/schemas/api_b2b_idp_v1_b2b_idp_oauth_AuthorizeRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_idp_v1_AuthorizeResponse'
+                $ref: '#/components/schemas/api_b2b_idp_v1_b2b_idp_oauth_AuthorizeResponse'
         '400':
           description: Bad request
         '401':
@@ -6104,14 +6104,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_discovery_v1_ExchangeRequest'
+              $ref: '#/components/schemas/api_discovery_v1_discovery_intermediate_sessions_ExchangeRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_discovery_v1_ExchangeResponse'
+                $ref: '#/components/schemas/api_discovery_v1_discovery_intermediate_sessions_ExchangeResponse'
         '400':
           description: Bad request
         '401':
@@ -6184,14 +6184,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_discovery_v1_CreateRequest'
+              $ref: '#/components/schemas/api_discovery_v1_discovery_organizations_CreateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_discovery_v1_CreateResponse'
+                $ref: '#/components/schemas/api_discovery_v1_discovery_organizations_CreateResponse'
         '400':
           description: Bad request
         '401':
@@ -6331,14 +6331,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_fraud_v1_LookupRequest'
+              $ref: '#/components/schemas/api_fraud_v1_fraud_fingerprint_LookupRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_fraud_v1_LookupResponse'
+                $ref: '#/components/schemas/api_fraud_v1_fraud_fingerprint_LookupResponse'
         '400':
           description: Bad request
         '401':
@@ -6414,14 +6414,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_fraud_v1_SetRequest'
+              $ref: '#/components/schemas/api_fraud_v1_fraud_rules_SetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_fraud_v1_SetResponse'
+                $ref: '#/components/schemas/api_fraud_v1_fraud_rules_SetResponse'
         '400':
           description: Bad request
         '401':
@@ -6467,14 +6467,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_fraud_v1_ListRequest'
+              $ref: '#/components/schemas/api_fraud_v1_fraud_rules_ListRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_fraud_v1_ListResponse'
+                $ref: '#/components/schemas/api_fraud_v1_fraud_rules_ListResponse'
         '400':
           description: Bad request
         '401':
@@ -6525,14 +6525,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_fraud_v1_OverrideRequest'
+              $ref: '#/components/schemas/api_fraud_v1_fraud_verdict_reasons_OverrideRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_fraud_v1_OverrideResponse'
+                $ref: '#/components/schemas/api_fraud_v1_fraud_verdict_reasons_OverrideResponse'
         '400':
           description: Bad request
         '401':
@@ -6584,14 +6584,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_fraud_v1_ListRequest'
+              $ref: '#/components/schemas/api_fraud_v1_fraud_verdict_reasons_ListRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_fraud_v1_ListResponse'
+                $ref: '#/components/schemas/api_fraud_v1_fraud_verdict_reasons_ListResponse'
         '400':
           description: Bad request
         '401':
@@ -6653,14 +6653,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_idp_v1_AuthorizeStartRequest'
+              $ref: '#/components/schemas/api_idp_v1_idp_oauth_AuthorizeStartRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_idp_v1_AuthorizeStartResponse'
+                $ref: '#/components/schemas/api_idp_v1_idp_oauth_AuthorizeStartResponse'
         '400':
           description: Bad request
         '401':
@@ -6722,14 +6722,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_idp_v1_AuthorizeRequest'
+              $ref: '#/components/schemas/api_idp_v1_idp_oauth_AuthorizeRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_idp_v1_AuthorizeResponse'
+                $ref: '#/components/schemas/api_idp_v1_idp_oauth_AuthorizeResponse'
         '400':
           description: Bad request
         '401':
@@ -6844,7 +6844,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_m2m_v1_GetResponse'
+                $ref: '#/components/schemas/api_m2m_v1_m2m_clients_GetResponse'
         '400':
           description: Bad request
         '401':
@@ -6899,7 +6899,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_m2m_v1_UpdateRequest'
+              $ref: '#/components/schemas/api_m2m_v1_m2m_clients_UpdateRequest'
       parameters:
       - name: client_id
         in: path
@@ -6912,7 +6912,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_m2m_v1_UpdateResponse'
+                $ref: '#/components/schemas/api_m2m_v1_m2m_clients_UpdateResponse'
         '400':
           description: Bad request
         '401':
@@ -6965,7 +6965,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_m2m_v1_DeleteRequest'
+              $ref: '#/components/schemas/api_m2m_v1_m2m_clients_DeleteRequest'
       parameters:
       - name: client_id
         in: path
@@ -6978,7 +6978,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_m2m_v1_DeleteResponse'
+                $ref: '#/components/schemas/api_m2m_v1_m2m_clients_DeleteResponse'
         '400':
           description: Bad request
         '401':
@@ -7035,14 +7035,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_m2m_v1_SearchRequest'
+              $ref: '#/components/schemas/api_m2m_v1_m2m_clients_SearchRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_m2m_v1_SearchResponse'
+                $ref: '#/components/schemas/api_m2m_v1_m2m_clients_SearchResponse'
         '400':
           description: Bad request
         '401':
@@ -7099,14 +7099,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_m2m_v1_CreateRequest'
+              $ref: '#/components/schemas/api_m2m_v1_m2m_clients_CreateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_m2m_v1_CreateResponse'
+                $ref: '#/components/schemas/api_m2m_v1_m2m_clients_CreateResponse'
         '400':
           description: Bad request
         '401':
@@ -7165,7 +7165,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_m2m_v1_RotateStartRequest'
+              $ref: '#/components/schemas/api_m2m_v1_m2m_clients_secrets_RotateStartRequest'
       parameters:
       - name: client_id
         in: path
@@ -7178,7 +7178,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_m2m_v1_RotateStartResponse'
+                $ref: '#/components/schemas/api_m2m_v1_m2m_clients_secrets_RotateStartResponse'
         '400':
           description: Bad request
         '401':
@@ -7229,7 +7229,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_m2m_v1_RotateCancelRequest'
+              $ref: '#/components/schemas/api_m2m_v1_m2m_clients_secrets_RotateCancelRequest'
       parameters:
       - name: client_id
         in: path
@@ -7242,7 +7242,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_m2m_v1_RotateCancelResponse'
+                $ref: '#/components/schemas/api_m2m_v1_m2m_clients_secrets_RotateCancelResponse'
         '400':
           description: Bad request
         '401':
@@ -7293,7 +7293,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_m2m_v1_RotateRequest'
+              $ref: '#/components/schemas/api_m2m_v1_m2m_clients_secrets_RotateRequest'
       parameters:
       - name: client_id
         in: path
@@ -7306,7 +7306,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_m2m_v1_RotateResponse'
+                $ref: '#/components/schemas/api_m2m_v1_m2m_clients_secrets_RotateResponse'
         '400':
           description: Bad request
         '401':
@@ -7498,14 +7498,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_magic_v1_SendRequest'
+              $ref: '#/components/schemas/api_magic_v1_magic_links_email_SendRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_magic_v1_SendResponse'
+                $ref: '#/components/schemas/api_magic_v1_magic_links_email_SendResponse'
         '400':
           description: Bad request
         '401':
@@ -7563,14 +7563,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_magic_v1_LoginOrCreateRequest'
+              $ref: '#/components/schemas/api_magic_v1_magic_links_email_LoginOrCreateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_magic_v1_LoginOrCreateResponse'
+                $ref: '#/components/schemas/api_magic_v1_magic_links_email_LoginOrCreateResponse'
         '400':
           description: Bad request
         '401':
@@ -7626,14 +7626,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_magic_v1_InviteRequest'
+              $ref: '#/components/schemas/api_magic_v1_magic_links_email_InviteRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_magic_v1_InviteResponse'
+                $ref: '#/components/schemas/api_magic_v1_magic_links_email_InviteResponse'
         '400':
           description: Bad request
         '401':
@@ -7679,14 +7679,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_magic_v1_RevokeInviteRequest'
+              $ref: '#/components/schemas/api_magic_v1_magic_links_email_RevokeInviteRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_magic_v1_RevokeInviteResponse'
+                $ref: '#/components/schemas/api_magic_v1_magic_links_email_RevokeInviteResponse'
         '400':
           description: Bad request
         '401':
@@ -7809,14 +7809,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_magic_v1_LoginOrSignupRequest'
+              $ref: '#/components/schemas/api_magic_v1_b2b_magic_links_email_LoginOrSignupRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_magic_v1_LoginOrSignupResponse'
+                $ref: '#/components/schemas/api_magic_v1_b2b_magic_links_email_LoginOrSignupResponse'
         '400':
           description: Bad request
         '401':
@@ -7876,7 +7876,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_magic_v1_InviteRequest'
+              $ref: '#/components/schemas/api_magic_v1_b2b_magic_links_email_InviteRequest'
       parameters:
       - name: X-Stytch-Member-Session
         in: header
@@ -7898,7 +7898,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_magic_v1_InviteResponse'
+                $ref: '#/components/schemas/api_magic_v1_b2b_magic_links_email_InviteResponse'
         '400':
           description: Bad request
         '401':
@@ -7945,14 +7945,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_magic_v1_SendRequest'
+              $ref: '#/components/schemas/api_magic_v1_b2b_magic_links_email_discovery_SendRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_magic_v1_SendResponse'
+                $ref: '#/components/schemas/api_magic_v1_b2b_magic_links_email_discovery_SendResponse'
         '400':
           description: Bad request
         '401':
@@ -8000,14 +8000,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_magic_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_magic_v1_b2b_magic_links_discovery_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_magic_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_magic_v1_b2b_magic_links_discovery_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -8150,14 +8150,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_oauth_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_oauth_v1_b2b_oauth_discovery_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_oauth_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_oauth_v1_b2b_oauth_discovery_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -8234,14 +8234,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_otp_v1_SendRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_sms_SendRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_otp_v1_SendResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_sms_SendResponse'
         '400':
           description: Bad request
         '401':
@@ -8330,14 +8330,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_sms_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_sms_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -8391,14 +8391,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_otp_v1_LoginOrSignupRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_email_LoginOrSignupRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_otp_v1_LoginOrSignupResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_email_LoginOrSignupResponse'
         '400':
           description: Bad request
         '401':
@@ -8462,14 +8462,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_email_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_email_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -8518,14 +8518,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_otp_v1_SendRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_email_discovery_SendRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_otp_v1_SendResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_email_discovery_SendResponse'
         '400':
           description: Bad request
         '401':
@@ -8573,14 +8573,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_email_discovery_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_otp_v1_b2b_otp_email_discovery_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -8897,14 +8897,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_password_v1_ResetStartRequest'
+              $ref: '#/components/schemas/api_password_v1_passwords_email_ResetStartRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_password_v1_ResetStartResponse'
+                $ref: '#/components/schemas/api_password_v1_passwords_email_ResetStartResponse'
         '400':
           description: Bad request
         '401':
@@ -8958,14 +8958,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_password_v1_passwords_email_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_password_v1_passwords_email_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -9015,14 +9015,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_password_v1_passwords_existing_password_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_password_v1_passwords_existing_password_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -9074,14 +9074,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_password_v1_passwords_session_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_password_v1_passwords_session_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -9359,14 +9359,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_password_v1_ResetStartRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_email_ResetStartRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_password_v1_ResetStartResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_email_ResetStartResponse'
         '400':
           description: Bad request
         '401':
@@ -9426,14 +9426,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_email_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_email_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -9484,7 +9484,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_password_v1_RequireResetRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_email_RequireResetRequest'
       parameters:
       - name: X-Stytch-Member-Session
         in: header
@@ -9506,7 +9506,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_password_v1_RequireResetResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_email_RequireResetResponse'
         '400':
           description: Bad request
         '401':
@@ -9560,14 +9560,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_session_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_session_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -9648,14 +9648,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_existing_password_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_existing_password_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -9716,14 +9716,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_password_v1_AuthenticateRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_discovery_AuthenticateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_password_v1_AuthenticateResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_discovery_AuthenticateResponse'
         '400':
           description: Bad request
         '401':
@@ -9787,14 +9787,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_password_v1_ResetStartRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_discovery_email_ResetStartRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_password_v1_ResetStartResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_discovery_email_ResetStartResponse'
         '400':
           description: Bad request
         '401':
@@ -9848,14 +9848,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_b2b_password_v1_ResetRequest'
+              $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_discovery_email_ResetRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_b2b_password_v1_ResetResponse'
+                $ref: '#/components/schemas/api_b2b_password_v1_b2b_passwords_discovery_email_ResetResponse'
         '400':
           description: Bad request
         '401':
@@ -10135,14 +10135,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_otp_v1_SendRequest'
+              $ref: '#/components/schemas/api_otp_v1_otp_sms_SendRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_otp_v1_SendResponse'
+                $ref: '#/components/schemas/api_otp_v1_otp_sms_SendResponse'
         '400':
           description: Bad request
         '401':
@@ -10218,14 +10218,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_otp_v1_LoginOrCreateRequest'
+              $ref: '#/components/schemas/api_otp_v1_otp_sms_LoginOrCreateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_otp_v1_LoginOrCreateResponse'
+                $ref: '#/components/schemas/api_otp_v1_otp_sms_LoginOrCreateResponse'
         '400':
           description: Bad request
         '401':
@@ -10305,14 +10305,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_otp_v1_SendRequest'
+              $ref: '#/components/schemas/api_otp_v1_otp_whatsapp_SendRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_otp_v1_SendResponse'
+                $ref: '#/components/schemas/api_otp_v1_otp_whatsapp_SendResponse'
         '400':
           description: Bad request
         '401':
@@ -10375,14 +10375,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_otp_v1_LoginOrCreateRequest'
+              $ref: '#/components/schemas/api_otp_v1_otp_whatsapp_LoginOrCreateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_otp_v1_LoginOrCreateResponse'
+                $ref: '#/components/schemas/api_otp_v1_otp_whatsapp_LoginOrCreateResponse'
         '400':
           description: Bad request
         '401':
@@ -10449,14 +10449,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_otp_v1_SendRequest'
+              $ref: '#/components/schemas/api_otp_v1_otp_email_SendRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_otp_v1_SendResponse'
+                $ref: '#/components/schemas/api_otp_v1_otp_email_SendResponse'
         '400':
           description: Bad request
         '401':
@@ -10511,14 +10511,14 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_otp_v1_LoginOrCreateRequest'
+              $ref: '#/components/schemas/api_otp_v1_otp_email_LoginOrCreateRequest'
       responses:
         '200':
           description: Successful response
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_otp_v1_LoginOrCreateResponse'
+                $ref: '#/components/schemas/api_otp_v1_otp_email_LoginOrCreateResponse'
         '400':
           description: Bad request
         '401':
@@ -10824,7 +10824,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_sso_v1_CreateConnectionRequest'
+              $ref: '#/components/schemas/api_sso_v1_sso_oidc_CreateConnectionRequest'
       parameters:
       - name: organization_id
         in: path
@@ -10851,7 +10851,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_sso_v1_CreateConnectionResponse'
+                $ref: '#/components/schemas/api_sso_v1_sso_oidc_CreateConnectionResponse'
         '400':
           description: Bad request
         '401':
@@ -10911,7 +10911,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_sso_v1_UpdateConnectionRequest'
+              $ref: '#/components/schemas/api_sso_v1_sso_oidc_UpdateConnectionRequest'
       parameters:
       - name: organization_id
         in: path
@@ -10943,7 +10943,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_sso_v1_UpdateConnectionResponse'
+                $ref: '#/components/schemas/api_sso_v1_sso_oidc_UpdateConnectionResponse'
         '400':
           description: Bad request
         '401':
@@ -10989,7 +10989,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_sso_v1_CreateConnectionRequest'
+              $ref: '#/components/schemas/api_sso_v1_sso_saml_CreateConnectionRequest'
       parameters:
       - name: organization_id
         in: path
@@ -11016,7 +11016,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_sso_v1_CreateConnectionResponse'
+                $ref: '#/components/schemas/api_sso_v1_sso_saml_CreateConnectionResponse'
         '400':
           description: Bad request
         '401':
@@ -11074,7 +11074,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_sso_v1_UpdateConnectionRequest'
+              $ref: '#/components/schemas/api_sso_v1_sso_saml_UpdateConnectionRequest'
       parameters:
       - name: organization_id
         in: path
@@ -11106,7 +11106,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_sso_v1_UpdateConnectionResponse'
+                $ref: '#/components/schemas/api_sso_v1_sso_saml_UpdateConnectionResponse'
         '400':
           description: Bad request
         '401':
@@ -11165,7 +11165,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_sso_v1_UpdateByURLRequest'
+              $ref: '#/components/schemas/api_sso_v1_sso_saml_UpdateByURLRequest'
       parameters:
       - name: organization_id
         in: path
@@ -11197,7 +11197,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_sso_v1_UpdateByURLResponse'
+                $ref: '#/components/schemas/api_sso_v1_sso_saml_UpdateByURLResponse'
         '400':
           description: Bad request
         '401':
@@ -11248,7 +11248,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_sso_v1_DeleteVerificationCertificateRequest'
+              $ref: '#/components/schemas/api_sso_v1_sso_saml_DeleteVerificationCertificateRequest'
       parameters:
       - name: organization_id
         in: path
@@ -11285,7 +11285,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_sso_v1_DeleteVerificationCertificateResponse'
+                $ref: '#/components/schemas/api_sso_v1_sso_saml_DeleteVerificationCertificateResponse'
         '400':
           description: Bad request
         '401':
@@ -11331,7 +11331,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_sso_v1_DeleteEncryptionPrivateKeyRequest'
+              $ref: '#/components/schemas/api_sso_v1_sso_saml_DeleteEncryptionPrivateKeyRequest'
       parameters:
       - name: organization_id
         in: path
@@ -11368,7 +11368,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_sso_v1_DeleteEncryptionPrivateKeyResponse'
+                $ref: '#/components/schemas/api_sso_v1_sso_saml_DeleteEncryptionPrivateKeyResponse'
         '400':
           description: Bad request
         '401':
@@ -11414,7 +11414,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_sso_v1_CreateConnectionRequest'
+              $ref: '#/components/schemas/api_sso_v1_sso_external_CreateConnectionRequest'
       parameters:
       - name: organization_id
         in: path
@@ -11441,7 +11441,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_sso_v1_CreateConnectionResponse'
+                $ref: '#/components/schemas/api_sso_v1_sso_external_CreateConnectionResponse'
         '400':
           description: Bad request
         '401':
@@ -11487,7 +11487,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/api_sso_v1_UpdateConnectionRequest'
+              $ref: '#/components/schemas/api_sso_v1_sso_external_UpdateConnectionRequest'
       parameters:
       - name: organization_id
         in: path
@@ -11519,7 +11519,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_sso_v1_UpdateConnectionResponse'
+                $ref: '#/components/schemas/api_sso_v1_sso_external_UpdateConnectionResponse'
         '400':
           description: Bad request
         '401':
@@ -12335,7 +12335,7 @@ components:
           type: string
       required:
       - total
-    api_connectedapps_v1_CreateRequest:
+    api_connectedapps_v1_connected_apps_clients_CreateRequest:
       type: object
       properties:
         client_type:
@@ -12368,7 +12368,7 @@ components:
       description: Request type
       required:
       - client_type
-    api_connectedapps_v1_CreateResponse:
+    api_connectedapps_v1_connected_apps_clients_CreateResponse:
       type: object
       properties:
         request_id:
@@ -12383,7 +12383,7 @@ components:
       - request_id
       - connected_app
       - status_code
-    api_connectedapps_v1_DeleteRequest:
+    api_connectedapps_v1_connected_apps_clients_DeleteRequest:
       type: object
       properties:
         client_id:
@@ -12391,7 +12391,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_connectedapps_v1_DeleteResponse:
+    api_connectedapps_v1_connected_apps_clients_DeleteResponse:
       type: object
       properties:
         request_id:
@@ -12406,7 +12406,7 @@ components:
       - request_id
       - client_id
       - status_code
-    api_connectedapps_v1_GetRequest:
+    api_connectedapps_v1_connected_apps_clients_GetRequest:
       type: object
       properties:
         client_id:
@@ -12414,7 +12414,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_connectedapps_v1_GetResponse:
+    api_connectedapps_v1_connected_apps_clients_GetResponse:
       type: object
       properties:
         request_id:
@@ -12429,7 +12429,7 @@ components:
       - request_id
       - connected_app
       - status_code
-    api_connectedapps_v1_SearchRequest:
+    api_connectedapps_v1_connected_apps_clients_SearchRequest:
       type: object
       properties:
         cursor:
@@ -12439,7 +12439,7 @@ components:
           format: int32
           minimum: 0
       description: Request type
-    api_connectedapps_v1_SearchResponse:
+    api_connectedapps_v1_connected_apps_clients_SearchResponse:
       type: object
       properties:
         request_id:
@@ -12459,7 +12459,7 @@ components:
       - connected_apps
       - results_metadata
       - status_code
-    api_connectedapps_v1_UpdateRequest:
+    api_connectedapps_v1_connected_apps_clients_UpdateRequest:
       type: object
       properties:
         client_id:
@@ -12492,7 +12492,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_connectedapps_v1_UpdateResponse:
+    api_connectedapps_v1_connected_apps_clients_UpdateResponse:
       type: object
       properties:
         request_id:
@@ -12514,7 +12514,7 @@ components:
       - first_party_public
       - third_party
       - third_party_public
-    api_connectedapps_v1_RotateCancelRequest:
+    api_connectedapps_v1_connected_apps_clients_secrets_RotateCancelRequest:
       type: object
       properties:
         client_id:
@@ -12522,7 +12522,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_connectedapps_v1_RotateCancelResponse:
+    api_connectedapps_v1_connected_apps_clients_secrets_RotateCancelResponse:
       type: object
       properties:
         request_id:
@@ -12537,7 +12537,7 @@ components:
       - request_id
       - connected_app
       - status_code
-    api_connectedapps_v1_RotateRequest:
+    api_connectedapps_v1_connected_apps_clients_secrets_RotateRequest:
       type: object
       properties:
         client_id:
@@ -12545,7 +12545,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_connectedapps_v1_RotateResponse:
+    api_connectedapps_v1_connected_apps_clients_secrets_RotateResponse:
       type: object
       properties:
         request_id:
@@ -12560,7 +12560,7 @@ components:
       - request_id
       - connected_app
       - status_code
-    api_connectedapps_v1_RotateStartRequest:
+    api_connectedapps_v1_connected_apps_clients_secrets_RotateStartRequest:
       type: object
       properties:
         client_id:
@@ -12568,7 +12568,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_connectedapps_v1_RotateStartResponse:
+    api_connectedapps_v1_connected_apps_clients_secrets_RotateStartResponse:
       type: object
       properties:
         request_id:
@@ -12992,7 +12992,7 @@ components:
       - value
       - type
       - primary
-    api_b2b_scim_v1_CreateRequest:
+    api_b2b_scim_v1_b2b_scim_connection_CreateRequest:
       type: object
       properties:
         organization_id:
@@ -13004,7 +13004,7 @@ components:
       description: Request type
       required:
       - organization_id
-    api_b2b_scim_v1_CreateResponse:
+    api_b2b_scim_v1_b2b_scim_connection_CreateResponse:
       type: object
       properties:
         request_id:
@@ -13018,7 +13018,7 @@ components:
       required:
       - request_id
       - status_code
-    api_b2b_scim_v1_DeleteRequest:
+    api_b2b_scim_v1_b2b_scim_connection_DeleteRequest:
       type: object
       properties:
         organization_id:
@@ -13029,7 +13029,7 @@ components:
       required:
       - organization_id
       - connection_id
-    api_b2b_scim_v1_DeleteResponse:
+    api_b2b_scim_v1_b2b_scim_connection_DeleteResponse:
       type: object
       properties:
         request_id:
@@ -13044,7 +13044,7 @@ components:
       - request_id
       - connection_id
       - status_code
-    api_b2b_scim_v1_GetGroupsRequest:
+    api_b2b_scim_v1_b2b_scim_connection_GetGroupsRequest:
       type: object
       properties:
         organization_id:
@@ -13061,7 +13061,7 @@ components:
       required:
       - organization_id
       - connection_id
-    api_b2b_scim_v1_GetGroupsResponse:
+    api_b2b_scim_v1_b2b_scim_connection_GetGroupsResponse:
       type: object
       properties:
         scim_groups:
@@ -13077,7 +13077,7 @@ components:
       required:
       - scim_groups
       - status_code
-    api_b2b_scim_v1_GetRequest:
+    api_b2b_scim_v1_b2b_scim_connection_GetRequest:
       type: object
       properties:
         organization_id:
@@ -13085,7 +13085,7 @@ components:
       description: Request type
       required:
       - organization_id
-    api_b2b_scim_v1_GetResponse:
+    api_b2b_scim_v1_b2b_scim_connection_GetResponse:
       type: object
       properties:
         request_id:
@@ -13099,7 +13099,7 @@ components:
       required:
       - request_id
       - status_code
-    api_b2b_scim_v1_RotateCancelRequest:
+    api_b2b_scim_v1_b2b_scim_connection_RotateCancelRequest:
       type: object
       properties:
         organization_id:
@@ -13110,7 +13110,7 @@ components:
       required:
       - organization_id
       - connection_id
-    api_b2b_scim_v1_RotateCancelResponse:
+    api_b2b_scim_v1_b2b_scim_connection_RotateCancelResponse:
       type: object
       properties:
         request_id:
@@ -13124,7 +13124,7 @@ components:
       required:
       - request_id
       - status_code
-    api_b2b_scim_v1_RotateCompleteRequest:
+    api_b2b_scim_v1_b2b_scim_connection_RotateCompleteRequest:
       type: object
       properties:
         organization_id:
@@ -13135,7 +13135,7 @@ components:
       required:
       - organization_id
       - connection_id
-    api_b2b_scim_v1_RotateCompleteResponse:
+    api_b2b_scim_v1_b2b_scim_connection_RotateCompleteResponse:
       type: object
       properties:
         request_id:
@@ -13149,7 +13149,7 @@ components:
       required:
       - request_id
       - status_code
-    api_b2b_scim_v1_RotateStartRequest:
+    api_b2b_scim_v1_b2b_scim_connection_RotateStartRequest:
       type: object
       properties:
         organization_id:
@@ -13160,7 +13160,7 @@ components:
       required:
       - organization_id
       - connection_id
-    api_b2b_scim_v1_RotateStartResponse:
+    api_b2b_scim_v1_b2b_scim_connection_RotateStartResponse:
       type: object
       properties:
         request_id:
@@ -13174,7 +13174,7 @@ components:
       required:
       - request_id
       - status_code
-    api_b2b_scim_v1_UpdateRequest:
+    api_b2b_scim_v1_b2b_scim_connection_UpdateRequest:
       type: object
       properties:
         organization_id:
@@ -13193,7 +13193,7 @@ components:
       required:
       - organization_id
       - connection_id
-    api_b2b_scim_v1_UpdateResponse:
+    api_b2b_scim_v1_b2b_scim_connection_UpdateResponse:
       type: object
       properties:
         request_id:
@@ -13729,43 +13729,72 @@ components:
     api_organization_v1_CreateRequest:
       type: object
       properties:
-        organization_id:
+        organization_name:
           type: string
-        email_address:
+        organization_slug:
           type: string
-        name:
+        organization_logo_url:
           type: string
         trusted_metadata:
           type: string
-        untrusted_metadata:
+        organization_external_id:
           type: string
-        create_member_as_pending:
-          type: boolean
-        is_breakglass:
-          type: boolean
-        mfa_phone_number:
+        sso_jit_provisioning:
           type: string
-        mfa_enrolled:
-          type: boolean
-        roles:
+        email_allowed_domains:
           type: array
           items:
             type: string
-        external_id:
+        email_jit_provisioning:
           type: string
+        email_invites:
+          type: string
+        auth_methods:
+          type: string
+        allowed_auth_methods:
+          type: array
+          items:
+            type: string
+        mfa_policy:
+          type: string
+        rbac_email_implicit_role_assignments:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_organization_v1_EmailImplicitRoleAssignment'
+        mfa_methods:
+          type: string
+        allowed_mfa_methods:
+          type: array
+          items:
+            type: string
+        oauth_tenant_jit_provisioning:
+          type: string
+        allowed_oauth_tenants:
+          type: string
+        claimed_email_domains:
+          type: array
+          items:
+            type: string
+        first_party_connected_apps_allowed_type:
+          $ref: '#/components/schemas/api_organization_v1_CreateRequestFirstPartyConnectedAppsAllowedType'
+        allowed_first_party_connected_apps:
+          type: array
+          items:
+            type: string
+        third_party_connected_apps_allowed_type:
+          $ref: '#/components/schemas/api_organization_v1_CreateRequestThirdPartyConnectedAppsAllowedType'
+        allowed_third_party_connected_apps:
+          type: array
+          items:
+            type: string
       description: Request type
       required:
-      - organization_id
-      - email_address
+      - organization_name
     api_organization_v1_CreateResponse:
       type: object
       properties:
         request_id:
           type: string
-        member_id:
-          type: string
-        member:
-          $ref: '#/components/schemas/api_organization_v1_Member'
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
@@ -13774,8 +13803,6 @@ components:
       description: Response type
       required:
       - request_id
-      - member_id
-      - member
       - organization
       - status_code
     api_organization_v1_DeleteRequest:
@@ -13783,18 +13810,15 @@ components:
       properties:
         organization_id:
           type: string
-        member_id:
-          type: string
       description: Request type
       required:
       - organization_id
-      - member_id
     api_organization_v1_DeleteResponse:
       type: object
       properties:
         request_id:
           type: string
-        member_id:
+        organization_id:
           type: string
         status_code:
           type: integer
@@ -13802,7 +13826,7 @@ components:
       description: Response type
       required:
       - request_id
-      - member_id
+      - organization_id
       - status_code
     api_organization_v1_GetConnectedAppRequest:
       type: object
@@ -13848,10 +13872,6 @@ components:
       properties:
         organization_id:
           type: string
-        member_id:
-          type: string
-        email_address:
-          type: string
       description: Request type
       required:
       - organization_id
@@ -13860,10 +13880,6 @@ components:
       properties:
         request_id:
           type: string
-        member_id:
-          type: string
-        member:
-          $ref: '#/components/schemas/api_organization_v1_Member'
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
@@ -13872,8 +13888,6 @@ components:
       description: Response type
       required:
       - request_id
-      - member_id
-      - member
       - organization
       - status_code
     api_organization_v1_MetricsRequest:
@@ -13902,6 +13916,461 @@ components:
     api_organization_v1_SearchRequest:
       type: object
       properties:
+        cursor:
+          type: string
+        limit:
+          type: integer
+          format: int32
+          minimum: 0
+        query:
+          $ref: '#/components/schemas/api_organization_v1_SearchQuery'
+      description: Request type
+    api_organization_v1_SearchResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        organizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_organization_v1_Organization'
+        results_metadata:
+          $ref: '#/components/schemas/api_organization_v1_ResultsMetadata'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - organizations
+      - results_metadata
+      - status_code
+    api_organization_v1_UpdateRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        organization_name:
+          type: string
+        organization_slug:
+          type: string
+        organization_logo_url:
+          type: string
+        trusted_metadata:
+          type: string
+        organization_external_id:
+          type: string
+        sso_default_connection_id:
+          type: string
+        sso_jit_provisioning:
+          type: string
+        sso_jit_provisioning_allowed_connections:
+          type: array
+          items:
+            type: string
+        email_allowed_domains:
+          type: array
+          items:
+            type: string
+        email_jit_provisioning:
+          type: string
+        email_invites:
+          type: string
+        auth_methods:
+          type: string
+        allowed_auth_methods:
+          type: array
+          items:
+            type: string
+        mfa_policy:
+          type: string
+        rbac_email_implicit_role_assignments:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_organization_v1_EmailImplicitRoleAssignment'
+        mfa_methods:
+          type: string
+        allowed_mfa_methods:
+          type: array
+          items:
+            type: string
+        oauth_tenant_jit_provisioning:
+          type: string
+        allowed_oauth_tenants:
+          type: string
+        claimed_email_domains:
+          type: array
+          items:
+            type: string
+        first_party_connected_apps_allowed_type:
+          $ref: '#/components/schemas/api_organization_v1_UpdateRequestFirstPartyConnectedAppsAllowedType'
+        allowed_first_party_connected_apps:
+          type: array
+          items:
+            type: string
+        third_party_connected_apps_allowed_type:
+          $ref: '#/components/schemas/api_organization_v1_UpdateRequestThirdPartyConnectedAppsAllowedType'
+        allowed_third_party_connected_apps:
+          type: array
+          items:
+            type: string
+      description: Request type
+      required:
+      - organization_id
+    api_organization_v1_UpdateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - organization
+      - status_code
+    api_organization_v1_CreateRequestFirstPartyConnectedAppsAllowedType:
+      type: string
+      enum:
+      - ALL_ALLOWED
+      - RESTRICTED
+      - NOT_ALLOWED
+    api_organization_v1_CreateRequestThirdPartyConnectedAppsAllowedType:
+      type: string
+      enum:
+      - ALL_ALLOWED
+      - RESTRICTED
+      - NOT_ALLOWED
+    api_organization_v1_SearchQueryOperator:
+      type: string
+      enum:
+      - OR
+      - AND
+    api_organization_v1_UpdateRequestFirstPartyConnectedAppsAllowedType:
+      type: string
+      enum:
+      - ALL_ALLOWED
+      - RESTRICTED
+      - NOT_ALLOWED
+    api_organization_v1_UpdateRequestThirdPartyConnectedAppsAllowedType:
+      type: string
+      enum:
+      - ALL_ALLOWED
+      - RESTRICTED
+      - NOT_ALLOWED
+    api_organization_v1_organizations_members_CreateRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        email_address:
+          type: string
+        name:
+          type: string
+        trusted_metadata:
+          type: string
+        untrusted_metadata:
+          type: string
+        create_member_as_pending:
+          type: boolean
+        is_breakglass:
+          type: boolean
+        mfa_phone_number:
+          type: string
+        mfa_enrolled:
+          type: boolean
+        roles:
+          type: array
+          items:
+            type: string
+        external_id:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - email_address
+    api_organization_v1_organizations_members_CreateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member
+      - organization
+      - status_code
+    api_organization_v1_organizations_members_DangerouslyGetRequest:
+      type: object
+      properties:
+        member_id:
+          type: string
+        include_deleted:
+          type: boolean
+      description: Request type
+      required:
+      - member_id
+    api_organization_v1_organizations_members_DeleteMFAPhoneNumberRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        member_id:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - member_id
+    api_organization_v1_organizations_members_DeleteMFAPhoneNumberResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member
+      - organization
+      - status_code
+    api_organization_v1_organizations_members_DeletePasswordRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        member_password_id:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - member_password_id
+    api_organization_v1_organizations_members_DeletePasswordResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member
+      - organization
+      - status_code
+    api_organization_v1_organizations_members_DeleteRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        member_id:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - member_id
+    api_organization_v1_organizations_members_DeleteResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - status_code
+    api_organization_v1_organizations_members_DeleteTOTPRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        member_id:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - member_id
+    api_organization_v1_organizations_members_DeleteTOTPResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member
+      - organization
+      - status_code
+    api_organization_v1_organizations_members_GetConnectedAppsRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        member_id:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - member_id
+    api_organization_v1_organizations_members_GetConnectedAppsResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        connected_apps:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_organization_v1_MemberConnectedApp'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - connected_apps
+      - status_code
+    api_organization_v1_organizations_members_GetRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        member_id:
+          type: string
+        email_address:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+    api_organization_v1_organizations_members_GetResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member
+      - organization
+      - status_code
+    api_organization_v1_organizations_members_OIDCProviderInformationRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        member_id:
+          type: string
+        include_refresh_token:
+          type: boolean
+      description: Request type
+      required:
+      - organization_id
+      - member_id
+    api_organization_v1_organizations_members_OIDCProvidersResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        registrations:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_organization_v1_OIDCProviderInfo'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - registrations
+      - status_code
+    api_organization_v1_organizations_members_ReactivateRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        member_id:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - member_id
+    api_organization_v1_organizations_members_ReactivateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member
+      - organization
+      - status_code
+    api_organization_v1_organizations_members_SearchRequest:
+      type: object
+      properties:
         organization_ids:
           type: array
           items:
@@ -13917,7 +14386,7 @@ components:
       description: Request type
       required:
       - organization_ids
-    api_organization_v1_SearchResponse:
+    api_organization_v1_organizations_members_SearchResponse:
       type: object
       properties:
         request_id:
@@ -13942,7 +14411,89 @@ components:
       - results_metadata
       - organizations
       - status_code
-    api_organization_v1_UpdateRequest:
+    api_organization_v1_organizations_members_StartEmailUpdateRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        member_id:
+          type: string
+        email_address:
+          type: string
+        login_redirect_url:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_organization_v1_StartEmailUpdateRequestLocale'
+        login_template_id:
+          type: string
+        delivery_method:
+          $ref: '#/components/schemas/api_organization_v1_StartEmailUpdateRequestDeliveryMethod'
+      description: Request type
+      required:
+      - organization_id
+      - member_id
+      - email_address
+    api_organization_v1_organizations_members_StartEmailUpdateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member
+      - organization
+      - status_code
+    api_organization_v1_organizations_members_UnlinkRetiredEmailRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        member_id:
+          type: string
+        email_id:
+          type: string
+        email_address:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - member_id
+    api_organization_v1_organizations_members_UnlinkRetiredEmailResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        organization_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - organization_id
+      - member
+      - organization
+      - status_code
+    api_organization_v1_organizations_members_UpdateRequest:
       type: object
       properties:
         organization_id:
@@ -13979,7 +14530,7 @@ components:
       required:
       - organization_id
       - member_id
-    api_organization_v1_UpdateResponse:
+    api_organization_v1_organizations_members_UpdateResponse:
       type: object
       properties:
         request_id:
@@ -13997,313 +14548,6 @@ components:
       required:
       - request_id
       - member_id
-      - member
-      - organization
-      - status_code
-    api_organization_v1_CreateRequestFirstPartyConnectedAppsAllowedType:
-      type: string
-      enum:
-      - ALL_ALLOWED
-      - RESTRICTED
-      - NOT_ALLOWED
-    api_organization_v1_CreateRequestThirdPartyConnectedAppsAllowedType:
-      type: string
-      enum:
-      - ALL_ALLOWED
-      - RESTRICTED
-      - NOT_ALLOWED
-    api_organization_v1_SearchQueryOperator:
-      type: string
-      enum:
-      - OR
-      - AND
-    api_organization_v1_UpdateRequestFirstPartyConnectedAppsAllowedType:
-      type: string
-      enum:
-      - ALL_ALLOWED
-      - RESTRICTED
-      - NOT_ALLOWED
-    api_organization_v1_UpdateRequestThirdPartyConnectedAppsAllowedType:
-      type: string
-      enum:
-      - ALL_ALLOWED
-      - RESTRICTED
-      - NOT_ALLOWED
-    api_organization_v1_DangerouslyGetRequest:
-      type: object
-      properties:
-        member_id:
-          type: string
-        include_deleted:
-          type: boolean
-      description: Request type
-      required:
-      - member_id
-    api_organization_v1_DeleteMFAPhoneNumberRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - member_id
-    api_organization_v1_DeleteMFAPhoneNumberResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        member_id:
-          type: string
-        member:
-          $ref: '#/components/schemas/api_organization_v1_Member'
-        organization:
-          $ref: '#/components/schemas/api_organization_v1_Organization'
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - member_id
-      - member
-      - organization
-      - status_code
-    api_organization_v1_DeletePasswordRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_password_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - member_password_id
-    api_organization_v1_DeletePasswordResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        member_id:
-          type: string
-        member:
-          $ref: '#/components/schemas/api_organization_v1_Member'
-        organization:
-          $ref: '#/components/schemas/api_organization_v1_Organization'
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - member_id
-      - member
-      - organization
-      - status_code
-    api_organization_v1_DeleteTOTPRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - member_id
-    api_organization_v1_DeleteTOTPResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        member_id:
-          type: string
-        member:
-          $ref: '#/components/schemas/api_organization_v1_Member'
-        organization:
-          $ref: '#/components/schemas/api_organization_v1_Organization'
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - member_id
-      - member
-      - organization
-      - status_code
-    api_organization_v1_GetConnectedAppsRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - member_id
-    api_organization_v1_GetConnectedAppsResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        connected_apps:
-          type: array
-          items:
-            $ref: '#/components/schemas/api_organization_v1_MemberConnectedApp'
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - connected_apps
-      - status_code
-    api_organization_v1_OIDCProviderInformationRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
-        include_refresh_token:
-          type: boolean
-      description: Request type
-      required:
-      - organization_id
-      - member_id
-    api_organization_v1_OIDCProvidersResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        registrations:
-          type: array
-          items:
-            $ref: '#/components/schemas/api_organization_v1_OIDCProviderInfo'
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - registrations
-      - status_code
-    api_organization_v1_ReactivateRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - member_id
-    api_organization_v1_ReactivateResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        member_id:
-          type: string
-        member:
-          $ref: '#/components/schemas/api_organization_v1_Member'
-        organization:
-          $ref: '#/components/schemas/api_organization_v1_Organization'
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - member_id
-      - member
-      - organization
-      - status_code
-    api_organization_v1_StartEmailUpdateRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
-        email_address:
-          type: string
-        login_redirect_url:
-          type: string
-        locale:
-          $ref: '#/components/schemas/api_organization_v1_StartEmailUpdateRequestLocale'
-        login_template_id:
-          type: string
-        delivery_method:
-          $ref: '#/components/schemas/api_organization_v1_StartEmailUpdateRequestDeliveryMethod'
-      description: Request type
-      required:
-      - organization_id
-      - member_id
-      - email_address
-    api_organization_v1_StartEmailUpdateResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        member_id:
-          type: string
-        member:
-          $ref: '#/components/schemas/api_organization_v1_Member'
-        organization:
-          $ref: '#/components/schemas/api_organization_v1_Organization'
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - member_id
-      - member
-      - organization
-      - status_code
-    api_organization_v1_UnlinkRetiredEmailRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
-        email_id:
-          type: string
-        email_address:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - member_id
-    api_organization_v1_UnlinkRetiredEmailResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        member_id:
-          type: string
-        organization_id:
-          type: string
-        member:
-          $ref: '#/components/schemas/api_organization_v1_Member'
-        organization:
-          $ref: '#/components/schemas/api_organization_v1_Organization'
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - member_id
-      - organization_id
       - member
       - organization
       - status_code
@@ -14319,7 +14563,7 @@ components:
       - es
       - pt-br
       - fr
-    api_organization_v1_GithubResponse:
+    api_organization_v1_organizations_members_oauth_providers_GithubResponse:
       type: object
       properties:
         request_id:
@@ -14339,7 +14583,7 @@ components:
       - provider_type
       - registrations
       - status_code
-    api_organization_v1_GoogleResponse:
+    api_organization_v1_organizations_members_oauth_providers_GoogleResponse:
       type: object
       properties:
         request_id:
@@ -14372,7 +14616,7 @@ components:
       - id_token
       - scopes
       - status_code
-    api_organization_v1_HubspotResponse:
+    api_organization_v1_organizations_members_oauth_providers_HubspotResponse:
       type: object
       properties:
         request_id:
@@ -14392,7 +14636,7 @@ components:
       - provider_type
       - registrations
       - status_code
-    api_organization_v1_MicrosoftResponse:
+    api_organization_v1_organizations_members_oauth_providers_MicrosoftResponse:
       type: object
       properties:
         request_id:
@@ -14427,7 +14671,7 @@ components:
       - id_token
       - scopes
       - status_code
-    api_organization_v1_ProviderInformationRequest:
+    api_organization_v1_organizations_members_oauth_providers_ProviderInformationRequest:
       type: object
       properties:
         organization_id:
@@ -14440,7 +14684,7 @@ components:
       required:
       - organization_id
       - member_id
-    api_organization_v1_SlackRequest:
+    api_organization_v1_organizations_members_oauth_providers_SlackRequest:
       type: object
       properties:
         organization_id:
@@ -14451,7 +14695,7 @@ components:
       required:
       - organization_id
       - member_id
-    api_organization_v1_SlackResponse:
+    api_organization_v1_organizations_members_oauth_providers_SlackResponse:
       type: object
       properties:
         request_id:
@@ -14471,7 +14715,7 @@ components:
       - provider_type
       - registrations
       - status_code
-    api_organization_v1_RevokeRequest:
+    api_organization_v1_organizations_members_connected_apps_RevokeRequest:
       type: object
       properties:
         organization_id:
@@ -14485,7 +14729,7 @@ components:
       - organization_id
       - member_id
       - connected_app_id
-    api_organization_v1_RevokeResponse:
+    api_organization_v1_organizations_members_connected_apps_RevokeResponse:
       type: object
       properties:
         request_id:
@@ -14510,7 +14754,7 @@ components:
       - scope
       - description
       - is_grantable
-    api_b2b_idp_v1_AuthorizeRequest:
+    api_b2b_idp_v1_b2b_idp_oauth_AuthorizeRequest:
       type: object
       properties:
         consent_granted:
@@ -14525,6 +14769,10 @@ components:
           type: string
         response_type:
           type: string
+        resources:
+          type: array
+          items:
+            type: string
         organization_id:
           type: string
         member_id:
@@ -14548,7 +14796,8 @@ components:
       - client_id
       - redirect_uri
       - response_type
-    api_b2b_idp_v1_AuthorizeResponse:
+      - resources
+    api_b2b_idp_v1_b2b_idp_oauth_AuthorizeResponse:
       type: object
       properties:
         request_id:
@@ -14565,7 +14814,7 @@ components:
       - request_id
       - redirect_uri
       - status_code
-    api_b2b_idp_v1_AuthorizeStartRequest:
+    api_b2b_idp_v1_b2b_idp_oauth_AuthorizeStartRequest:
       type: object
       properties:
         client_id:
@@ -14575,6 +14824,10 @@ components:
         response_type:
           type: string
         scopes:
+          type: array
+          items:
+            type: string
+        resources:
           type: array
           items:
             type: string
@@ -14594,7 +14847,8 @@ components:
       - redirect_uri
       - response_type
       - scopes
-    api_b2b_idp_v1_AuthorizeStartResponse:
+      - resources
+    api_b2b_idp_v1_b2b_idp_oauth_AuthorizeStartResponse:
       type: object
       properties:
         request_id:
@@ -17548,7 +17802,7 @@ components:
           $ref: '#/components/schemas/api_organization_v1_Member'
       required:
       - type
-    api_discovery_v1_ExchangeRequest:
+    api_discovery_v1_discovery_intermediate_sessions_ExchangeRequest:
       type: object
       properties:
         intermediate_session_token:
@@ -17568,7 +17822,7 @@ components:
       required:
       - intermediate_session_token
       - organization_id
-    api_discovery_v1_ExchangeResponse:
+    api_discovery_v1_discovery_intermediate_sessions_ExchangeResponse:
       type: object
       properties:
         request_id:
@@ -17620,7 +17874,39 @@ components:
       - de-DE
       - zh-Hans
       - ca-ES
-    api_discovery_v1_CreateRequest:
+    api_discovery_v1_discovery_ListRequest:
+      type: object
+      properties:
+        intermediate_session_token:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+      description: Request type
+    api_discovery_v1_discovery_ListResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        email_address:
+          type: string
+        discovered_organizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
+        status_code:
+          type: integer
+          format: int32
+        organization_id_hint:
+          type: string
+      description: Response type
+      required:
+      - request_id
+      - email_address
+      - discovered_organizations
+      - status_code
+    api_discovery_v1_discovery_organizations_CreateRequest:
       type: object
       properties:
         intermediate_session_token:
@@ -17689,7 +17975,7 @@ components:
       description: Request type
       required:
       - intermediate_session_token
-    api_discovery_v1_CreateResponse:
+    api_discovery_v1_discovery_organizations_CreateResponse:
       type: object
       properties:
         request_id:
@@ -17728,38 +18014,6 @@ components:
       - member
       - member_authenticated
       - intermediate_session_token
-      - status_code
-    api_discovery_v1_discovery_ListRequest:
-      type: object
-      properties:
-        intermediate_session_token:
-          type: string
-        session_token:
-          type: string
-        session_jwt:
-          type: string
-      description: Request type
-    api_discovery_v1_discovery_ListResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        email_address:
-          type: string
-        discovered_organizations:
-          type: array
-          items:
-            $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
-        status_code:
-          type: integer
-          format: int32
-        organization_id_hint:
-          type: string
-      description: Response type
-      required:
-      - request_id
-      - email_address
-      - discovered_organizations
       - status_code
     api_discovery_v1_CreateRequestFirstPartyConnectedAppsAllowedType:
       type: string
@@ -17991,7 +18245,7 @@ components:
       - ALLOW
       - CHALLENGE
       - BLOCK
-    api_fraud_v1_LookupRequest:
+    api_fraud_v1_fraud_fingerprint_LookupRequest:
       type: object
       properties:
         telemetry_id:
@@ -18001,7 +18255,7 @@ components:
       description: Request type
       required:
       - telemetry_id
-    api_fraud_v1_LookupResponse:
+    api_fraud_v1_fraud_fingerprint_LookupResponse:
       type: object
       properties:
         request_id:
@@ -18035,30 +18289,36 @@ components:
       - created_at
       - expires_at
       - status_code
-    api_fraud_v1_ListRequest:
+    api_fraud_v1_fraud_rules_ListRequest:
       type: object
       properties:
-        overrides_only:
-          type: boolean
+        cursor:
+          type: string
+        limit:
+          type: integer
+          format: int32
       description: Request type
-    api_fraud_v1_ListResponse:
+    api_fraud_v1_fraud_rules_ListResponse:
       type: object
       properties:
         request_id:
           type: string
-        verdict_reason_actions:
+        next_cursor:
+          type: string
+        rules:
           type: array
           items:
-            $ref: '#/components/schemas/api_fraud_v1_VerdictReasonAction'
+            $ref: '#/components/schemas/api_fraud_v1_Rule'
         status_code:
           type: integer
           format: int32
       description: Response type
       required:
       - request_id
-      - verdict_reason_actions
+      - next_cursor
+      - rules
       - status_code
-    api_fraud_v1_SetRequest:
+    api_fraud_v1_fraud_rules_SetRequest:
       type: object
       properties:
         action:
@@ -18089,7 +18349,7 @@ components:
       description: Request type
       required:
       - action
-    api_fraud_v1_SetResponse:
+    api_fraud_v1_fraud_rules_SetResponse:
       type: object
       properties:
         request_id:
@@ -18124,7 +18384,30 @@ components:
       - request_id
       - action
       - status_code
-    api_fraud_v1_OverrideRequest:
+    api_fraud_v1_fraud_verdict_reasons_ListRequest:
+      type: object
+      properties:
+        overrides_only:
+          type: boolean
+      description: Request type
+    api_fraud_v1_fraud_verdict_reasons_ListResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        verdict_reason_actions:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_fraud_v1_VerdictReasonAction'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - verdict_reason_actions
+      - status_code
+    api_fraud_v1_fraud_verdict_reasons_OverrideRequest:
       type: object
       properties:
         verdict_reason:
@@ -18137,7 +18420,7 @@ components:
       required:
       - verdict_reason
       - override_action
-    api_fraud_v1_OverrideResponse:
+    api_fraud_v1_fraud_verdict_reasons_OverrideResponse:
       type: object
       properties:
         request_id:
@@ -18172,7 +18455,7 @@ components:
       - scope
       - description
       - is_grantable
-    api_idp_v1_AuthorizeRequest:
+    api_idp_v1_idp_oauth_AuthorizeRequest:
       type: object
       properties:
         consent_granted:
@@ -18187,6 +18470,10 @@ components:
           type: string
         response_type:
           type: string
+        resources:
+          type: array
+          items:
+            type: string
         user_id:
           type: string
         session_token:
@@ -18208,7 +18495,8 @@ components:
       - client_id
       - redirect_uri
       - response_type
-    api_idp_v1_AuthorizeResponse:
+      - resources
+    api_idp_v1_idp_oauth_AuthorizeResponse:
       type: object
       properties:
         request_id:
@@ -18225,7 +18513,7 @@ components:
       - request_id
       - redirect_uri
       - status_code
-    api_idp_v1_AuthorizeStartRequest:
+    api_idp_v1_idp_oauth_AuthorizeStartRequest:
       type: object
       properties:
         client_id:
@@ -18235,6 +18523,10 @@ components:
         response_type:
           type: string
         scopes:
+          type: array
+          items:
+            type: string
+        resources:
           type: array
           items:
             type: string
@@ -18252,7 +18544,8 @@ components:
       - redirect_uri
       - response_type
       - scopes
-    api_idp_v1_AuthorizeStartResponse:
+      - resources
+    api_idp_v1_idp_oauth_AuthorizeStartResponse:
       type: object
       properties:
         request_id:
@@ -18432,7 +18725,7 @@ components:
       enum:
       - OR
       - AND
-    api_m2m_v1_CreateRequest:
+    api_m2m_v1_m2m_clients_CreateRequest:
       type: object
       properties:
         scopes:
@@ -18452,7 +18745,7 @@ components:
       description: Request type
       required:
       - scopes
-    api_m2m_v1_CreateResponse:
+    api_m2m_v1_m2m_clients_CreateResponse:
       type: object
       properties:
         request_id:
@@ -18467,7 +18760,7 @@ components:
       - request_id
       - m2m_client
       - status_code
-    api_m2m_v1_DeleteRequest:
+    api_m2m_v1_m2m_clients_DeleteRequest:
       type: object
       properties:
         client_id:
@@ -18475,7 +18768,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_m2m_v1_DeleteResponse:
+    api_m2m_v1_m2m_clients_DeleteResponse:
       type: object
       properties:
         request_id:
@@ -18490,7 +18783,7 @@ components:
       - request_id
       - client_id
       - status_code
-    api_m2m_v1_GetRequest:
+    api_m2m_v1_m2m_clients_GetRequest:
       type: object
       properties:
         client_id:
@@ -18498,7 +18791,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_m2m_v1_GetResponse:
+    api_m2m_v1_m2m_clients_GetResponse:
       type: object
       properties:
         request_id:
@@ -18513,7 +18806,7 @@ components:
       - request_id
       - m2m_client
       - status_code
-    api_m2m_v1_SearchRequest:
+    api_m2m_v1_m2m_clients_SearchRequest:
       type: object
       properties:
         cursor:
@@ -18525,7 +18818,7 @@ components:
         query:
           $ref: '#/components/schemas/api_m2m_v1_M2MSearchQuery'
       description: Request type
-    api_m2m_v1_SearchResponse:
+    api_m2m_v1_m2m_clients_SearchResponse:
       type: object
       properties:
         request_id:
@@ -18545,7 +18838,7 @@ components:
       - m2m_clients
       - results_metadata
       - status_code
-    api_m2m_v1_UpdateRequest:
+    api_m2m_v1_m2m_clients_UpdateRequest:
       type: object
       properties:
         client_id:
@@ -18565,7 +18858,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_m2m_v1_UpdateResponse:
+    api_m2m_v1_m2m_clients_UpdateResponse:
       type: object
       properties:
         request_id:
@@ -18585,7 +18878,7 @@ components:
       enum:
       - active
       - inactive
-    api_m2m_v1_RotateCancelRequest:
+    api_m2m_v1_m2m_clients_secrets_RotateCancelRequest:
       type: object
       properties:
         client_id:
@@ -18593,7 +18886,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_m2m_v1_RotateCancelResponse:
+    api_m2m_v1_m2m_clients_secrets_RotateCancelResponse:
       type: object
       properties:
         request_id:
@@ -18608,7 +18901,7 @@ components:
       - request_id
       - m2m_client
       - status_code
-    api_m2m_v1_RotateRequest:
+    api_m2m_v1_m2m_clients_secrets_RotateRequest:
       type: object
       properties:
         client_id:
@@ -18616,7 +18909,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_m2m_v1_RotateResponse:
+    api_m2m_v1_m2m_clients_secrets_RotateResponse:
       type: object
       properties:
         request_id:
@@ -18631,7 +18924,7 @@ components:
       - request_id
       - m2m_client
       - status_code
-    api_m2m_v1_RotateStartRequest:
+    api_m2m_v1_m2m_clients_secrets_RotateStartRequest:
       type: object
       properties:
         client_id:
@@ -18639,7 +18932,7 @@ components:
       description: Request type
       required:
       - client_id
-    api_m2m_v1_RotateStartResponse:
+    api_m2m_v1_m2m_clients_secrets_RotateStartResponse:
       type: object
       properties:
         request_id:
@@ -18667,35 +18960,77 @@ components:
     api_magic_v1_AuthenticateRequest:
       type: object
       properties:
-        discovery_magic_links_token:
+        magic_links_token:
           type: string
         pkce_code_verifier:
           type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        session_duration_minutes:
+          type: integer
+          format: int32
+        session_custom_claims:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_magic_v1_AuthenticateRequestLocale'
+        intermediate_session_token:
+          type: string
+        telemetry_id:
+          type: string
       description: Request type
       required:
-      - discovery_magic_links_token
+      - magic_links_token
     api_magic_v1_AuthenticateResponse:
       type: object
       properties:
         request_id:
           type: string
+        member_id:
+          type: string
+        method_id:
+          type: string
+        reset_sessions:
+          type: boolean
+        organization_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
         intermediate_session_token:
           type: string
-        email_address:
-          type: string
-        discovered_organizations:
-          type: array
-          items:
-            $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
+        member_authenticated:
+          type: boolean
         status_code:
           type: integer
           format: int32
+        member_session:
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
+        mfa_required:
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
+        primary_required:
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
+        member_device:
+          $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
       required:
       - request_id
+      - member_id
+      - method_id
+      - reset_sessions
+      - organization_id
+      - member
+      - session_token
+      - session_jwt
+      - organization
       - intermediate_session_token
-      - email_address
-      - discovered_organizations
+      - member_authenticated
       - status_code
     api_magic_v1_CreateRequest:
       type: object
@@ -18728,7 +19063,201 @@ components:
       - user_id
       - token
       - status_code
-    api_magic_v1_InviteRequest:
+    api_magic_v1_magic_links_email_InviteRequest:
+      type: object
+      properties:
+        email:
+          type: string
+        invite_template_id:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/api_attribute_v1_Attributes'
+        name:
+          $ref: '#/components/schemas/api_user_v1_Name'
+        invite_magic_link_url:
+          type: string
+        invite_expiration_minutes:
+          type: integer
+          format: int32
+        locale:
+          $ref: '#/components/schemas/api_magic_v1_InviteRequestLocale'
+        trusted_metadata:
+          type: string
+        untrusted_metadata:
+          type: string
+      description: Request type
+      required:
+      - email
+    api_magic_v1_magic_links_email_InviteResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        user_id:
+          type: string
+        email_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - user_id
+      - email_id
+      - status_code
+    api_magic_v1_magic_links_email_LoginOrCreateRequest:
+      type: object
+      properties:
+        email:
+          type: string
+        login_magic_link_url:
+          type: string
+        signup_magic_link_url:
+          type: string
+        login_expiration_minutes:
+          type: integer
+          format: int32
+        signup_expiration_minutes:
+          type: integer
+          format: int32
+        login_template_id:
+          type: string
+        signup_template_id:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/api_attribute_v1_Attributes'
+        create_user_as_pending:
+          type: boolean
+        code_challenge:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_magic_v1_LoginOrCreateRequestLocale'
+      description: Request type
+      required:
+      - email
+    api_magic_v1_magic_links_email_LoginOrCreateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        user_id:
+          type: string
+        email_id:
+          type: string
+        user_created:
+          type: boolean
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - user_id
+      - email_id
+      - user_created
+      - status_code
+    api_magic_v1_magic_links_email_RevokeInviteRequest:
+      type: object
+      properties:
+        email:
+          type: string
+      description: Request type
+      required:
+      - email
+    api_magic_v1_magic_links_email_RevokeInviteResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - status_code
+    api_magic_v1_magic_links_email_SendRequest:
+      type: object
+      properties:
+        email:
+          type: string
+        login_template_id:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/api_attribute_v1_Attributes'
+        login_magic_link_url:
+          type: string
+        signup_magic_link_url:
+          type: string
+        login_expiration_minutes:
+          type: integer
+          format: int32
+        signup_expiration_minutes:
+          type: integer
+          format: int32
+        code_challenge:
+          type: string
+        user_id:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_magic_v1_SendRequestLocale'
+        signup_template_id:
+          type: string
+      description: Request type
+      required:
+      - email
+    api_magic_v1_magic_links_email_SendResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        user_id:
+          type: string
+        email_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - user_id
+      - email_id
+      - status_code
+    api_magic_v1_InviteRequestLocale:
+      type: string
+      enum:
+      - en
+      - es
+      - pt-br
+      - fr
+    api_magic_v1_LoginOrCreateRequestLocale:
+      type: string
+      enum:
+      - en
+      - es
+      - pt-br
+      - fr
+    api_magic_v1_SendRequestLocale:
+      type: string
+      enum:
+      - en
+      - es
+      - pt-br
+      - fr
+    api_magic_v1_AuthenticateRequestLocale:
+      type: string
+      enum:
+      - en
+      - es
+      - pt-br
+      - fr
+    api_magic_v1_b2b_magic_links_email_InviteRequest:
       type: object
       properties:
         organization_id:
@@ -18761,7 +19290,7 @@ components:
       required:
       - organization_id
       - email_address
-    api_magic_v1_InviteResponse:
+    api_magic_v1_b2b_magic_links_email_InviteResponse:
       type: object
       properties:
         request_id:
@@ -18782,138 +19311,7 @@ components:
       - member
       - organization
       - status_code
-    api_magic_v1_LoginOrCreateRequest:
-      type: object
-      properties:
-        email:
-          type: string
-        login_magic_link_url:
-          type: string
-        signup_magic_link_url:
-          type: string
-        login_expiration_minutes:
-          type: integer
-          format: int32
-        signup_expiration_minutes:
-          type: integer
-          format: int32
-        login_template_id:
-          type: string
-        signup_template_id:
-          type: string
-        attributes:
-          $ref: '#/components/schemas/api_attribute_v1_Attributes'
-        create_user_as_pending:
-          type: boolean
-        code_challenge:
-          type: string
-        locale:
-          $ref: '#/components/schemas/api_magic_v1_LoginOrCreateRequestLocale'
-      description: Request type
-      required:
-      - email
-    api_magic_v1_LoginOrCreateResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        user_id:
-          type: string
-        email_id:
-          type: string
-        user_created:
-          type: boolean
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - user_id
-      - email_id
-      - user_created
-      - status_code
-    api_magic_v1_RevokeInviteRequest:
-      type: object
-      properties:
-        email:
-          type: string
-      description: Request type
-      required:
-      - email
-    api_magic_v1_RevokeInviteResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - status_code
-    api_magic_v1_SendRequest:
-      type: object
-      properties:
-        email_address:
-          type: string
-        discovery_redirect_url:
-          type: string
-        pkce_code_challenge:
-          type: string
-        login_template_id:
-          type: string
-        locale:
-          $ref: '#/components/schemas/api_magic_v1_SendRequestLocale'
-        discovery_expiration_minutes:
-          type: integer
-          format: int32
-          minimum: 0
-      description: Request type
-      required:
-      - email_address
-    api_magic_v1_SendResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - status_code
-    api_magic_v1_InviteRequestLocale:
-      type: string
-      enum:
-      - en
-      - es
-      - pt-br
-      - fr
-    api_magic_v1_LoginOrCreateRequestLocale:
-      type: string
-      enum:
-      - en
-      - es
-      - pt-br
-      - fr
-    api_magic_v1_SendRequestLocale:
-      type: string
-      enum:
-      - en
-      - es
-      - pt-br
-      - fr
-    api_magic_v1_AuthenticateRequestLocale:
-      type: string
-      enum:
-      - en
-      - es
-      - pt-br
-      - fr
-    api_magic_v1_LoginOrSignupRequest:
+    api_magic_v1_b2b_magic_links_email_LoginOrSignupRequest:
       type: object
       properties:
         organization_id:
@@ -18944,7 +19342,7 @@ components:
       required:
       - organization_id
       - email_address
-    api_magic_v1_LoginOrSignupResponse:
+    api_magic_v1_b2b_magic_links_email_LoginOrSignupResponse:
       type: object
       properties:
         request_id:
@@ -18975,6 +19373,71 @@ components:
       - es
       - pt-br
       - fr
+    api_magic_v1_b2b_magic_links_email_discovery_SendRequest:
+      type: object
+      properties:
+        email_address:
+          type: string
+        discovery_redirect_url:
+          type: string
+        pkce_code_challenge:
+          type: string
+        login_template_id:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_magic_v1_SendRequestLocale'
+        discovery_expiration_minutes:
+          type: integer
+          format: int32
+          minimum: 0
+      description: Request type
+      required:
+      - email_address
+    api_magic_v1_b2b_magic_links_email_discovery_SendResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - status_code
+    api_magic_v1_b2b_magic_links_discovery_AuthenticateRequest:
+      type: object
+      properties:
+        discovery_magic_links_token:
+          type: string
+        pkce_code_verifier:
+          type: string
+      description: Request type
+      required:
+      - discovery_magic_links_token
+    api_magic_v1_b2b_magic_links_discovery_AuthenticateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        intermediate_session_token:
+          type: string
+        email_address:
+          type: string
+        discovered_organizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - intermediate_session_token
+      - email_address
+      - discovered_organizations
+      - status_code
     api_b2b_oauth_v1_ProviderValues:
       type: object
       properties:
@@ -18995,6 +19458,97 @@ components:
     api_b2b_oauth_v1_AuthenticateRequest:
       type: object
       properties:
+        oauth_token:
+          type: string
+        session_token:
+          type: string
+        session_duration_minutes:
+          type: integer
+          format: int32
+        session_jwt:
+          type: string
+        session_custom_claims:
+          type: string
+        pkce_code_verifier:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_b2b_oauth_v1_AuthenticateRequestLocale'
+        intermediate_session_token:
+          type: string
+        telemetry_id:
+          type: string
+      description: Request type
+      required:
+      - oauth_token
+    api_b2b_oauth_v1_AuthenticateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        provider_subject:
+          type: string
+        provider_type:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization_id:
+          type: string
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        reset_sessions:
+          type: boolean
+        member_authenticated:
+          type: boolean
+        intermediate_session_token:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+        member_session:
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
+        provider_values:
+          $ref: '#/components/schemas/api_b2b_oauth_v1_ProviderValues'
+        mfa_required:
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
+        primary_required:
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
+        member_device:
+          $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - provider_subject
+      - provider_type
+      - session_token
+      - session_jwt
+      - member
+      - organization_id
+      - organization
+      - reset_sessions
+      - member_authenticated
+      - intermediate_session_token
+      - status_code
+    api_b2b_oauth_v1_AuthenticateRequestLocale:
+      type: string
+      enum:
+      - en
+      - es
+      - pt-br
+      - fr
+      - it
+      - de-DE
+      - zh-Hans
+      - ca-ES
+    api_b2b_oauth_v1_b2b_oauth_discovery_AuthenticateRequest:
+      type: object
+      properties:
         discovery_oauth_token:
           type: string
         session_token:
@@ -19011,7 +19565,7 @@ components:
       description: Request type
       required:
       - discovery_oauth_token
-    api_b2b_oauth_v1_AuthenticateResponse:
+    api_b2b_oauth_v1_b2b_oauth_discovery_AuthenticateResponse:
       type: object
       properties:
         request_id:
@@ -19048,78 +19602,109 @@ components:
       - provider_tenant_ids
       - full_name
       - status_code
-    api_b2b_oauth_v1_AuthenticateRequestLocale:
-      type: string
-      enum:
-      - en
-      - es
-      - pt-br
-      - fr
-      - it
-      - de-DE
-      - zh-Hans
-      - ca-ES
-    api_b2b_otp_v1_AuthenticateRequest:
+    api_b2b_otp_v1_b2b_otp_sms_AuthenticateRequest:
       type: object
       properties:
-        email_address:
+        organization_id:
+          type: string
+        member_id:
           type: string
         code:
           type: string
+        intermediate_session_token:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        session_duration_minutes:
+          type: integer
+          format: int32
+        session_custom_claims:
+          type: string
+        set_mfa_enrollment:
+          type: string
+        set_default_mfa:
+          type: boolean
+        telemetry_id:
+          type: string
       description: Request type
       required:
-      - email_address
+      - organization_id
+      - member_id
       - code
-    api_b2b_otp_v1_AuthenticateResponse:
+    api_b2b_otp_v1_b2b_otp_sms_AuthenticateResponse:
       type: object
       properties:
         request_id:
           type: string
-        intermediate_session_token:
+        member_id:
           type: string
-        email_address:
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        session_token:
           type: string
-        discovered_organizations:
-          type: array
-          items:
-            $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
+        session_jwt:
+          type: string
         status_code:
           type: integer
           format: int32
+        member_session:
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
+        member_device:
+          $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
       required:
       - request_id
-      - intermediate_session_token
-      - email_address
-      - discovered_organizations
+      - member_id
+      - member
+      - organization
+      - session_token
+      - session_jwt
       - status_code
-    api_b2b_otp_v1_SendRequest:
+    api_b2b_otp_v1_b2b_otp_sms_SendRequest:
       type: object
       properties:
-        email_address:
+        organization_id:
           type: string
-        login_template_id:
+        member_id:
+          type: string
+        mfa_phone_number:
           type: string
         locale:
           $ref: '#/components/schemas/api_b2b_otp_v1_SendRequestLocale'
-        discovery_expiration_minutes:
-          type: integer
-          format: int32
-          minimum: 0
+        intermediate_session_token:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
       description: Request type
       required:
-      - email_address
-    api_b2b_otp_v1_SendResponse:
+      - organization_id
+      - member_id
+    api_b2b_otp_v1_b2b_otp_sms_SendResponse:
       type: object
       properties:
         request_id:
           type: string
+        member_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
         status_code:
           type: integer
           format: int32
       description: Response type
       required:
       - request_id
+      - member_id
+      - member
+      - organization
       - status_code
     api_b2b_otp_v1_SendRequestLocale:
       type: string
@@ -19128,7 +19713,83 @@ components:
       - es
       - pt-br
       - fr
-    api_b2b_otp_v1_LoginOrSignupRequest:
+    api_b2b_otp_v1_b2b_otp_email_AuthenticateRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        email_address:
+          type: string
+        code:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        intermediate_session_token:
+          type: string
+        session_duration_minutes:
+          type: integer
+          format: int32
+        session_custom_claims:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_b2b_otp_v1_AuthenticateRequestLocale'
+        telemetry_id:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - email_address
+      - code
+    api_b2b_otp_v1_b2b_otp_email_AuthenticateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        method_id:
+          type: string
+        organization_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        intermediate_session_token:
+          type: string
+        member_authenticated:
+          type: boolean
+        status_code:
+          type: integer
+          format: int32
+        member_session:
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
+        mfa_required:
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
+        primary_required:
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
+        member_device:
+          $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - method_id
+      - organization_id
+      - member
+      - session_token
+      - session_jwt
+      - organization
+      - intermediate_session_token
+      - member_authenticated
+      - status_code
+    api_b2b_otp_v1_b2b_otp_email_LoginOrSignupRequest:
       type: object
       properties:
         organization_id:
@@ -19153,7 +19814,7 @@ components:
       required:
       - organization_id
       - email_address
-    api_b2b_otp_v1_LoginOrSignupResponse:
+    api_b2b_otp_v1_b2b_otp_email_LoginOrSignupResponse:
       type: object
       properties:
         request_id:
@@ -19191,6 +19852,68 @@ components:
       - es
       - pt-br
       - fr
+    api_b2b_otp_v1_b2b_otp_email_discovery_AuthenticateRequest:
+      type: object
+      properties:
+        email_address:
+          type: string
+        code:
+          type: string
+      description: Request type
+      required:
+      - email_address
+      - code
+    api_b2b_otp_v1_b2b_otp_email_discovery_AuthenticateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        intermediate_session_token:
+          type: string
+        email_address:
+          type: string
+        discovered_organizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - intermediate_session_token
+      - email_address
+      - discovered_organizations
+      - status_code
+    api_b2b_otp_v1_b2b_otp_email_discovery_SendRequest:
+      type: object
+      properties:
+        email_address:
+          type: string
+        login_template_id:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_b2b_otp_v1_SendRequestLocale'
+        discovery_expiration_minutes:
+          type: integer
+          format: int32
+          minimum: 0
+      description: Request type
+      required:
+      - email_address
+    api_b2b_otp_v1_b2b_otp_email_discovery_SendResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - status_code
     api_password_v1_Argon2Config:
       type: object
       properties:
@@ -19535,7 +20258,164 @@ components:
       - scrypt
       - phpass
       - pbkdf_2
-    api_password_v1_ResetRequest:
+    api_password_v1_passwords_email_ResetRequest:
+      type: object
+      properties:
+        token:
+          type: string
+        password:
+          type: string
+        session_token:
+          type: string
+        session_duration_minutes:
+          type: integer
+          format: int32
+        session_jwt:
+          type: string
+        code_verifier:
+          type: string
+        session_custom_claims:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/api_attribute_v1_Attributes'
+        options:
+          $ref: '#/components/schemas/api_magic_v1_Options'
+        telemetry_id:
+          type: string
+      description: Request type
+      required:
+      - token
+      - password
+    api_password_v1_passwords_email_ResetResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        user_id:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        user:
+          $ref: '#/components/schemas/api_user_v1_User'
+        status_code:
+          type: integer
+          format: int32
+        session:
+          $ref: '#/components/schemas/api_session_v1_Session'
+        user_device:
+          $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
+      description: Response type
+      required:
+      - request_id
+      - user_id
+      - session_token
+      - session_jwt
+      - user
+      - status_code
+    api_password_v1_passwords_email_ResetStartRequest:
+      type: object
+      properties:
+        email:
+          type: string
+        reset_password_redirect_url:
+          type: string
+        reset_password_expiration_minutes:
+          type: integer
+          format: int32
+        code_challenge:
+          type: string
+        attributes:
+          $ref: '#/components/schemas/api_attribute_v1_Attributes'
+        login_redirect_url:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_password_v1_ResetStartRequestLocale'
+        reset_password_template_id:
+          type: string
+      description: Request type
+      required:
+      - email
+    api_password_v1_passwords_email_ResetStartResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        user_id:
+          type: string
+        email_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - user_id
+      - email_id
+      - status_code
+    api_password_v1_ResetStartRequestLocale:
+      type: string
+      enum:
+      - en
+      - es
+      - pt-br
+      - fr
+    api_password_v1_passwords_existing_password_ResetRequest:
+      type: object
+      properties:
+        email:
+          type: string
+        existing_password:
+          type: string
+        new_password:
+          type: string
+        session_token:
+          type: string
+        session_duration_minutes:
+          type: integer
+          format: int32
+        session_jwt:
+          type: string
+        session_custom_claims:
+          type: string
+        telemetry_id:
+          type: string
+      description: Request type
+      required:
+      - email
+      - existing_password
+      - new_password
+    api_password_v1_passwords_existing_password_ResetResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        user_id:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        user:
+          $ref: '#/components/schemas/api_user_v1_User'
+        status_code:
+          type: integer
+          format: int32
+        session:
+          $ref: '#/components/schemas/api_session_v1_Session'
+        user_device:
+          $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
+      description: Response type
+      required:
+      - request_id
+      - user_id
+      - session_token
+      - session_jwt
+      - user
+      - status_code
+    api_password_v1_passwords_session_ResetRequest:
       type: object
       properties:
         password:
@@ -19554,7 +20434,7 @@ components:
       description: Request type
       required:
       - password
-    api_password_v1_ResetResponse:
+    api_password_v1_passwords_session_ResetResponse:
       type: object
       properties:
         request_id:
@@ -19582,54 +20462,6 @@ components:
       - session_token
       - session_jwt
       - status_code
-    api_password_v1_ResetStartRequest:
-      type: object
-      properties:
-        email:
-          type: string
-        reset_password_redirect_url:
-          type: string
-        reset_password_expiration_minutes:
-          type: integer
-          format: int32
-        code_challenge:
-          type: string
-        attributes:
-          $ref: '#/components/schemas/api_attribute_v1_Attributes'
-        login_redirect_url:
-          type: string
-        locale:
-          $ref: '#/components/schemas/api_password_v1_ResetStartRequestLocale'
-        reset_password_template_id:
-          type: string
-      description: Request type
-      required:
-      - email
-    api_password_v1_ResetStartResponse:
-      type: object
-      properties:
-        request_id:
-          type: string
-        user_id:
-          type: string
-        email_id:
-          type: string
-        status_code:
-          type: integer
-          format: int32
-      description: Response type
-      required:
-      - request_id
-      - user_id
-      - email_id
-      - status_code
-    api_password_v1_ResetStartRequestLocale:
-      type: string
-      enum:
-      - en
-      - es
-      - pt-br
-      - fr
     api_b2b_password_v1_LudsFeedback:
       type: object
       properties:
@@ -19669,12 +20501,30 @@ components:
     api_b2b_password_v1_AuthenticateRequest:
       type: object
       properties:
+        organization_id:
+          type: string
         email_address:
           type: string
         password:
           type: string
+        session_token:
+          type: string
+        session_duration_minutes:
+          type: integer
+          format: int32
+        session_jwt:
+          type: string
+        session_custom_claims:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_b2b_password_v1_AuthenticateRequestLocale'
+        intermediate_session_token:
+          type: string
+        telemetry_id:
+          type: string
       description: Request type
       required:
+      - organization_id
       - email_address
       - password
     api_b2b_password_v1_AuthenticateResponse:
@@ -19682,23 +20532,44 @@ components:
       properties:
         request_id:
           type: string
-        email_address:
+        member_id:
           type: string
+        organization_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
         intermediate_session_token:
           type: string
-        discovered_organizations:
-          type: array
-          items:
-            $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
+        member_authenticated:
+          type: boolean
         status_code:
           type: integer
           format: int32
+        member_session:
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
+        mfa_required:
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
+        primary_required:
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
+        member_device:
+          $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
       description: Response type
       required:
       - request_id
-      - email_address
+      - member_id
+      - organization_id
+      - member
+      - session_token
+      - session_jwt
+      - organization
       - intermediate_session_token
-      - discovered_organizations
+      - member_authenticated
       - status_code
     api_b2b_password_v1_MigrateRequest:
       type: object
@@ -19829,7 +20700,7 @@ components:
       - scrypt
       - phpass
       - pbkdf_2
-    api_b2b_password_v1_RequireResetRequest:
+    api_b2b_password_v1_b2b_passwords_email_RequireResetRequest:
       type: object
       properties:
         email_address:
@@ -19841,7 +20712,7 @@ components:
       description: Request type
       required:
       - email_address
-    api_b2b_password_v1_RequireResetResponse:
+    api_b2b_password_v1_b2b_passwords_email_RequireResetResponse:
       type: object
       properties:
         request_id:
@@ -19859,7 +20730,311 @@ components:
       required:
       - request_id
       - status_code
-    api_b2b_password_v1_ResetRequest:
+    api_b2b_password_v1_b2b_passwords_email_ResetRequest:
+      type: object
+      properties:
+        password_reset_token:
+          type: string
+        password:
+          type: string
+        session_token:
+          type: string
+        session_duration_minutes:
+          type: integer
+          format: int32
+        session_jwt:
+          type: string
+        code_verifier:
+          type: string
+        session_custom_claims:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_b2b_password_v1_ResetRequestLocale'
+        intermediate_session_token:
+          type: string
+        telemetry_id:
+          type: string
+      description: Request type
+      required:
+      - password_reset_token
+      - password
+    api_b2b_password_v1_b2b_passwords_email_ResetResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member_email_id:
+          type: string
+        organization_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        intermediate_session_token:
+          type: string
+        member_authenticated:
+          type: boolean
+        status_code:
+          type: integer
+          format: int32
+        member_session:
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
+        mfa_required:
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
+        primary_required:
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
+        member_device:
+          $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member_email_id
+      - organization_id
+      - member
+      - session_token
+      - session_jwt
+      - organization
+      - intermediate_session_token
+      - member_authenticated
+      - status_code
+    api_b2b_password_v1_b2b_passwords_email_ResetStartRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        email_address:
+          type: string
+        reset_password_redirect_url:
+          type: string
+        reset_password_expiration_minutes:
+          type: integer
+          format: int32
+        code_challenge:
+          type: string
+        login_redirect_url:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_b2b_password_v1_ResetStartRequestLocale'
+        reset_password_template_id:
+          type: string
+        verify_email_template_id:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - email_address
+    api_b2b_password_v1_b2b_passwords_email_ResetStartResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member_email_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member_email_id
+      - member
+      - status_code
+    api_b2b_password_v1_ResetRequestLocale:
+      type: string
+      enum:
+      - en
+      - es
+      - pt-br
+      - fr
+    api_b2b_password_v1_ResetStartRequestLocale:
+      type: string
+      enum:
+      - en
+      - es
+      - pt-br
+      - fr
+    api_b2b_password_v1_b2b_passwords_session_ResetRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        password:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        session_duration_minutes:
+          type: integer
+          format: int32
+        session_custom_claims:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_b2b_password_v1_ResetRequestLocale'
+        telemetry_id:
+          type: string
+      description: Request type
+      required:
+      - organization_id
+      - password
+    api_b2b_password_v1_b2b_passwords_session_ResetResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        intermediate_session_token:
+          type: string
+        member_authenticated:
+          type: boolean
+        status_code:
+          type: integer
+          format: int32
+        member_session:
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
+        mfa_required:
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
+        member_device:
+          $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member
+      - organization
+      - session_token
+      - session_jwt
+      - intermediate_session_token
+      - member_authenticated
+      - status_code
+    api_b2b_password_v1_b2b_passwords_existing_password_ResetRequest:
+      type: object
+      properties:
+        email_address:
+          type: string
+        existing_password:
+          type: string
+        new_password:
+          type: string
+        organization_id:
+          type: string
+        session_token:
+          type: string
+        session_duration_minutes:
+          type: integer
+          format: int32
+        session_jwt:
+          type: string
+        session_custom_claims:
+          type: string
+        locale:
+          $ref: '#/components/schemas/api_b2b_password_v1_ResetRequestLocale'
+        telemetry_id:
+          type: string
+      description: Request type
+      required:
+      - email_address
+      - existing_password
+      - new_password
+      - organization_id
+    api_b2b_password_v1_b2b_passwords_existing_password_ResetResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        member_id:
+          type: string
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        intermediate_session_token:
+          type: string
+        member_authenticated:
+          type: boolean
+        status_code:
+          type: integer
+          format: int32
+        member_session:
+          $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
+        mfa_required:
+          $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
+        primary_required:
+          $ref: '#/components/schemas/api_b2b_session_v1_PrimaryRequired'
+        member_device:
+          $ref: '#/components/schemas/api_device_history_v1_DeviceInfo'
+      description: Response type
+      required:
+      - request_id
+      - member_id
+      - member
+      - session_token
+      - session_jwt
+      - organization
+      - intermediate_session_token
+      - member_authenticated
+      - status_code
+    api_b2b_password_v1_b2b_passwords_discovery_AuthenticateRequest:
+      type: object
+      properties:
+        email_address:
+          type: string
+        password:
+          type: string
+      description: Request type
+      required:
+      - email_address
+      - password
+    api_b2b_password_v1_b2b_passwords_discovery_AuthenticateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        email_address:
+          type: string
+        intermediate_session_token:
+          type: string
+        discovered_organizations:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_discovery_v1_DiscoveredOrganization'
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - email_address
+      - intermediate_session_token
+      - discovered_organizations
+      - status_code
+    api_b2b_password_v1_b2b_passwords_discovery_email_ResetRequest:
       type: object
       properties:
         password_reset_token:
@@ -19872,7 +21047,7 @@ components:
       required:
       - password_reset_token
       - password
-    api_b2b_password_v1_ResetResponse:
+    api_b2b_password_v1_b2b_passwords_discovery_email_ResetResponse:
       type: object
       properties:
         request_id:
@@ -19895,7 +21070,7 @@ components:
       - email_address
       - discovered_organizations
       - status_code
-    api_b2b_password_v1_ResetStartRequest:
+    api_b2b_password_v1_b2b_passwords_discovery_email_ResetStartRequest:
       type: object
       properties:
         email_address:
@@ -19918,7 +21093,7 @@ components:
       description: Request type
       required:
       - email_address
-    api_b2b_password_v1_ResetStartResponse:
+    api_b2b_password_v1_b2b_passwords_discovery_email_ResetStartResponse:
       type: object
       properties:
         request_id:
@@ -19930,20 +21105,6 @@ components:
       required:
       - request_id
       - status_code
-    api_b2b_password_v1_ResetRequestLocale:
-      type: string
-      enum:
-      - en
-      - es
-      - pt-br
-      - fr
-    api_b2b_password_v1_ResetStartRequestLocale:
-      type: string
-      enum:
-      - en
-      - es
-      - pt-br
-      - fr
     api_oauth_v1_ProviderValues:
       type: object
       properties:
@@ -20117,7 +21278,175 @@ components:
       - user
       - reset_sessions
       - status_code
-    api_otp_v1_LoginOrCreateRequest:
+    api_otp_v1_otp_sms_LoginOrCreateRequest:
+      type: object
+      properties:
+        phone_number:
+          type: string
+        expiration_minutes:
+          type: integer
+          format: int32
+        attributes:
+          $ref: '#/components/schemas/api_attribute_v1_Attributes'
+        create_user_as_pending:
+          type: boolean
+        locale:
+          $ref: '#/components/schemas/api_otp_v1_LoginOrCreateRequestLocale'
+      description: Request type
+      required:
+      - phone_number
+    api_otp_v1_otp_sms_LoginOrCreateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        user_id:
+          type: string
+        phone_id:
+          type: string
+        user_created:
+          type: boolean
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - user_id
+      - phone_id
+      - user_created
+      - status_code
+    api_otp_v1_otp_sms_SendRequest:
+      type: object
+      properties:
+        phone_number:
+          type: string
+        expiration_minutes:
+          type: integer
+          format: int32
+        attributes:
+          $ref: '#/components/schemas/api_attribute_v1_Attributes'
+        locale:
+          $ref: '#/components/schemas/api_otp_v1_SendRequestLocale'
+        user_id:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+      description: Request type
+      required:
+      - phone_number
+    api_otp_v1_otp_sms_SendResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        user_id:
+          type: string
+        phone_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - user_id
+      - phone_id
+      - status_code
+    api_otp_v1_LoginOrCreateRequestLocale:
+      type: string
+      enum:
+      - en
+      - es
+      - pt-br
+      - fr
+    api_otp_v1_SendRequestLocale:
+      type: string
+      enum:
+      - en
+      - es
+      - pt-br
+      - fr
+    api_otp_v1_otp_whatsapp_LoginOrCreateRequest:
+      type: object
+      properties:
+        phone_number:
+          type: string
+        expiration_minutes:
+          type: integer
+          format: int32
+        attributes:
+          $ref: '#/components/schemas/api_attribute_v1_Attributes'
+        create_user_as_pending:
+          type: boolean
+        locale:
+          $ref: '#/components/schemas/api_otp_v1_LoginOrCreateRequestLocale'
+      description: Request type
+      required:
+      - phone_number
+    api_otp_v1_otp_whatsapp_LoginOrCreateResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        user_id:
+          type: string
+        phone_id:
+          type: string
+        user_created:
+          type: boolean
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - user_id
+      - phone_id
+      - user_created
+      - status_code
+    api_otp_v1_otp_whatsapp_SendRequest:
+      type: object
+      properties:
+        phone_number:
+          type: string
+        expiration_minutes:
+          type: integer
+          format: int32
+        attributes:
+          $ref: '#/components/schemas/api_attribute_v1_Attributes'
+        locale:
+          $ref: '#/components/schemas/api_otp_v1_SendRequestLocale'
+        user_id:
+          type: string
+        session_token:
+          type: string
+        session_jwt:
+          type: string
+      description: Request type
+      required:
+      - phone_number
+    api_otp_v1_otp_whatsapp_SendResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        user_id:
+          type: string
+        phone_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - user_id
+      - phone_id
+      - status_code
+    api_otp_v1_otp_email_LoginOrCreateRequest:
       type: object
       properties:
         email:
@@ -20138,7 +21467,7 @@ components:
       description: Request type
       required:
       - email
-    api_otp_v1_LoginOrCreateResponse:
+    api_otp_v1_otp_email_LoginOrCreateResponse:
       type: object
       properties:
         request_id:
@@ -20159,7 +21488,7 @@ components:
       - email_id
       - user_created
       - status_code
-    api_otp_v1_SendRequest:
+    api_otp_v1_otp_email_SendRequest:
       type: object
       properties:
         email:
@@ -20184,7 +21513,7 @@ components:
       description: Request type
       required:
       - email
-    api_otp_v1_SendResponse:
+    api_otp_v1_otp_email_SendResponse:
       type: object
       properties:
         request_id:
@@ -20202,20 +21531,6 @@ components:
       - user_id
       - email_id
       - status_code
-    api_otp_v1_LoginOrCreateRequestLocale:
-      type: string
-      enum:
-      - en
-      - es
-      - pt-br
-      - fr
-    api_otp_v1_SendRequestLocale:
-      type: string
-      enum:
-      - en
-      - es
-      - pt-br
-      - fr
     api_project_v1_ProjectMetric:
       type: object
       properties:
@@ -20620,31 +21935,19 @@ components:
       - de-DE
       - zh-Hans
       - ca-ES
-    api_sso_v1_CreateConnectionRequest:
+    api_sso_v1_sso_oidc_CreateConnectionRequest:
       type: object
       properties:
         organization_id:
           type: string
-        external_organization_id:
-          type: string
-        external_connection_id:
-          type: string
         display_name:
           type: string
-        connection_implicit_role_assignments:
-          type: array
-          items:
-            $ref: '#/components/schemas/api_sso_v1_SAMLConnectionImplicitRoleAssignment'
-        group_implicit_role_assignments:
-          type: array
-          items:
-            $ref: '#/components/schemas/api_sso_v1_SAMLGroupImplicitRoleAssignment'
+        identity_provider:
+          $ref: '#/components/schemas/api_sso_v1_CreateConnectionRequestIdentityProvider'
       description: Request type
       required:
       - organization_id
-      - external_organization_id
-      - external_connection_id
-    api_sso_v1_CreateConnectionResponse:
+    api_sso_v1_sso_oidc_CreateConnectionResponse:
       type: object
       properties:
         request_id:
@@ -20653,12 +21956,12 @@ components:
           type: integer
           format: int32
         connection:
-          $ref: '#/components/schemas/api_sso_v1_Connection'
+          $ref: '#/components/schemas/api_sso_v1_OIDCConnection'
       description: Response type
       required:
       - request_id
       - status_code
-    api_sso_v1_UpdateConnectionRequest:
+    api_sso_v1_sso_oidc_UpdateConnectionRequest:
       type: object
       properties:
         organization_id:
@@ -20667,19 +21970,31 @@ components:
           type: string
         display_name:
           type: string
-        external_connection_implicit_role_assignments:
-          type: array
-          items:
-            $ref: '#/components/schemas/api_sso_v1_ConnectionImplicitRoleAssignment'
-        external_group_implicit_role_assignments:
-          type: array
-          items:
-            $ref: '#/components/schemas/api_sso_v1_GroupImplicitRoleAssignment'
+        client_id:
+          type: string
+        client_secret:
+          type: string
+        issuer:
+          type: string
+        authorization_url:
+          type: string
+        token_url:
+          type: string
+        userinfo_url:
+          type: string
+        jwks_url:
+          type: string
+        identity_provider:
+          $ref: '#/components/schemas/api_sso_v1_UpdateConnectionRequestIdentityProvider'
+        custom_scopes:
+          type: string
+        attribute_mapping:
+          type: string
       description: Request type
       required:
       - organization_id
       - connection_id
-    api_sso_v1_UpdateConnectionResponse:
+    api_sso_v1_sso_oidc_UpdateConnectionResponse:
       type: object
       properties:
         request_id:
@@ -20688,7 +22003,9 @@ components:
           type: integer
           format: int32
         connection:
-          $ref: '#/components/schemas/api_sso_v1_Connection'
+          $ref: '#/components/schemas/api_sso_v1_OIDCConnection'
+        warning:
+          type: string
       description: Response type
       required:
       - request_id
@@ -20729,7 +22046,33 @@ components:
       - rippling
       - salesforce
       - shibboleth
-    api_sso_v1_DeleteEncryptionPrivateKeyRequest:
+    api_sso_v1_sso_saml_CreateConnectionRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        display_name:
+          type: string
+        identity_provider:
+          $ref: '#/components/schemas/api_sso_v1_CreateConnectionRequestIdentityProvider'
+      description: Request type
+      required:
+      - organization_id
+    api_sso_v1_sso_saml_CreateConnectionResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+        connection:
+          $ref: '#/components/schemas/api_sso_v1_SAMLConnection'
+      description: Response type
+      required:
+      - request_id
+      - status_code
+    api_sso_v1_sso_saml_DeleteEncryptionPrivateKeyRequest:
       type: object
       properties:
         organization_id:
@@ -20743,7 +22086,7 @@ components:
       - organization_id
       - connection_id
       - private_key_id
-    api_sso_v1_DeleteEncryptionPrivateKeyResponse:
+    api_sso_v1_sso_saml_DeleteEncryptionPrivateKeyResponse:
       type: object
       properties:
         request_id:
@@ -20758,7 +22101,7 @@ components:
       - request_id
       - private_key_id
       - status_code
-    api_sso_v1_DeleteVerificationCertificateRequest:
+    api_sso_v1_sso_saml_DeleteVerificationCertificateRequest:
       type: object
       properties:
         organization_id:
@@ -20772,7 +22115,7 @@ components:
       - organization_id
       - connection_id
       - certificate_id
-    api_sso_v1_DeleteVerificationCertificateResponse:
+    api_sso_v1_sso_saml_DeleteVerificationCertificateResponse:
       type: object
       properties:
         request_id:
@@ -20787,7 +22130,7 @@ components:
       - request_id
       - certificate_id
       - status_code
-    api_sso_v1_UpdateByURLRequest:
+    api_sso_v1_sso_saml_UpdateByURLRequest:
       type: object
       properties:
         organization_id:
@@ -20801,7 +22144,7 @@ components:
       - organization_id
       - connection_id
       - metadata_url
-    api_sso_v1_UpdateByURLResponse:
+    api_sso_v1_sso_saml_UpdateByURLResponse:
       type: object
       properties:
         request_id:
@@ -20811,6 +22154,138 @@ components:
           format: int32
         connection:
           $ref: '#/components/schemas/api_sso_v1_SAMLConnection'
+      description: Response type
+      required:
+      - request_id
+      - status_code
+    api_sso_v1_sso_saml_UpdateConnectionRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        connection_id:
+          type: string
+        idp_entity_id:
+          type: string
+        display_name:
+          type: string
+        attribute_mapping:
+          type: string
+        x509_certificate:
+          type: string
+        idp_sso_url:
+          type: string
+        saml_connection_implicit_role_assignments:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_sso_v1_SAMLConnectionImplicitRoleAssignment'
+        saml_group_implicit_role_assignments:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_sso_v1_SAMLGroupImplicitRoleAssignment'
+        alternative_audience_uri:
+          type: string
+        identity_provider:
+          $ref: '#/components/schemas/api_sso_v1_UpdateConnectionRequestIdentityProvider'
+        signing_private_key:
+          type: string
+        nameid_format:
+          type: string
+        alternative_acs_url:
+          type: string
+        idp_initiated_auth_disabled:
+          type: boolean
+        saml_encryption_private_key:
+          type: string
+        allow_gateway_callback:
+          type: boolean
+      description: Request type
+      required:
+      - organization_id
+      - connection_id
+    api_sso_v1_sso_saml_UpdateConnectionResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+        connection:
+          $ref: '#/components/schemas/api_sso_v1_SAMLConnection'
+      description: Response type
+      required:
+      - request_id
+      - status_code
+    api_sso_v1_sso_external_CreateConnectionRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        external_organization_id:
+          type: string
+        external_connection_id:
+          type: string
+        display_name:
+          type: string
+        connection_implicit_role_assignments:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_sso_v1_SAMLConnectionImplicitRoleAssignment'
+        group_implicit_role_assignments:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_sso_v1_SAMLGroupImplicitRoleAssignment'
+      description: Request type
+      required:
+      - organization_id
+      - external_organization_id
+      - external_connection_id
+    api_sso_v1_sso_external_CreateConnectionResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+        connection:
+          $ref: '#/components/schemas/api_sso_v1_Connection'
+      description: Response type
+      required:
+      - request_id
+      - status_code
+    api_sso_v1_sso_external_UpdateConnectionRequest:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        connection_id:
+          type: string
+        display_name:
+          type: string
+        external_connection_implicit_role_assignments:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_sso_v1_ConnectionImplicitRoleAssignment'
+        external_group_implicit_role_assignments:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_sso_v1_GroupImplicitRoleAssignment'
+      description: Request type
+      required:
+      - organization_id
+      - connection_id
+    api_sso_v1_sso_external_UpdateConnectionResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+        connection:
+          $ref: '#/components/schemas/api_sso_v1_Connection'
       description: Response type
       required:
       - request_id
