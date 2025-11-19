@@ -36,7 +36,7 @@ The `openapi.yml` file in this repository can be used to:
 
 ## API Credentials
 
-You can find your API credentials in the [Stytch Dashboard](https://stytch.com/dashboard/api-keys).
+You can find your API credentials in the [Stytch Dashboard](https://stytch.com/dashboard/).
 
 ## Documentation
 
