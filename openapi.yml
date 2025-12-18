@@ -133,12 +133,6 @@ paths:
       tags:
       - Connected Apps
       description: Deletes a Connected App.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_connectedapps_v1_connected_apps_clients_DeleteRequest'
       parameters:
       - name: client_id
         in: path
@@ -658,12 +652,6 @@ paths:
       tags:
       - B2B Scim
       description: Deletes a SCIM Connection.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_b2b_scim_v1_b2b_scim_connection_DeleteRequest'
       parameters:
       - name: organization_id
         in: path
@@ -1796,12 +1784,6 @@ paths:
       - Organization
       description: Deletes an Organization specified by `organization_id`. All Members
         of the Organization will also be deleted.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_organization_v1_DeleteRequest'
       parameters:
       - name: organization_id
         in: path
@@ -2249,6 +2231,72 @@ paths:
                 error_message: Oops, something seems to have gone wrong, please reach
                   out to support@stytch.com to let us know what went wrong.
                 error_url: https://stytch.com/docs/api/errors/500
+  /v1/b2b/organizations/{organization_id}/external_id:
+    delete:
+      summary: Deleteexternalid
+      operationId: api_organization_v1_DeleteExternalId
+      tags:
+      - Organization
+      parameters:
+      - name: organization_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/api_organization_v1_DeleteIdResponse'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                status_code: 401
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: unauthorized_credentials
+                error_message: Unauthorized credentials.
+                error_url: https://stytch.com/docs/api/errors/401
+        '429':
+          description: Too Many Requests
+          content:
+            application/json:
+              example:
+                status_code: 429
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: too_many_requests
+                error_message: Too many requests have been made.
+                error_url: https://stytch.com/docs/api/errors/429
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                status_code: 500
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: internal_server_error
+                error_message: Oops, something seems to have gone wrong, please reach
+                  out to support@stytch.com to let us know what went wrong.
+                error_url: https://stytch.com/docs/api/errors/500
   /v1/b2b/organizations/{organization_id}/members/{member_id}:
     put:
       summary: Update
@@ -2414,12 +2462,6 @@ paths:
       tags:
       - Organizations
       description: Deletes a Member specified by `organization_id` and `member_id`.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteRequest'
       parameters:
       - name: organization_id
         in: path
@@ -2736,12 +2778,6 @@ paths:
         \ enter a new phone number\nand calling the [OTP SMS send](https://stytch.com/docs/b2b/api/otp-sms-send)\
         \ endpoint, then calling the [OTP SMS Authenticate](https://stytch.com/docs/b2b/api/authenticate-otp-sms)\
         \ endpoint."
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteMFAPhoneNumberRequest'
       parameters:
       - name: organization_id
         in: path
@@ -2823,12 +2859,6 @@ paths:
         Existing Member Sessions that include the TOTP authentication factor will
         not be revoked if the registration is deleted, and MFA will not be enforced
         until the Member logs in again.'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteTOTPRequest'
       parameters:
       - name: organization_id
         in: path
@@ -3054,12 +3084,6 @@ paths:
         \ passwords. For cross-org password Projects, use [Require Password Reset\
         \ By Email](https://stytch.com/docs/b2b/api/passwords-require-reset-by-email)\
         \ instead."
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_organization_v1_organizations_members_DeletePasswordRequest'
       parameters:
       - name: organization_id
         in: path
@@ -3503,6 +3527,77 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/api_organization_v1_organizations_members_GetConnectedAppsResponse'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                status_code: 401
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: unauthorized_credentials
+                error_message: Unauthorized credentials.
+                error_url: https://stytch.com/docs/api/errors/401
+        '429':
+          description: Too Many Requests
+          content:
+            application/json:
+              example:
+                status_code: 429
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: too_many_requests
+                error_message: Too many requests have been made.
+                error_url: https://stytch.com/docs/api/errors/429
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                status_code: 500
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: internal_server_error
+                error_message: Oops, something seems to have gone wrong, please reach
+                  out to support@stytch.com to let us know what went wrong.
+                error_url: https://stytch.com/docs/api/errors/500
+  /v1/b2b/organizations/{organization_id}/members/{member_id}/external_id:
+    delete:
+      summary: Deleteexternalid
+      operationId: api_organization_v1_organizations_members_DeleteExternalId
+      tags:
+      - Organizations
+      parameters:
+      - name: organization_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: member_id
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: X-Stytch-Member-Session
+        in: header
+        required: false
+        description: A Stytch session that can be used to run the request with the
+          given member's permissions.
+        schema:
+          type: string
+      - name: X-Stytch-Member-SessionJWT
+        in: header
+        required: false
+        description: A Stytch Session JSON Web Token (JWT) that can be used to run
+          the request with the given member's permissions.
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteIdResponse'
         '400':
           description: Bad request
         '401':
@@ -4421,7 +4516,7 @@ paths:
         label: Python
         source: "# POST /v1/b2b/idp/oauth/authorize\nfrom stytch import B2BClient\n\
           \nclient = B2BClient(\n    project_id=\"${projectId}\",\n    secret=\"${secret}\"\
-          ,\n)\n\nresp = client.idp.oauth.authorize(\n    consent_granted=true,\n\
+          ,\n)\n\nresp = client.idp.oauth.authorize(\n    consent_granted=True,\n\
           \    scopes=[\"openid\"],\n    client_id=\"${exampleConnectedAppClientID}\"\
           ,\n    redirect_uri=\"https://app.example/oauth/callback\",\n    response_type=\"\
           code\",\n)\n\nprint(resp)\n"
@@ -4750,12 +4845,6 @@ paths:
       tags:
       - User
       description: Delete a User from Stytch.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_user_v1_DeleteRequest'
       parameters:
       - name: user_id
         in: path
@@ -4995,12 +5084,6 @@ paths:
       tags:
       - User
       description: Delete an email from a User.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_user_v1_DeleteEmailRequest'
       parameters:
       - name: email_id
         in: path
@@ -5054,12 +5137,6 @@ paths:
       tags:
       - User
       description: Delete a phone number from a User.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_user_v1_DeletePhoneNumberRequest'
       parameters:
       - name: phone_id
         in: path
@@ -5113,12 +5190,6 @@ paths:
       tags:
       - User
       description: Delete a WebAuthn registration from a User.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_user_v1_DeleteWebAuthnRegistrationRequest'
       parameters:
       - name: webauthn_registration_id
         in: path
@@ -5172,12 +5243,6 @@ paths:
       tags:
       - User
       description: Delete a biometric registration from a User.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_user_v1_DeleteBiometricRegistrationRequest'
       parameters:
       - name: biometric_registration_id
         in: path
@@ -5231,12 +5296,6 @@ paths:
       tags:
       - User
       description: Delete a TOTP from a User.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_user_v1_DeleteTOTPRequest'
       parameters:
       - name: totp_id
         in: path
@@ -5290,12 +5349,6 @@ paths:
       tags:
       - User
       description: Delete a crypto wallet from a User.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_user_v1_DeleteCryptoWalletRequest'
       parameters:
       - name: crypto_wallet_id
         in: path
@@ -5349,12 +5402,6 @@ paths:
       tags:
       - User
       description: Delete a password from a User.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_user_v1_DeletePasswordRequest'
       parameters:
       - name: password_id
         in: path
@@ -5408,12 +5455,6 @@ paths:
       tags:
       - User
       description: Delete an OAuth registration from a User.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_user_v1_DeleteOAuthRegistrationRequest'
       parameters:
       - name: oauth_user_registration_id
         in: path
@@ -5427,6 +5468,58 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/api_user_v1_DeleteOAuthRegistrationResponse'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                status_code: 401
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: unauthorized_credentials
+                error_message: Unauthorized credentials.
+                error_url: https://stytch.com/docs/api/errors/401
+        '429':
+          description: Too Many Requests
+          content:
+            application/json:
+              example:
+                status_code: 429
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: too_many_requests
+                error_message: Too many requests have been made.
+                error_url: https://stytch.com/docs/api/errors/429
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                status_code: 500
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: internal_server_error
+                error_message: Oops, something seems to have gone wrong, please reach
+                  out to support@stytch.com to let us know what went wrong.
+                error_url: https://stytch.com/docs/api/errors/500
+  /v1/users/{user_id}/external_id:
+    delete:
+      summary: Deleteexternalid
+      operationId: api_user_v1_DeleteExternalId
+      tags:
+      - User
+      parameters:
+      - name: user_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/api_user_v1_DeleteIdResponse'
         '400':
           description: Bad request
         '401':
@@ -7363,6 +7456,139 @@ paths:
           ${projectId}\", \"${secret}\").unwrap();\n    let resp = client.rbac.policy(\n\
           \        PolicyRequest{\n            ..Default::default()\n        }\n \
           \   ).await;\n    println!(\"The response is {:?}\", resp);\n}"
+  /v1/b2b/rbac/organizations/{organization_id}:
+    get:
+      summary: Getorgpolicy
+      operationId: api_b2b_rbac_v1_b2b_rbac_organizations_GetOrgPolicy
+      tags:
+      - B2B Rbac
+      description: 'Get the active RBAC Policy for a specific Organization within
+        your Stytch Project. An Organization RBAC Policy contains the roles that have
+        been defined specifically for that organization, allowing for organization-specific
+        permissioning models.
+
+
+        This endpoint returns the organization-scoped roles that supplement the project-level
+        RBAC policy. Organization policies allow you to define custom roles that are
+        specific to individual organizations within your project.
+
+
+        When using the backend SDKs, the RBAC Policy will be cached to allow for local
+        evaluations, eliminating the need for an extra request to Stytch. The policy
+        will be refreshed if an authorization check is requested and the RBAC policy
+        was last updated more than 5 minutes ago.
+
+
+        Organization-specific roles can be created and managed through this API endpoint,
+        providing fine-grained control over permissions at the organization level.
+
+
+        Check out the [RBAC overview](https://stytch.com/docs/b2b/guides/rbac/overview)
+        to learn more about Stytch''s RBAC permissioning model and organization-scoped
+        policies.'
+      parameters:
+      - name: organization_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/api_b2b_rbac_v1_b2b_rbac_organizations_GetOrgPolicyResponse'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                status_code: 401
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: unauthorized_credentials
+                error_message: Unauthorized credentials.
+                error_url: https://stytch.com/docs/api/errors/401
+        '429':
+          description: Too Many Requests
+          content:
+            application/json:
+              example:
+                status_code: 429
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: too_many_requests
+                error_message: Too many requests have been made.
+                error_url: https://stytch.com/docs/api/errors/429
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                status_code: 500
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: internal_server_error
+                error_message: Oops, something seems to have gone wrong, please reach
+                  out to support@stytch.com to let us know what went wrong.
+                error_url: https://stytch.com/docs/api/errors/500
+    put:
+      summary: Setorgpolicy
+      operationId: api_b2b_rbac_v1_b2b_rbac_organizations_SetOrgPolicy
+      tags:
+      - B2B Rbac
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/api_b2b_rbac_v1_b2b_rbac_organizations_SetOrgPolicyRequest'
+      parameters:
+      - name: organization_id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/api_b2b_rbac_v1_b2b_rbac_organizations_SetOrgPolicyResponse'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                status_code: 401
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: unauthorized_credentials
+                error_message: Unauthorized credentials.
+                error_url: https://stytch.com/docs/api/errors/401
+        '429':
+          description: Too Many Requests
+          content:
+            application/json:
+              example:
+                status_code: 429
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: too_many_requests
+                error_message: Too many requests have been made.
+                error_url: https://stytch.com/docs/api/errors/429
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                status_code: 500
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: internal_server_error
+                error_message: Oops, something seems to have gone wrong, please reach
+                  out to support@stytch.com to let us know what went wrong.
+                error_url: https://stytch.com/docs/api/errors/500
   /v1/b2b/recovery_codes/recover:
     post:
       summary: Recover
@@ -9177,7 +9403,7 @@ paths:
         label: Python
         source: "# POST /v1/idp/oauth/authorize\nfrom stytch import Client\n\nclient\
           \ = Client(\n    project_id=\"${projectId}\",\n    secret=\"${secret}\"\
-          ,\n)\n\nresp = client.idp.oauth.authorize(\n    consent_granted=true,\n\
+          ,\n)\n\nresp = client.idp.oauth.authorize(\n    consent_granted=True,\n\
           \    scopes=[\"openid\"],\n    client_id=\"${exampleConnectedAppClientID}\"\
           ,\n    redirect_uri=\"https://app.example/oauth/callback\",\n    response_type=\"\
           code\",\n)\n\nprint(resp)\n"
@@ -9583,12 +9809,6 @@ paths:
         To protect more-sensitive routes, pass a lower `max_token_age` value when[authenticating
         the token](https://stytch.com/docs/b2b/api/authenticate-m2m-token)[authenticating
         the token](https://stytch.com/docs/api/authenticate-m2m-token).'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_m2m_v1_m2m_clients_DeleteRequest'
       parameters:
       - name: client_id
         in: path
@@ -14362,7 +14582,7 @@ paths:
           \ static void main(String[] args) {\n        StytchClient.configure(\"${projectId}\"\
           , \"${secret}\");\n\n        SendRequest params = new SendRequest();\n \
           \       params.setPhoneNumber(\"${examplePhoneNumber}\");\n\n        Object\
-          \ result = StytchClient.getOTPs().getWhatsapp().send(params);\n        if\
+          \ result = StytchClient.getOTPs().getWhatsApp().send(params);\n        if\
           \ (result instanceof StytchResult.Success) {\n          System.out.println(((StytchResult.Success)\
           \ result).getValue());\n        } else {\n          System.out.println(((StytchResult.Error)\
           \ result).getException());\n        }\n    }\n}"
@@ -14802,12 +15022,6 @@ paths:
       tags:
       - Sso
       description: Delete an existing SSO connection.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_sso_v1_DeleteConnectionRequest'
       parameters:
       - name: organization_id
         in: path
@@ -15422,12 +15636,6 @@ paths:
         You may need to do this when rotating certificates from your IdP, since Stytch
         allows a maximum of 5 certificates per connection. There must always be at
         least one certificate per active connection.'
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_sso_v1_sso_saml_DeleteVerificationCertificateRequest'
       parameters:
       - name: organization_id
         in: path
@@ -15505,12 +15713,6 @@ paths:
       tags:
       - Sso
       description: Delete a SAML encryption private key.
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/api_sso_v1_sso_saml_DeleteEncryptionPrivateKeyRequest'
       parameters:
       - name: organization_id
         in: path
@@ -16842,14 +17044,6 @@ components:
       - request_id
       - connected_app
       - status_code
-    api_connectedapps_v1_connected_apps_clients_DeleteRequest:
-      type: object
-      properties:
-        client_id:
-          type: string
-      description: Request type
-      required:
-      - client_id
     api_connectedapps_v1_connected_apps_clients_DeleteResponse:
       type: object
       properties:
@@ -16867,12 +17061,8 @@ components:
       - status_code
     api_connectedapps_v1_connected_apps_clients_GetRequest:
       type: object
-      properties:
-        client_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - client_id
     api_connectedapps_v1_connected_apps_clients_GetResponse:
       type: object
       properties:
@@ -16921,8 +17111,6 @@ components:
     api_connectedapps_v1_connected_apps_clients_UpdateRequest:
       type: object
       properties:
-        client_id:
-          type: string
         client_name:
           type: string
         client_description:
@@ -16949,8 +17137,6 @@ components:
         bypass_consent_for_offline_access:
           type: boolean
       description: Request type
-      required:
-      - client_id
     api_connectedapps_v1_connected_apps_clients_UpdateResponse:
       type: object
       properties:
@@ -16975,12 +17161,8 @@ components:
       - third_party_public
     api_connectedapps_v1_connected_apps_clients_secrets_RotateCancelRequest:
       type: object
-      properties:
-        client_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - client_id
     api_connectedapps_v1_connected_apps_clients_secrets_RotateCancelResponse:
       type: object
       properties:
@@ -16998,12 +17180,8 @@ components:
       - status_code
     api_connectedapps_v1_connected_apps_clients_secrets_RotateRequest:
       type: object
-      properties:
-        client_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - client_id
     api_connectedapps_v1_connected_apps_clients_secrets_RotateResponse:
       type: object
       properties:
@@ -17021,12 +17199,8 @@ components:
       - status_code
     api_connectedapps_v1_connected_apps_clients_secrets_RotateStartRequest:
       type: object
-      properties:
-        client_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - client_id
     api_connectedapps_v1_connected_apps_clients_secrets_RotateStartResponse:
       type: object
       properties:
@@ -17454,15 +17628,11 @@ components:
     api_b2b_scim_v1_b2b_scim_connection_CreateRequest:
       type: object
       properties:
-        organization_id:
-          type: string
         display_name:
           type: string
         identity_provider:
           $ref: '#/components/schemas/api_b2b_scim_v1_CreateRequestIdentityProvider'
       description: Request type
-      required:
-      - organization_id
     api_b2b_scim_v1_b2b_scim_connection_CreateResponse:
       type: object
       properties:
@@ -17477,17 +17647,6 @@ components:
       required:
       - request_id
       - status_code
-    api_b2b_scim_v1_b2b_scim_connection_DeleteRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - connection_id
     api_b2b_scim_v1_b2b_scim_connection_DeleteResponse:
       type: object
       properties:
@@ -17506,10 +17665,6 @@ components:
     api_b2b_scim_v1_b2b_scim_connection_GetGroupsRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
         cursor:
           type: string
         limit:
@@ -17517,9 +17672,6 @@ components:
           format: int32
           minimum: 0
       description: Request type
-      required:
-      - organization_id
-      - connection_id
     api_b2b_scim_v1_b2b_scim_connection_GetGroupsResponse:
       type: object
       properties:
@@ -17538,12 +17690,8 @@ components:
       - status_code
     api_b2b_scim_v1_b2b_scim_connection_GetRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
     api_b2b_scim_v1_b2b_scim_connection_GetResponse:
       type: object
       properties:
@@ -17560,15 +17708,8 @@ components:
       - status_code
     api_b2b_scim_v1_b2b_scim_connection_RotateCancelRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
-      - connection_id
     api_b2b_scim_v1_b2b_scim_connection_RotateCancelResponse:
       type: object
       properties:
@@ -17585,15 +17726,8 @@ components:
       - status_code
     api_b2b_scim_v1_b2b_scim_connection_RotateCompleteRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
-      - connection_id
     api_b2b_scim_v1_b2b_scim_connection_RotateCompleteResponse:
       type: object
       properties:
@@ -17610,15 +17744,8 @@ components:
       - status_code
     api_b2b_scim_v1_b2b_scim_connection_RotateStartRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
-      - connection_id
     api_b2b_scim_v1_b2b_scim_connection_RotateStartResponse:
       type: object
       properties:
@@ -17636,10 +17763,6 @@ components:
     api_b2b_scim_v1_b2b_scim_connection_UpdateRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
         display_name:
           type: string
         identity_provider:
@@ -17649,9 +17772,6 @@ components:
           items:
             $ref: '#/components/schemas/api_b2b_scim_v1_SCIMGroupImplicitRoleAssignments'
       description: Request type
-      required:
-      - organization_id
-      - connection_id
     api_b2b_scim_v1_b2b_scim_connection_UpdateResponse:
       type: object
       properties:
@@ -17716,6 +17836,33 @@ components:
       - connection_id
       - display_name
       - identity_provider
+    api_organization_v1_CustomRole:
+      type: object
+      properties:
+        role_id:
+          type: string
+        description:
+          type: string
+        permissions:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_organization_v1_CustomRolePermission'
+      required:
+      - role_id
+      - description
+      - permissions
+    api_organization_v1_CustomRolePermission:
+      type: object
+      properties:
+        resource_id:
+          type: string
+        actions:
+          type: array
+          items:
+            type: string
+      required:
+      - resource_id
+      - actions
     api_organization_v1_EmailImplicitRoleAssignment:
       type: object
       properties:
@@ -18006,6 +18153,10 @@ components:
           type: array
           items:
             type: string
+        custom_roles:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_organization_v1_CustomRole'
         trusted_metadata:
           type: string
         created_at:
@@ -18043,6 +18194,7 @@ components:
       - allowed_first_party_connected_apps
       - third_party_connected_apps_allowed_type
       - allowed_third_party_connected_apps
+      - custom_roles
     api_organization_v1_OrganizationConnectedApp:
       type: object
       properties:
@@ -18162,12 +18314,8 @@ components:
       - bot_scopes
     api_organization_v1_ConnectedAppsRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
     api_organization_v1_ConnectedAppsResponse:
       type: object
       properties:
@@ -18264,14 +18412,20 @@ components:
       - request_id
       - organization
       - status_code
-    api_organization_v1_DeleteRequest:
+    api_organization_v1_DeleteIdResponse:
       type: object
       properties:
-        organization_id:
+        request_id:
           type: string
-      description: Request type
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
       required:
-      - organization_id
+      - request_id
+      - organization
+      - status_code
     api_organization_v1_DeleteResponse:
       type: object
       properties:
@@ -18289,15 +18443,8 @@ components:
       - status_code
     api_organization_v1_GetConnectedAppRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
-        connected_app_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
-      - connected_app_id
     api_organization_v1_GetConnectedAppResponse:
       type: object
       properties:
@@ -18328,12 +18475,8 @@ components:
       - status_code
     api_organization_v1_GetRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
     api_organization_v1_GetResponse:
       type: object
       properties:
@@ -18351,11 +18494,7 @@ components:
       - status_code
     api_organization_v1_MetricsRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
-      required:
-      - organization_id
+      properties: {}
     api_organization_v1_MetricsResponse:
       type: object
       properties:
@@ -18407,8 +18546,6 @@ components:
     api_organization_v1_UpdateRequest:
       type: object
       properties:
-        organization_id:
-          type: string
         organization_name:
           type: string
         organization_slug:
@@ -18474,8 +18611,6 @@ components:
           items:
             type: string
       description: Request type
-      required:
-      - organization_id
     api_organization_v1_UpdateResponse:
       type: object
       properties:
@@ -18523,8 +18658,6 @@ components:
     api_organization_v1_organizations_members_CreateRequest:
       type: object
       properties:
-        organization_id:
-          type: string
         email_address:
           type: string
         name:
@@ -18549,7 +18682,6 @@ components:
           type: string
       description: Request type
       required:
-      - organization_id
       - email_address
     api_organization_v1_organizations_members_CreateResponse:
       type: object
@@ -18575,24 +18707,29 @@ components:
     api_organization_v1_organizations_members_DangerouslyGetRequest:
       type: object
       properties:
-        member_id:
-          type: string
         include_deleted:
           type: boolean
       description: Request type
-      required:
-      - member_id
-    api_organization_v1_organizations_members_DeleteMFAPhoneNumberRequest:
+    api_organization_v1_organizations_members_DeleteIdResponse:
       type: object
       properties:
-        organization_id:
+        request_id:
           type: string
         member_id:
           type: string
-      description: Request type
+        member:
+          $ref: '#/components/schemas/api_organization_v1_Member'
+        organization:
+          $ref: '#/components/schemas/api_organization_v1_Organization'
+        status_code:
+          type: integer
+          format: int32
       required:
-      - organization_id
+      - request_id
       - member_id
+      - member
+      - organization
+      - status_code
     api_organization_v1_organizations_members_DeleteMFAPhoneNumberResponse:
       type: object
       properties:
@@ -18614,17 +18751,6 @@ components:
       - member
       - organization
       - status_code
-    api_organization_v1_organizations_members_DeletePasswordRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_password_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - member_password_id
     api_organization_v1_organizations_members_DeletePasswordResponse:
       type: object
       properties:
@@ -18646,17 +18772,6 @@ components:
       - member
       - organization
       - status_code
-    api_organization_v1_organizations_members_DeleteRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - member_id
     api_organization_v1_organizations_members_DeleteResponse:
       type: object
       properties:
@@ -18672,17 +18787,6 @@ components:
       - request_id
       - member_id
       - status_code
-    api_organization_v1_organizations_members_DeleteTOTPRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - member_id
     api_organization_v1_organizations_members_DeleteTOTPResponse:
       type: object
       properties:
@@ -18706,15 +18810,8 @@ components:
       - status_code
     api_organization_v1_organizations_members_GetConnectedAppsRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
-      - member_id
     api_organization_v1_organizations_members_GetConnectedAppsResponse:
       type: object
       properties:
@@ -18735,15 +18832,11 @@ components:
     api_organization_v1_organizations_members_GetRequest:
       type: object
       properties:
-        organization_id:
-          type: string
         member_id:
           type: string
         email_address:
           type: string
       description: Request type
-      required:
-      - organization_id
     api_organization_v1_organizations_members_GetResponse:
       type: object
       properties:
@@ -18768,16 +18861,9 @@ components:
     api_organization_v1_organizations_members_OIDCProviderInformationRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
         include_refresh_token:
           type: boolean
       description: Request type
-      required:
-      - organization_id
-      - member_id
     api_organization_v1_organizations_members_OIDCProvidersResponse:
       type: object
       properties:
@@ -18797,15 +18883,8 @@ components:
       - status_code
     api_organization_v1_organizations_members_ReactivateRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
-      - member_id
     api_organization_v1_organizations_members_ReactivateResponse:
       type: object
       properties:
@@ -18873,10 +18952,6 @@ components:
     api_organization_v1_organizations_members_StartEmailUpdateRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
         email_address:
           type: string
         login_redirect_url:
@@ -18889,8 +18964,6 @@ components:
           $ref: '#/components/schemas/api_organization_v1_StartEmailUpdateRequestDeliveryMethod'
       description: Request type
       required:
-      - organization_id
-      - member_id
       - email_address
     api_organization_v1_organizations_members_StartEmailUpdateResponse:
       type: object
@@ -18916,18 +18989,11 @@ components:
     api_organization_v1_organizations_members_UnlinkRetiredEmailRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
         email_id:
           type: string
         email_address:
           type: string
       description: Request type
-      required:
-      - organization_id
-      - member_id
     api_organization_v1_organizations_members_UnlinkRetiredEmailResponse:
       type: object
       properties:
@@ -18955,10 +19021,6 @@ components:
     api_organization_v1_organizations_members_UpdateRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
         name:
           type: string
         trusted_metadata:
@@ -18986,9 +19048,6 @@ components:
         unlink_email:
           type: boolean
       description: Request type
-      required:
-      - organization_id
-      - member_id
     api_organization_v1_organizations_members_UpdateResponse:
       type: object
       properties:
@@ -19133,27 +19192,13 @@ components:
     api_organization_v1_organizations_members_oauth_providers_ProviderInformationRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
         include_refresh_token:
           type: boolean
       description: Request type
-      required:
-      - organization_id
-      - member_id
     api_organization_v1_organizations_members_oauth_providers_SlackRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
-      - member_id
     api_organization_v1_organizations_members_oauth_providers_SlackResponse:
       type: object
       properties:
@@ -19176,18 +19221,8 @@ components:
       - status_code
     api_organization_v1_organizations_members_connected_apps_RevokeRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
-        member_id:
-          type: string
-        connected_app_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
-      - member_id
-      - connected_app_id
     api_organization_v1_organizations_members_connected_apps_RevokeResponse:
       type: object
       properties:
@@ -19618,12 +19653,8 @@ components:
       - name
     api_user_v1_ConnectedAppsRequest:
       type: object
-      properties:
-        user_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - user_id
     api_user_v1_ConnectedAppsResponse:
       type: object
       properties:
@@ -19692,14 +19723,6 @@ components:
       - phone_id
       - user
       - status_code
-    api_user_v1_DeleteBiometricRegistrationRequest:
-      type: object
-      properties:
-        biometric_registration_id:
-          type: string
-      description: Request type
-      required:
-      - biometric_registration_id
     api_user_v1_DeleteBiometricRegistrationResponse:
       type: object
       properties:
@@ -19718,14 +19741,6 @@ components:
       - user_id
       - user
       - status_code
-    api_user_v1_DeleteCryptoWalletRequest:
-      type: object
-      properties:
-        crypto_wallet_id:
-          type: string
-      description: Request type
-      required:
-      - crypto_wallet_id
     api_user_v1_DeleteCryptoWalletResponse:
       type: object
       properties:
@@ -19744,14 +19759,6 @@ components:
       - user_id
       - user
       - status_code
-    api_user_v1_DeleteEmailRequest:
-      type: object
-      properties:
-        email_id:
-          type: string
-      description: Request type
-      required:
-      - email_id
     api_user_v1_DeleteEmailResponse:
       type: object
       properties:
@@ -19770,14 +19777,23 @@ components:
       - user_id
       - user
       - status_code
-    api_user_v1_DeleteOAuthRegistrationRequest:
+    api_user_v1_DeleteIdResponse:
       type: object
       properties:
-        oauth_user_registration_id:
+        request_id:
           type: string
-      description: Request type
+        user_id:
+          type: string
+        user:
+          $ref: '#/components/schemas/api_user_v1_User'
+        status_code:
+          type: integer
+          format: int32
       required:
-      - oauth_user_registration_id
+      - request_id
+      - user_id
+      - user
+      - status_code
     api_user_v1_DeleteOAuthRegistrationResponse:
       type: object
       properties:
@@ -19796,14 +19812,6 @@ components:
       - user_id
       - user
       - status_code
-    api_user_v1_DeletePasswordRequest:
-      type: object
-      properties:
-        password_id:
-          type: string
-      description: Request type
-      required:
-      - password_id
     api_user_v1_DeletePasswordResponse:
       type: object
       properties:
@@ -19822,14 +19830,6 @@ components:
       - user_id
       - user
       - status_code
-    api_user_v1_DeletePhoneNumberRequest:
-      type: object
-      properties:
-        phone_id:
-          type: string
-      description: Request type
-      required:
-      - phone_id
     api_user_v1_DeletePhoneNumberResponse:
       type: object
       properties:
@@ -19848,14 +19848,6 @@ components:
       - user_id
       - user
       - status_code
-    api_user_v1_DeleteRequest:
-      type: object
-      properties:
-        user_id:
-          type: string
-      description: Request type
-      required:
-      - user_id
     api_user_v1_DeleteResponse:
       type: object
       properties:
@@ -19871,14 +19863,6 @@ components:
       - request_id
       - user_id
       - status_code
-    api_user_v1_DeleteTOTPRequest:
-      type: object
-      properties:
-        totp_id:
-          type: string
-      description: Request type
-      required:
-      - totp_id
     api_user_v1_DeleteTOTPResponse:
       type: object
       properties:
@@ -19897,14 +19881,6 @@ components:
       - user_id
       - user
       - status_code
-    api_user_v1_DeleteWebAuthnRegistrationRequest:
-      type: object
-      properties:
-        webauthn_registration_id:
-          type: string
-      description: Request type
-      required:
-      - webauthn_registration_id
     api_user_v1_DeleteWebAuthnRegistrationResponse:
       type: object
       properties:
@@ -19926,15 +19902,11 @@ components:
     api_user_v1_ExchangePrimaryFactorRequest:
       type: object
       properties:
-        user_id:
-          type: string
         email_address:
           type: string
         phone_number:
           type: string
       description: Request type
-      required:
-      - user_id
     api_user_v1_ExchangePrimaryFactorResponse:
       type: object
       properties:
@@ -19955,12 +19927,8 @@ components:
       - status_code
     api_user_v1_GetRequest:
       type: object
-      properties:
-        user_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - user_id
     api_user_v1_GetResponse:
       type: object
       properties:
@@ -20040,15 +20008,8 @@ components:
       - status_code
     api_user_v1_RevokeRequest:
       type: object
-      properties:
-        user_id:
-          type: string
-        connected_app_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - user_id
-      - connected_app_id
     api_user_v1_RevokeResponse:
       type: object
       properties:
@@ -20096,8 +20057,6 @@ components:
     api_user_v1_UpdateRequest:
       type: object
       properties:
-        user_id:
-          type: string
         name:
           $ref: '#/components/schemas/api_user_v1_Name'
         attributes:
@@ -20113,8 +20072,6 @@ components:
           items:
             type: string
       description: Request type
-      required:
-      - user_id
     api_user_v1_UpdateResponse:
       type: object
       properties:
@@ -20913,12 +20870,8 @@ components:
       - status_code
     api_session_v1_GetJWKSRequest:
       type: object
-      properties:
-        project_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - project_id
     api_session_v1_GetJWKSResponse:
       type: object
       properties:
@@ -21371,12 +21324,8 @@ components:
       - status_code
     api_b2b_session_v1_GetJWKSRequest:
       type: object
-      properties:
-        project_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - project_id
     api_b2b_session_v1_GetJWKSResponse:
       type: object
       properties:
@@ -21550,6 +21499,15 @@ components:
       - intermediate_session_token
       - member_authenticated
       - status_code
+    api_b2b_rbac_v1_OrgPolicy:
+      type: object
+      properties:
+        roles:
+          type: array
+          items:
+            $ref: '#/components/schemas/api_b2b_rbac_v1_PolicyRole'
+      required:
+      - roles
     api_b2b_rbac_v1_Policy:
       type: object
       properties:
@@ -21656,17 +21614,46 @@ components:
       required:
       - request_id
       - status_code
-    api_b2b_recovery_codes_v1_GetRequest:
+    api_b2b_rbac_v1_b2b_rbac_organizations_GetOrgPolicyRequest:
+      type: object
+      properties: {}
+      description: Request type
+    api_b2b_rbac_v1_b2b_rbac_organizations_GetOrgPolicyResponse:
       type: object
       properties:
-        organization_id:
+        request_id:
           type: string
-        member_id:
-          type: string
-      description: Request type
+        status_code:
+          type: integer
+          format: int32
+        org_policy:
+          $ref: '#/components/schemas/api_b2b_rbac_v1_OrgPolicy'
+      description: Response type
       required:
-      - organization_id
-      - member_id
+      - request_id
+      - status_code
+    api_b2b_rbac_v1_b2b_rbac_organizations_SetOrgPolicyRequest:
+      type: object
+      properties:
+        org_policy:
+          $ref: '#/components/schemas/api_b2b_rbac_v1_OrgPolicy'
+    api_b2b_rbac_v1_b2b_rbac_organizations_SetOrgPolicyResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        status_code:
+          type: integer
+          format: int32
+        org_policy:
+          $ref: '#/components/schemas/api_b2b_rbac_v1_OrgPolicy'
+      required:
+      - request_id
+      - status_code
+    api_b2b_recovery_codes_v1_GetRequest:
+      type: object
+      properties: {}
+      description: Request type
     api_b2b_recovery_codes_v1_GetResponse:
       type: object
       properties:
@@ -23207,14 +23194,6 @@ components:
       - request_id
       - m2m_client
       - status_code
-    api_m2m_v1_m2m_clients_DeleteRequest:
-      type: object
-      properties:
-        client_id:
-          type: string
-      description: Request type
-      required:
-      - client_id
     api_m2m_v1_m2m_clients_DeleteResponse:
       type: object
       properties:
@@ -23232,12 +23211,8 @@ components:
       - status_code
     api_m2m_v1_m2m_clients_GetRequest:
       type: object
-      properties:
-        client_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - client_id
     api_m2m_v1_m2m_clients_GetResponse:
       type: object
       properties:
@@ -23288,8 +23263,6 @@ components:
     api_m2m_v1_m2m_clients_UpdateRequest:
       type: object
       properties:
-        client_id:
-          type: string
         client_name:
           type: string
         client_description:
@@ -23303,8 +23276,6 @@ components:
         trusted_metadata:
           type: string
       description: Request type
-      required:
-      - client_id
     api_m2m_v1_m2m_clients_UpdateResponse:
       type: object
       properties:
@@ -23327,12 +23298,8 @@ components:
       - inactive
     api_m2m_v1_m2m_clients_secrets_RotateCancelRequest:
       type: object
-      properties:
-        client_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - client_id
     api_m2m_v1_m2m_clients_secrets_RotateCancelResponse:
       type: object
       properties:
@@ -23350,12 +23317,8 @@ components:
       - status_code
     api_m2m_v1_m2m_clients_secrets_RotateRequest:
       type: object
-      properties:
-        client_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - client_id
     api_m2m_v1_m2m_clients_secrets_RotateResponse:
       type: object
       properties:
@@ -23373,12 +23336,8 @@ components:
       - status_code
     api_m2m_v1_m2m_clients_secrets_RotateStartRequest:
       type: object
-      properties:
-        client_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - client_id
     api_m2m_v1_m2m_clients_secrets_RotateStartResponse:
       type: object
       properties:
@@ -26326,17 +26285,6 @@ components:
       - intermediate_session_token
       - member_authenticated
       - status_code
-    api_sso_v1_DeleteConnectionRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - connection_id
     api_sso_v1_DeleteConnectionResponse:
       type: object
       properties:
@@ -26354,12 +26302,8 @@ components:
       - status_code
     api_sso_v1_GetConnectionsRequest:
       type: object
-      properties:
-        organization_id:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - organization_id
     api_sso_v1_GetConnectionsResponse:
       type: object
       properties:
@@ -26401,15 +26345,11 @@ components:
     api_sso_v1_sso_oidc_CreateConnectionRequest:
       type: object
       properties:
-        organization_id:
-          type: string
         display_name:
           type: string
         identity_provider:
           $ref: '#/components/schemas/api_sso_v1_CreateConnectionRequestIdentityProvider'
       description: Request type
-      required:
-      - organization_id
     api_sso_v1_sso_oidc_CreateConnectionResponse:
       type: object
       properties:
@@ -26427,10 +26367,6 @@ components:
     api_sso_v1_sso_oidc_UpdateConnectionRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
         display_name:
           type: string
         client_id:
@@ -26454,9 +26390,6 @@ components:
         attribute_mapping:
           type: string
       description: Request type
-      required:
-      - organization_id
-      - connection_id
     api_sso_v1_sso_oidc_UpdateConnectionResponse:
       type: object
       properties:
@@ -26512,15 +26445,11 @@ components:
     api_sso_v1_sso_saml_CreateConnectionRequest:
       type: object
       properties:
-        organization_id:
-          type: string
         display_name:
           type: string
         identity_provider:
           $ref: '#/components/schemas/api_sso_v1_CreateConnectionRequestIdentityProvider'
       description: Request type
-      required:
-      - organization_id
     api_sso_v1_sso_saml_CreateConnectionResponse:
       type: object
       properties:
@@ -26535,20 +26464,6 @@ components:
       required:
       - request_id
       - status_code
-    api_sso_v1_sso_saml_DeleteEncryptionPrivateKeyRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
-        private_key_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - connection_id
-      - private_key_id
     api_sso_v1_sso_saml_DeleteEncryptionPrivateKeyResponse:
       type: object
       properties:
@@ -26564,20 +26479,6 @@ components:
       - request_id
       - private_key_id
       - status_code
-    api_sso_v1_sso_saml_DeleteVerificationCertificateRequest:
-      type: object
-      properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
-        certificate_id:
-          type: string
-      description: Request type
-      required:
-      - organization_id
-      - connection_id
-      - certificate_id
     api_sso_v1_sso_saml_DeleteVerificationCertificateResponse:
       type: object
       properties:
@@ -26596,16 +26497,10 @@ components:
     api_sso_v1_sso_saml_UpdateByURLRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
         metadata_url:
           type: string
       description: Request type
       required:
-      - organization_id
-      - connection_id
       - metadata_url
     api_sso_v1_sso_saml_UpdateByURLResponse:
       type: object
@@ -26624,10 +26519,6 @@ components:
     api_sso_v1_sso_saml_UpdateConnectionRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
         idp_entity_id:
           type: string
         display_name:
@@ -26663,9 +26554,6 @@ components:
         allow_gateway_callback:
           type: boolean
       description: Request type
-      required:
-      - organization_id
-      - connection_id
     api_sso_v1_sso_saml_UpdateConnectionResponse:
       type: object
       properties:
@@ -26683,8 +26571,6 @@ components:
     api_sso_v1_sso_external_CreateConnectionRequest:
       type: object
       properties:
-        organization_id:
-          type: string
         external_organization_id:
           type: string
         external_connection_id:
@@ -26701,7 +26587,6 @@ components:
             $ref: '#/components/schemas/api_sso_v1_SAMLGroupImplicitRoleAssignment'
       description: Request type
       required:
-      - organization_id
       - external_organization_id
       - external_connection_id
     api_sso_v1_sso_external_CreateConnectionResponse:
@@ -26721,10 +26606,6 @@ components:
     api_sso_v1_sso_external_UpdateConnectionRequest:
       type: object
       properties:
-        organization_id:
-          type: string
-        connection_id:
-          type: string
         display_name:
           type: string
         external_connection_implicit_role_assignments:
@@ -26736,9 +26617,6 @@ components:
           items:
             $ref: '#/components/schemas/api_sso_v1_GroupImplicitRoleAssignment'
       description: Request type
-      required:
-      - organization_id
-      - connection_id
     api_sso_v1_sso_external_UpdateConnectionResponse:
       type: object
       properties:
@@ -27043,15 +26921,8 @@ components:
       - status_code
     api_webauthn_v1_ListCredentialsRequest:
       type: object
-      properties:
-        user_id:
-          type: string
-        domain:
-          type: string
+      properties: {}
       description: Request type
-      required:
-      - user_id
-      - domain
     api_webauthn_v1_ListCredentialsResponse:
       type: object
       properties:
@@ -27168,13 +27039,10 @@ components:
     api_webauthn_v1_UpdateRequest:
       type: object
       properties:
-        webauthn_registration_id:
-          type: string
         name:
           type: string
       description: Request type
       required:
-      - webauthn_registration_id
       - name
     api_webauthn_v1_UpdateResponse:
       type: object
