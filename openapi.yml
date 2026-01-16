@@ -3325,7 +3325,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_DeleteIdResponse'
+                $ref: '#/components/schemas/api_organization_v1_DeleteExternalIdResponse'
         '400':
           description: Bad request
         '401':
@@ -5302,7 +5302,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteIdResponse'
+                $ref: '#/components/schemas/api_organization_v1_organizations_members_DeleteExternalIdResponse'
         '400':
           description: Bad request
         '401':
@@ -8152,7 +8152,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/api_user_v1_DeleteIdResponse'
+                $ref: '#/components/schemas/api_user_v1_DeleteExternalIdResponse'
         '400':
           description: Bad request
         '401':
@@ -12440,6 +12440,8 @@ paths:
           \ \"${token}\",\n};\n\nclient.Discovery.Organizations.List(params)\n  .then(resp\
           \ => { console.log(resp) })\n  .catch(err => { console.log(err) });"
   /v1/fingerprint/lookup:
+    servers:
+    - url: https://telemetry.stytch.com
     post:
       summary: Lookup
       operationId: api_fraud_v1_fraud_fingerprint_Lookup
@@ -12591,6 +12593,8 @@ paths:
           ,\n};\n\nclient.Fraud.Fingerprint.Lookup(params)\n  .then(resp => { console.log(resp)\
           \ })\n  .catch(err => { console.log(err) });"
   /v1/rules/set:
+    servers:
+    - url: https://telemetry.stytch.com
     post:
       summary: Set
       operationId: api_fraud_v1_fraud_rules_Set
@@ -12752,6 +12756,8 @@ paths:
           \ 120,\n};\n\nclient.Fraud.Rules.Set(params)\n  .then(resp => { console.log(resp)\
           \ })\n  .catch(err => { console.log(err) });"
   /v1/rules/list:
+    servers:
+    - url: https://telemetry.stytch.com
     post:
       summary: List
       operationId: api_fraud_v1_fraud_rules_List
@@ -12870,6 +12876,8 @@ paths:
           \  .then(resp => { console.log(resp) })\n  .catch(err => { console.log(err)\
           \ });"
   /v1/verdict_reasons/override:
+    servers:
+    - url: https://telemetry.stytch.com
     post:
       summary: Override
       operationId: api_fraud_v1_fraud_verdict_reasons_Override
@@ -12984,6 +12992,8 @@ paths:
           \  .then(resp => { console.log(resp) })\n  .catch(err => { console.log(err)\
           \ });"
   /v1/verdict_reasons/list:
+    servers:
+    - url: https://telemetry.stytch.com
     post:
       summary: List
       operationId: api_fraud_v1_fraud_verdict_reasons_List
@@ -25279,7 +25289,7 @@ components:
       - request_id
       - organization
       - status_code
-    api_organization_v1_DeleteIdResponse:
+    api_organization_v1_DeleteExternalIdResponse:
       type: object
       properties:
         request_id:
@@ -25581,7 +25591,7 @@ components:
         include_deleted:
           type: boolean
       description: Request type
-    api_organization_v1_organizations_members_DeleteIdResponse:
+    api_organization_v1_organizations_members_DeleteExternalIdResponse:
       type: object
       properties:
         request_id:
@@ -26655,7 +26665,7 @@ components:
       - user_id
       - user
       - status_code
-    api_user_v1_DeleteIdResponse:
+    api_user_v1_DeleteExternalIdResponse:
       type: object
       properties:
         request_id:
