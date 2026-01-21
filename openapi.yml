@@ -14403,6 +14403,140 @@ paths:
           \  secret: '${secret}',\n});\n\nconst params = {\n};\n\nclient.Fraud.VerdictReasons.List(params)\n\
           \  .then(resp => { console.log(resp) })\n  .catch(err => { console.log(err)\
           \ });"
+  /v1/email/risk:
+    servers:
+    - url: https://telemetry.stytch.com
+    post:
+      summary: Risk
+      operationId: api_fraud_v1_fraud_email_Risk
+      tags:
+      - Fraud
+      description: 'Get risk information for a specific email address.
+
+        The response will contain a recommended action (`ALLOW`, `BLOCK`, or `CHALLENGE`)
+        and a more granular `risk_score`.
+
+        You can also check the `address_information` and `domain_information` fields
+        for more information about the email address and email domain.
+
+
+        This feature is in beta. Reach out to us [here](mailto:fraud-team@stytch.com?subject=Email_Intelligence_Early_Access)
+        if you''d like to request early access.'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/api_fraud_v1_fraud_email_RiskRequest'
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/api_fraud_v1_fraud_email_RiskResponse'
+        '400':
+          description: Bad request
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              example:
+                status_code: 401
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: unauthorized_credentials
+                error_message: Unauthorized credentials.
+                error_url: https://stytch.com/docs/api/errors/401
+        '429':
+          description: Too Many Requests
+          content:
+            application/json:
+              example:
+                status_code: 429
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: too_many_requests
+                error_message: Too many requests have been made.
+                error_url: https://stytch.com/docs/api/errors/429
+        '500':
+          description: Internal server error
+          content:
+            application/json:
+              example:
+                status_code: 500
+                request_id: request-id-test-b05c992f-ebdc-489d-a754-c7e70ba13141
+                error_type: internal_server_error
+                error_message: Oops, something seems to have gone wrong, please reach
+                  out to support@stytch.com to let us know what went wrong.
+                error_url: https://stytch.com/docs/api/errors/500
+      x-code-samples:
+      - lang: python
+        label: Python
+        source: "# POST /v1/email/risk\nfrom stytch import Client\n\nclient = Client(\n\
+          \    project_id=\"${projectId}\",\n    secret=\"${secret}\",\n)\n\nresp\
+          \ = client.fraud.email.risk(\n    email_address=\"${email}\",\n)\n\nprint(resp)\n"
+      - lang: javascript
+        label: Node.js
+        source: "// POST /v1/email/risk\nconst stytch = require('stytch');\n\nconst\
+          \ client = new stytch.Client({\n  project_id: '${projectId}',\n  secret:\
+          \ '${secret}',\n});\n\nconst params = {\n  email_address: \"${email}\",\n\
+          };\n\nclient.fraud.email.risk(params)\n  .then(resp => { console.log(resp)\
+          \ })\n  .catch(err => { console.log(err) });"
+      - lang: go
+        label: Go
+        source: "// POST /v1/email/risk\npackage main\n\nimport (\n\t\"context\"\n\
+          \t\"log\"\n\n\t\"github.com/stytchauth/stytch-go/v17/stytch/consumer/fraud/email\"\
+          \n\t\"github.com/stytchauth/stytch-go/v17/stytch/consumer/stytchapi\"\n\
+          )\n\nfunc main() {\n\tclient, err := stytchapi.NewClient(\n\t\t\"${projectId}\"\
+          ,\n\t\t\"${secret}\",\n\t)\n\tif err != nil {\n\t\tlog.Fatalf(\"error instantiating\
+          \ client: %v\", err)\n\t}\n\n\tparams := &email.RiskParams{\n\t\tEmailAddress:\
+          \ \"${email}\",\n\t}\n\n\tresp, err := client.Fraud.Email.Risk(context.Background(),\
+          \ params)\n\tif err != nil {\n\t\tlog.Fatalf(\"error in method call: %v\"\
+          , err)\n\t}\n\n\tlog.Println(resp)\n}\n"
+      - lang: java
+        label: Java
+        source: "// POST /v1/email/risk\npackage com.example;\n\nimport com.stytch.java.common.StytchResult;\n\
+          import com.stytch.java.consumer.models.fraudemail.RiskRequest;\nimport com.stytch.java.consumer.StytchClient;\n\
+          \npublic class Main {\n    public static void main(String[] args) {\n  \
+          \      StytchClient.configure(\"${projectId}\", \"${secret}\");\n\n    \
+          \    RiskRequest params = new RiskRequest();\n        params.setEmailAddress(\"\
+          ${email}\");\n\n        Object result = StytchClient.getFraud().getEmail().risk(params);\n\
+          \        if (result instanceof StytchResult.Success) {\n          System.out.println(((StytchResult.Success)\
+          \ result).getValue());\n        } else {\n          System.out.println(((StytchResult.Error)\
+          \ result).getException());\n        }\n    }\n}"
+      - lang: ruby
+        label: Ruby
+        source: "# POST /v1/email/risk\nrequire 'stytch'\n\nclient = Stytch::Client.new(\n\
+          \  project_id: '${projectId}',\n  secret: '${secret}'\n)\n\nresp = client.fraud.email.risk(\n\
+          \  email_address: '${email}'\n)\n\nputs resp\n"
+      - lang: php
+        label: PHP
+        source: "$response = $client->fraud->email->risk([\n    'email_address' =>\
+          \ '${email}',\n]);"
+      - lang: kotlin
+        label: Kotlin
+        source: "// POST /v1/email/risk\npackage com.example\n\nimport com.stytch.java.consumer.StytchClient\n\
+          import com.stytch.java.consumer.models.fraudemail.RiskRequest\n\nfun main()\
+          \ {\n    StytchClient.configure(\n        projectId = \"${projectId}\",\n\
+          \        secret = \"${secret}\",\n    )\n\n    when (\n        val result\
+          \ =\n            StytchClient.fraud.email.risk(\n                RiskRequest(\n\
+          \                    emailAddress = \"${email}\",\n                ),\n\
+          \            )\n    ) {\n        is StytchResult.Success -> println(result.value)\n\
+          \        is StytchResult.Error -> println(result.exception)\n    }\n}\n"
+      - lang: rust
+        label: Rust
+        source: "// POST /v1/email/risk\nuse stytch::consumer::client::Client;\nuse\
+          \ stytch::consumer::fraud_email::RiskRequest;\n\nfn main() {\n    let client\
+          \ = Client::new(\"${projectId}\", \"${secret}\").unwrap();\n    let resp\
+          \ = client.fraud.email.risk(\n        RiskRequest{\n            email_address:\
+          \ \"${email}\",\n            ..Default::default()\n        }\n    ).await;\n\
+          \    println!(\"The response is {:?}\", resp);\n}"
+      - lang: csharp
+        label: C#
+        source: "// POST /v1/email/risk\nconst stytch = require('stytch');\n\nconst\
+          \ client = new stytch.B2BClient({\n  project_id: '${projectId}',\n  secret:\
+          \ '${secret}',\n});\n\nconst params = {\n  email_address: \"${email}\",\n\
+          };\n\nclient.Fraud.Email.Risk(params)\n  .then(resp => { console.log(resp)\
+          \ })\n  .catch(err => { console.log(err) });"
   /v1/idp/oauth/authorize/start:
     post:
       summary: Authorizestart
@@ -31370,6 +31504,26 @@ components:
       - asn
       - name
       - network
+    api_fraud_v1_AddressInformation:
+      type: object
+      properties:
+        has_known_bounces:
+          type: boolean
+        has_valid_syntax:
+          type: boolean
+        is_suspected_role_address:
+          type: boolean
+        normalized_email:
+          type: string
+        tumbling_character_count:
+          type: integer
+          format: int32
+      required:
+      - has_known_bounces
+      - has_valid_syntax
+      - is_suspected_role_address
+      - normalized_email
+      - tumbling_character_count
     api_fraud_v1_BrowserProperties:
       type: object
       properties:
@@ -31377,6 +31531,16 @@ components:
           type: string
       required:
       - user_agent
+    api_fraud_v1_DomainInformation:
+      type: object
+      properties:
+        has_mx_or_a_record:
+          type: boolean
+        is_disposable_domain:
+          type: boolean
+      required:
+      - has_mx_or_a_record
+      - is_disposable_domain
     api_fraud_v1_Fingerprints:
       type: object
       properties:
@@ -31773,6 +31937,45 @@ components:
       - CHALLENGE
       - BLOCK
       - NONE
+    api_fraud_v1_fraud_email_RiskRequest:
+      type: object
+      properties:
+        email_address:
+          type: string
+      description: Request type
+      required:
+      - email_address
+    api_fraud_v1_fraud_email_RiskResponse:
+      type: object
+      properties:
+        request_id:
+          type: string
+        address_information:
+          $ref: '#/components/schemas/api_fraud_v1_AddressInformation'
+        domain_information:
+          $ref: '#/components/schemas/api_fraud_v1_DomainInformation'
+        action:
+          $ref: '#/components/schemas/api_fraud_v1_RiskResponseAction'
+        risk_score:
+          type: integer
+          format: int32
+        status_code:
+          type: integer
+          format: int32
+      description: Response type
+      required:
+      - request_id
+      - address_information
+      - domain_information
+      - action
+      - risk_score
+      - status_code
+    api_fraud_v1_RiskResponseAction:
+      type: string
+      enum:
+      - ALLOW
+      - CHALLENGE
+      - BLOCK
     api_idp_v1_ScopeResult:
       type: object
       properties:
