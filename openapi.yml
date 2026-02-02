@@ -30510,6 +30510,14 @@ components:
               \ and `hubspot_oauth`.\n  "
         mfa_policy:
           type: string
+          description: "The setting that controls the MFA policy for all Members in\
+              \ the Organization. The accepted values are:\n \n  `REQUIRED_FOR_ALL`\
+              \ \u2013 All Members within the Organization will be required to complete\
+              \ MFA every time they wish to log in. However, any active Session that\
+              \ existed prior to this setting change will remain valid.\n \n  `OPTIONAL`\
+              \ \u2013 The default value. The Organization does not require MFA by default\
+              \ for all Members. Members will be required to complete MFA only if their\
+              \ `mfa_enrolled` status is set to `true`.\n  "
         rbac_email_implicit_role_assignments:
           type: array
           items:
