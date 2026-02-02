@@ -30553,6 +30553,7 @@ components:
           type: array
           items:
             type: string
+            description: A list of email domains that are claimed by the Organization.
         first_party_connected_apps_allowed_type:
           type: string
           description: "The authentication setting that sets the Organization's policy\
