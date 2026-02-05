@@ -29741,7 +29741,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - connected_app
@@ -29757,7 +29756,6 @@ components:
         status_code:
           type: integer
           format: int32
-      description: Response type
       required:
       - request_id
       - client_id
@@ -29784,7 +29782,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - connected_app
@@ -29834,7 +29831,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - connected_apps
@@ -29902,7 +29898,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - connected_app
@@ -29936,7 +29931,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - connected_app
@@ -29963,7 +29957,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - connected_app
@@ -29990,7 +29983,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - connected_app
@@ -30518,7 +30510,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnectionWithToken'
           description: The [SCIM Connection Object](https://stytch.com/docs/b2b/api/scim-connection-object).
-      description: Response type
       required:
       - request_id
       - status_code
@@ -30541,7 +30532,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - connection_id
@@ -30584,7 +30574,6 @@ components:
           description: The `next_cursor` string is returned when your search result
             contains more than one page of results. This value is passed into your
             next search call in the `cursor` field.
-      description: Response type
       required:
       - scim_groups
       - status_code
@@ -30610,7 +30599,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnection'
           description: The [SCIM Connection Object](https://stytch.com/docs/b2b/api/scim-connection-object).
-      description: Response type
       required:
       - request_id
       - status_code
@@ -30636,7 +30624,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnection'
           description: The [SCIM Connection Object](https://stytch.com/docs/b2b/api/scim-connection-object).
-      description: Response type
       required:
       - request_id
       - status_code
@@ -30662,7 +30649,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnection'
           description: The [SCIM Connection Object](https://stytch.com/docs/b2b/api/scim-connection-object).
-      description: Response type
       required:
       - request_id
       - status_code
@@ -30688,7 +30674,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnectionWithNextToken'
           description: The [SCIM Connection Object](https://stytch.com/docs/b2b/api/scim-connection-object).
-      description: Response type
       required:
       - request_id
       - status_code
@@ -30725,7 +30710,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_b2b_scim_v1_SCIMConnection'
           description: The [SCIM Connection Object](https://stytch.com/docs/b2b/api/scim-connection-object).
-      description: Response type
       required:
       - request_id
       - status_code
@@ -31657,7 +31641,6 @@ components:
         status_code:
           type: integer
           format: int32
-      description: Response type
       required:
       - request_id
       - connected_apps
@@ -31849,7 +31832,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - organization
@@ -31888,7 +31870,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - organization_id
@@ -31923,7 +31904,6 @@ components:
           format: int32
         logo_url:
           type: string
-      description: Response type
       required:
       - connected_app_id
       - name
@@ -31953,7 +31933,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - organization
@@ -32030,7 +32009,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - organizations
@@ -32297,7 +32275,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - organization
@@ -32418,7 +32395,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -32477,7 +32453,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -32508,7 +32483,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -32533,7 +32507,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -32562,7 +32535,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -32591,7 +32563,6 @@ components:
         status_code:
           type: integer
           format: int32
-      description: Response type
       required:
       - request_id
       - connected_apps
@@ -32633,7 +32604,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -32670,7 +32640,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - registrations
@@ -32703,7 +32672,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -32774,7 +32742,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - members
@@ -32849,7 +32816,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -32895,7 +32861,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -33066,7 +33031,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -33109,7 +33073,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - provider_type
@@ -33164,7 +33127,6 @@ components:
           type: string
           description: The `refresh_token` that you may use to obtain a new `access_token`
             for the User within the provider's API.
-      description: Response type
       required:
       - request_id
       - provider_type
@@ -33196,7 +33158,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - provider_type
@@ -33251,7 +33212,6 @@ components:
           type: string
           description: The `refresh_token` that you may use to obtain a new `access_token`
             for the User within the provider's API.
-      description: Response type
       required:
       - request_id
       - provider_type
@@ -33299,7 +33259,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - provider_type
@@ -33321,7 +33280,6 @@ components:
         status_code:
           type: integer
           format: int32
-      description: Response type
       required:
       - request_id
       - status_code
@@ -33432,7 +33390,6 @@ components:
         authorization_code:
           type: string
           description: A one-time use code that can be exchanged for tokens.
-      description: Response type
       required:
       - request_id
       - redirect_uri
@@ -33518,7 +33475,6 @@ components:
         status_code:
           type: integer
           format: int32
-      description: Response type
       required:
       - request_id
       - member_id
@@ -33975,7 +33931,6 @@ components:
         status_code:
           type: integer
           format: int32
-      description: Response type
       required:
       - request_id
       - connected_apps
@@ -34065,7 +34020,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34097,7 +34051,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34126,7 +34079,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34155,7 +34107,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34201,7 +34152,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34230,7 +34180,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34259,7 +34208,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34283,7 +34231,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34311,7 +34258,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34340,7 +34286,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34380,7 +34325,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34489,7 +34433,6 @@ components:
           type: string
         lock_expires_at:
           type: string
-      description: Response type
       required:
       - request_id
       - user_id
@@ -34520,7 +34463,6 @@ components:
         status_code:
           type: integer
           format: int32
-      description: Response type
       required:
       - request_id
       - status_code
@@ -34577,7 +34519,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - results
@@ -34659,7 +34600,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -35506,7 +35446,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -35590,7 +35529,6 @@ components:
           description: "If an `authorization_check` is provided in the request and\
             \ the check succeeds, this field will return\n  information about why\
             \ the User was granted permission."
-      description: Response type
       required:
       - request_id
       - session
@@ -35679,7 +35617,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -35711,7 +35648,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - keys
       - request_id
@@ -35746,7 +35682,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - sessions
@@ -35829,7 +35764,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -35865,7 +35799,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - status_code
@@ -36142,7 +36075,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -36241,7 +36173,6 @@ components:
           description: "If an `authorization_check` is provided in the request and\
             \ the check succeeds, this field will return\n  information about why\
             \ the Member was granted permission."
-      description: Response type
       required:
       - request_id
       - member_session
@@ -36331,7 +36262,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -36480,7 +36410,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -36515,7 +36444,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - keys
       - request_id
@@ -36559,7 +36487,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_sessions
@@ -36637,7 +36564,6 @@ components:
         member_session:
           $ref: '#/components/schemas/api_b2b_session_v1_MemberSession'
           description: The [Session object](https://stytch.com/docs/b2b/api/session-object).
-      description: Response type
       required:
       - request_id
       - member_id
@@ -36681,7 +36607,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - status_code
@@ -36758,7 +36683,6 @@ components:
           $ref: '#/components/schemas/api_b2b_mfa_v1_MfaRequired'
           description: MFA will not be required when authenticating impersonation
             tokens.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -36954,7 +36878,6 @@ components:
           description: "The RBAC Policy document that contains all defined Roles and\
             \ Resources \u2013 which are managed in the [Dashboard](https://stytch.com/dashboard/rbac).\
             \ Read more about these entities and how they work in our [RBAC overview](https://stytch.com/docs/b2b/guides/rbac/overview)."
-      description: Response type
       required:
       - request_id
       - status_code
@@ -36982,7 +36905,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - org_policy
@@ -37018,7 +36940,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - org_policy
@@ -37057,7 +36978,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -37187,7 +37107,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -37246,7 +37165,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -37389,7 +37307,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -37486,7 +37403,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -37561,7 +37477,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -37717,7 +37632,6 @@ components:
           description: "The RBAC Policy document that contains all defined Roles and\
             \ Resources \u2013 which are managed in the [Dashboard](https://stytch.com/dashboard/rbac).\
             \ Read more about these entities and how they work in our [RBAC overview](https://stytch.com/docs/guides/rbac/overview)."
-      description: Response type
       required:
       - request_id
       - status_code
@@ -37870,7 +37784,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -37934,7 +37847,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -38191,7 +38103,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -38279,7 +38190,6 @@ components:
             ID will be null if the intermediate session token was generated by a email
             magic link discovery or OAuth discovery flow. If a session token or session
             JWT is provided, the Organization ID hint will be null.
-      description: Response type
       required:
       - request_id
       - email_address
@@ -38571,7 +38481,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -39007,7 +38916,6 @@ components:
             verdict. You must be specifically enabled for the raw signals feature
             to see this field. You can find documentation for the specific fields
             in the [guides](https://stytch.com/docs/fraud/guides/device-fingerprinting/reference/raw-signals).
-      description: Response type
       required:
       - request_id
       - telemetry_id
@@ -39062,7 +38970,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - next_cursor
@@ -39180,7 +39087,6 @@ components:
         asn:
           type: string
           description: The ASN that a rule was set for.
-      description: Response type
       required:
       - request_id
       - action
@@ -39214,7 +39120,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - verdict_reason_actions
@@ -39257,7 +39162,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - verdict_reason_action
@@ -39314,7 +39218,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - address_information
@@ -39427,7 +39330,6 @@ components:
         authorization_code:
           type: string
           description: A one-time use code that can be exchanged for tokens.
-      description: Response type
       required:
       - request_id
       - redirect_uri
@@ -39504,7 +39406,6 @@ components:
         status_code:
           type: integer
           format: int32
-      description: Response type
       required:
       - request_id
       - user_id
@@ -39558,7 +39459,6 @@ components:
             \ in your authenticate call, you'll receive a full Session object in the\
             \ response.\n\n  See [Session object](https://stytch.com/docs/api/session-object)\
             \ for complete response fields.\n  "
-      description: Response type
       required:
       - request_id
       - user_id
@@ -39786,7 +39686,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - m2m_client
@@ -39809,7 +39708,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - client_id
@@ -39836,7 +39734,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - m2m_client
@@ -39894,7 +39791,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - m2m_clients
@@ -39942,7 +39838,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - m2m_client
@@ -39974,7 +39869,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - m2m_client
@@ -40001,7 +39895,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - m2m_client
@@ -40028,7 +39921,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - m2m_client
@@ -40210,7 +40102,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -40266,7 +40157,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -40360,7 +40250,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -40473,7 +40362,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -40504,7 +40392,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - status_code
@@ -40613,7 +40500,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -40748,7 +40634,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -40863,7 +40748,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -40944,7 +40828,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - status_code
@@ -41010,7 +40893,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - intermediate_session_token
@@ -41215,7 +41097,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -41342,7 +41223,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - intermediate_session_token
@@ -41483,7 +41363,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -41576,7 +41455,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -41752,7 +41630,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -41852,7 +41729,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -41936,7 +41812,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - intermediate_session_token
@@ -41996,7 +41871,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - status_code
@@ -42272,7 +42146,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -42385,7 +42258,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -42509,7 +42381,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -42575,7 +42446,6 @@ components:
         feedback:
           $ref: '#/components/schemas/api_password_v1_Feedback'
           description: Feedback for how to improve the password's strength [HaveIBeenPwned](https://haveibeenpwned.com/).
-      description: Response type
       required:
       - request_id
       - valid_password
@@ -42701,7 +42571,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -42795,7 +42664,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -42902,7 +42770,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -42997,7 +42864,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -43216,7 +43082,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -43357,7 +43222,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -43428,7 +43292,6 @@ components:
         zxcvbn_feedback:
           $ref: '#/components/schemas/api_b2b_password_v1_ZxcvbnFeedback'
           description: Feedback for how to improve the password's strength using [zxcvbn](https://stytch.com/docs/b2b/guides/passwords/strength-policy).
-      description: Response type
       required:
       - request_id
       - valid_password
@@ -43502,7 +43365,6 @@ components:
         organization:
           $ref: '#/components/schemas/api_organization_v1_Organization'
           description: The [Organization object](https://stytch.com/docs/b2b/api/organization-object).
-      description: Response type
       required:
       - request_id
       - status_code
@@ -43669,7 +43531,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -43783,7 +43644,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -43938,7 +43798,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -44094,7 +43953,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -44165,7 +44023,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - email_address
@@ -44234,7 +44091,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - intermediate_session_token
@@ -44322,7 +44178,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - status_code
@@ -44398,7 +44253,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - oauth_attach_token
@@ -44533,7 +44387,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -44652,7 +44505,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -44732,7 +44584,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -44807,7 +44658,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -44897,7 +44747,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -44972,7 +44821,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -45061,7 +44909,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -45149,7 +44996,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -45707,7 +45553,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `member_device` response field will contain information
             about the member's device attributes.
-      description: Response type
       required:
       - request_id
       - member_id
@@ -45739,7 +45584,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - connection_id
@@ -45781,7 +45625,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - saml_connections
@@ -45834,7 +45677,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_sso_v1_OIDCConnection'
           description: The [OIDC Connection Object](https://stytch.com/docs/b2b/api/oidc-connection-object).
-      description: Response type
       required:
       - request_id
       - status_code
@@ -45918,7 +45760,6 @@ components:
             from the OIDC issuer, this field will explain what went wrong if the request
             is successful otherwise. In other words, even if the overall request succeeds,
             there could be relevant warnings related to the connection update.
-      description: Response type
       required:
       - request_id
       - status_code
@@ -45993,7 +45834,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_sso_v1_SAMLConnection'
           description: The [SAML Connection Object](https://stytch.com/docs/b2b/api/saml-connection-object)
-      description: Response type
       required:
       - request_id
       - status_code
@@ -46015,7 +45855,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - private_key_id
@@ -46038,7 +45877,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - certificate_id
@@ -46071,7 +45909,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_sso_v1_SAMLConnection'
           description: The [SAML Connection Object](https://stytch.com/docs/b2b/api/saml-connection-object)
-      description: Response type
       required:
       - request_id
       - status_code
@@ -46185,7 +46022,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_sso_v1_SAMLConnection'
           description: The [SAML Connection Object](https://stytch.com/docs/b2b/api/saml-connection-object)
-      description: Response type
       required:
       - request_id
       - status_code
@@ -46233,7 +46069,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_sso_v1_Connection'
           description: The [External Connection Object](https://stytch.com/docs/b2b/api/external-connection-object).
-      description: Response type
       required:
       - request_id
       - status_code
@@ -46286,7 +46121,6 @@ components:
         connection:
           $ref: '#/components/schemas/api_sso_v1_Connection'
           description: The [External Connection Object](https://stytch.com/docs/b2b/api/external-connection-object).
-      description: Response type
       required:
       - request_id
       - status_code
@@ -46406,7 +46240,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -46470,7 +46303,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - totp_id
@@ -46574,7 +46406,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - totp_id
@@ -46617,7 +46448,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -46732,7 +46562,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -46786,7 +46615,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -46816,7 +46644,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - credentials
       - request_id
@@ -46913,7 +46740,6 @@ components:
             [Fingerprint Lookup API](https://stytch.com/docs/fraud/api/fingerprint-lookup)
             returned results, the `user_device` response field will contain information
             about the user's device attributes.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -46982,7 +46808,6 @@ components:
           description: The HTTP status code of the response. Stytch follows standard
             HTTP response status code patterns, e.g. 2XX values equate to success,
             3XX values are redirects, 4XX are client errors, and 5XX are server errors.
-      description: Response type
       required:
       - request_id
       - user_id
@@ -47015,7 +46840,6 @@ components:
         webauthn_registration:
           $ref: '#/components/schemas/api_user_v1_WebAuthnRegistration'
           description: A Passkey or WebAuthn registration.
-      description: Response type
       required:
       - request_id
       - status_code
